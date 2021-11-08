@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 7323568504522224012}
   - component: {fileID: 7323568504522224013}
   - component: {fileID: 7323568504522224014}
+  - component: {fileID: 6279039229661208437}
   m_Layer: 0
   m_Name: CoinCollectingAgent
   m_TagString: Untagged
@@ -179,3 +180,15 @@ MonoBehaviour:
   m_UseChildSensors: 1
   m_UseChildActuators: 1
   m_ObservableAttributeHandling: 0
+--- !u!114 &6279039229661208437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7323568504522224020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4d69b15e9d45d647985e7660bc1a2b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
