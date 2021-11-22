@@ -6,6 +6,7 @@ public class BotPlayerController : MonoBehaviour
 {
 
     [SerializeField] private float torqueSpeed;
+    [SerializeField] private float brakeSpeed;
     [SerializeField] private float maxSteeringAngle;
     [SerializeField] private WheelCollider[] frontWheels;
     [SerializeField] private WheelCollider[] backWheels;
@@ -48,11 +49,23 @@ public class BotPlayerController : MonoBehaviour
             backWheels[i].motorTorque = verticalInput * torqueSpeed;
         }
 
+        //Braking
+        if(Input.GetKey(KeyCode.Space))
+        {
+            
+            backWheels[0].brakeTorque = brakeSpeed;
+            backWheels[1].brakeTorque = brakeSpeed;
+
+        }
+        else
+        {
+            backWheels[0].brakeTorque = 0;
+            backWheels[1].brakeTorque = 0;
+        }
 
 
 
-        //frontWheels[0].steerAngle = maxSteeringAngle * horizontalInput;
-        //frontWheels[1].steerAngle = maxSteeringAngle * horizontalInput;
+
 
     }
 
