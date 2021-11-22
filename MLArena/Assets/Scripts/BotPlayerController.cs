@@ -55,12 +55,15 @@ public class BotPlayerController : MonoBehaviour
             
             backWheels[0].brakeTorque = brakeSpeed;
             backWheels[1].brakeTorque = brakeSpeed;
-
+            frontWheels[0].brakeTorque = brakeSpeed;
+            frontWheels[1].brakeTorque = brakeSpeed;
         }
         else
         {
             backWheels[0].brakeTorque = 0;
             backWheels[1].brakeTorque = 0;
+            frontWheels[0].brakeTorque = 0;
+            frontWheels[1].brakeTorque = 0;
         }
 
 
