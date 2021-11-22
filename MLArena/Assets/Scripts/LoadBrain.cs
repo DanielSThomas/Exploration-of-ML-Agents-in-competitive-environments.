@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-//using UnityEditor;
+using UnityEditor;
 using System.IO;
 using Unity.MLAgents.Policies;
 using Unity.Barracuda;
@@ -38,7 +38,7 @@ public class LoadBrain : MonoBehaviour
     public void Loadbrain()
     {
 
-        //string path = EditorUtility.OpenFilePanel("Load Brain", "", "onnx");
+        string path = EditorUtility.OpenFilePanel("Load Brain", "", "onnx");
 
 
         byte[] model = null;
