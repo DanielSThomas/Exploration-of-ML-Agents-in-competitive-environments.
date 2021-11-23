@@ -8,9 +8,10 @@ public class BotPlayerController : MonoBehaviour
     [SerializeField] private float torqueSpeed;
     [SerializeField] private float brakeSpeed;
     [SerializeField] private float maxSteeringAngle;
+    [SerializeField] private ApplyForce applyForce;
     [SerializeField] private WheelCollider[] frontWheels;
     [SerializeField] private WheelCollider[] backWheels;
-
+    [SerializeField] private Rigidbody rb;
 
     // Start is called before the first frame update
     void Start()
@@ -22,7 +23,7 @@ public class BotPlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        ApplyForce();
     }
 
     private void FixedUpdate()
@@ -57,6 +58,8 @@ public class BotPlayerController : MonoBehaviour
             backWheels[1].brakeTorque = brakeSpeed;
             frontWheels[0].brakeTorque = brakeSpeed;
             frontWheels[1].brakeTorque = brakeSpeed;
+
+            
         }
         else
         {
@@ -66,13 +69,23 @@ public class BotPlayerController : MonoBehaviour
             frontWheels[1].brakeTorque = 0;
         }
 
+        
+
 
 
 
 
     }
 
+    private void ApplyForce()
+    {
 
+        float _force = Mathf.Clamp((backWheels[0].rpm * 30), -6000, 6000);
+
+        _force = Mathf.Abs(_force);
+
+        applyForce.forceStrength = _force;
+    }
 
 
 

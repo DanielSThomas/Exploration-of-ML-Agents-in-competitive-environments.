@@ -575,7 +575,8 @@ GameObject:
   - component: {fileID: 5026729541996600634}
   - component: {fileID: 6520199856046060108}
   - component: {fileID: 8804086005218644278}
-  - component: {fileID: 1128756770}
+  - component: {fileID: 182304439}
+  - component: {fileID: 182304440}
   m_Layer: 0
   m_Name: Bumper
   m_TagString: Untagged
@@ -648,7 +649,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &1128756770
+--- !u!65 &182304439
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -656,11 +657,24 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4931816118365479330}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.4591118, y: 0.40205032, z: 1.8995638}
-  m_Center: {x: -0.007685541, y: 0.07273084, z: 0.0066880286}
+  m_Size: {x: 1.57903, y: 0.24922597, z: 2.0256772}
+  m_Center: {x: 0.004662394, y: -0.0036813319, z: 0.009754658}
+--- !u!114 &182304440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4931816118365479330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f08ca20852d83a49a56e25cf67460db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  forceStrength: 0
 --- !u!1 &5247715460065418649
 GameObject:
   m_ObjectHideFlags: 0
@@ -779,10 +793,10 @@ BoxCollider:
   m_GameObject: {fileID: 5247715460065418649}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.60107744, y: 0.33787733, z: 1.2026794}
-  m_Center: {x: -0.0005387068, y: 0.07545182, z: -0.0013397932}
+  m_Size: {x: 1.497266, y: 0.249226, z: 1.948576}
+  m_Center: {x: 0, y: -0.003681332, z: -0.00000002980232}
 --- !u!114 &1483056510
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -796,13 +810,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   torqueSpeed: 200
+  brakeSpeed: 400
   maxSteeringAngle: 30
+  applyForce: {fileID: 182304440}
   frontWheels:
   - {fileID: 5153553789705866403}
   - {fileID: 6972593260458332133}
   backWheels:
   - {fileID: 6667035187491384357}
   - {fileID: 8677818711099579071}
+  rb: {fileID: 4905203644974636665}
 --- !u!1 &5276091683539490572
 GameObject:
   m_ObjectHideFlags: 0
