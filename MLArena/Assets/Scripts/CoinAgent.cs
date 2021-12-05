@@ -36,7 +36,7 @@ public class CoinAgent : Agent
     public override void CollectObservations(VectorSensor sensor)
     {
         // Target and Agent positions
-        sensor.AddObservation(target.localPosition);
+       // sensor.AddObservation(target.localPosition);
         sensor.AddObservation(this.transform.localPosition);
 
         // Agent velocity
@@ -60,13 +60,14 @@ public class CoinAgent : Agent
         // Reached target
         if (distanceToTarget < 1.42f)
         {
-            SetReward(1.0f);
+            AddReward(1.0f);
             EndEpisode();
         }
 
         // Fell off platform
         else if (this.transform.localPosition.y < 0)
         {
+            AddReward(-1.0f);
             EndEpisode();
         }
     }
