@@ -5,7 +5,7 @@ using Unity.MLAgents;
 using Unity.MLAgents.Sensors;
 using Unity.MLAgents.Actuators;
 
-public class CoinCarBotAgent : Agent
+public class BotAgent : Agent
 {
 
     [SerializeField] private Rigidbody rb;
@@ -23,10 +23,15 @@ public class CoinCarBotAgent : Agent
         
     }
 
+    private void Update()
+    {
+        ApplyForce();
+    }
+
     public override void OnEpisodeBegin()
     {
         // If the Agent fell, zero its momentum
-        if (this.transform.localPosition.y < 0)
+        if (this.transform.localPosition.y < -1)
         {
             this.rb.angularVelocity = Vector3.zero;
             this.rb.velocity = Vector3.zero;
@@ -36,7 +41,7 @@ public class CoinCarBotAgent : Agent
         }
 
         // Move the target to a new spot
-        target.localPosition = new Vector3(Random.value * 8 - 4, 0.5f, Random.value * 8 - 4);
+        //target.localPosition = new Vector3(Random.value * 8 - 4, 0.5f, Random.value * 8 - 4);
     }
 
     public override void CollectObservations(VectorSensor sensor)
@@ -62,22 +67,20 @@ public class CoinCarBotAgent : Agent
 
         Movement(controlSignal.x, controlSignal.z);
 
-        // Rewards
-        float distanceToTarget = Vector3.Distance(this.transform.localPosition, target.localPosition);
-
-        //AddReward(-1f / MaxStep);
-
-        // Reached target
-        if (distanceToTarget < 1.42f)
+        //Rewards
+        if (target.transform.localPosition.y < -1)
         {
-            SetReward(1.0f);
+            AddReward(1f);
             EndEpisode();
         }
 
+        //AddReward(-1f / MaxStep);
+
+        
         // Fell off platform
-        else if (this.transform.localPosition.y < 0)
+        if (this.transform.localPosition.y < -1)
         {
-            //AddReward(-1f);
+            AddReward(-1f);
             EndEpisode();
         }
     }
@@ -89,19 +92,21 @@ public class CoinCarBotAgent : Agent
         continuousActionsOut[1] = Input.GetAxis("Vertical");
     }
 
+    
+
     private void Movement(float horizontalInput, float verticalInput)
     {
         
         //Steering
         for (int i = 0; i < frontWheels.Length; i++)
         {
-            frontWheels[i].steerAngle = maxSteeringAngle * horizontalInput;
+            frontWheels[i].steerAngle = maxSteeringAngle * horizontalInput * Time.fixedDeltaTime;
         }
 
         //Acceleration
         for (int i = 0; i < backWheels.Length; i++)
         {
-            backWheels[i].motorTorque = verticalInput * torqueSpeed;
+            backWheels[i].motorTorque = verticalInput * torqueSpeed * Time.fixedDeltaTime;
         }
 
         //Braking
@@ -124,7 +129,16 @@ public class CoinCarBotAgent : Agent
         //}
 
 
-
-
     }
+
+    private void ApplyForce()
+    {
+
+        float _force = Mathf.Clamp((backWheels[0].rpm * 30), -6000, 6000);
+
+        _force = Mathf.Abs(_force);
+
+        applyForce.forceStrength = _force;
+    }
+
 }
