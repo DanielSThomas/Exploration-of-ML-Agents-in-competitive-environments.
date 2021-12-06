@@ -10,6 +10,7 @@ public class BotAgent : Agent
 
     [SerializeField] private Rigidbody rb;
     [SerializeField] private Transform target;
+    [SerializeField] private Transform spawn;
     [SerializeField] private float torqueSpeed;
     [SerializeField] private float brakeSpeed;
     [SerializeField] private float maxSteeringAngle;
@@ -31,11 +32,12 @@ public class BotAgent : Agent
     public override void OnEpisodeBegin()
     {
         // If the Agent fell, zero its momentum
-        if (this.transform.localPosition.y < -1)
+        if (this.transform.localPosition.y < -1 || target.transform.localPosition.y < -1)
         {
             this.rb.angularVelocity = Vector3.zero;
             this.rb.velocity = Vector3.zero;
-            this.transform.localPosition = new Vector3(0, 0.5f, 0);
+            this.transform.localPosition = spawn.position;
+            this.transform.localRotation = spawn.rotation;
             backWheels[0].motorTorque = 0;
             backWheels[1].motorTorque = 0;
         }
@@ -100,13 +102,13 @@ public class BotAgent : Agent
         //Steering
         for (int i = 0; i < frontWheels.Length; i++)
         {
-            frontWheels[i].steerAngle = maxSteeringAngle * horizontalInput * Time.fixedDeltaTime;
+            frontWheels[i].steerAngle = maxSteeringAngle * horizontalInput;
         }
 
         //Acceleration
         for (int i = 0; i < backWheels.Length; i++)
         {
-            backWheels[i].motorTorque = verticalInput * torqueSpeed * Time.fixedDeltaTime;
+            backWheels[i].motorTorque = verticalInput * torqueSpeed;
         }
 
         //Braking
