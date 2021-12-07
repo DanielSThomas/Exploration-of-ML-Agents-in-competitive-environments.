@@ -355,6 +355,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Target
       objectReference: {fileID: 0}
+    - target: {fileID: 6156987761657334199, guid: 3f9366644e0fae94485db96181f30b99, type: 3}
+      propertyPath: m_RayLength
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 6156987761677814037, guid: 3f9366644e0fae94485db96181f30b99, type: 3}
       propertyPath: m_Name
       value: RollerBotV1 Def
@@ -767,7 +771,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6156987761657334198, guid: 3f9366644e0fae94485db96181f30b99, type: 3}
   m_PrefabInstance: {fileID: 213315890}
   m_PrefabAsset: {fileID: 0}
---- !u!135 &843470991
+--- !u!135 &843470997
 SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1072,6 +1076,14 @@ PrefabInstance:
     - target: {fileID: 6156987761657334198, guid: 3f9366644e0fae94485db96181f30b99, type: 3}
       propertyPath: m_TagString
       value: Attacker
+      objectReference: {fileID: 0}
+    - target: {fileID: 6156987761657334199, guid: 3f9366644e0fae94485db96181f30b99, type: 3}
+      propertyPath: m_RayLength
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6156987761657334199, guid: 3f9366644e0fae94485db96181f30b99, type: 3}
+      propertyPath: m_SphereCastRadius
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6156987761677814037, guid: 3f9366644e0fae94485db96181f30b99, type: 3}
       propertyPath: m_Name
