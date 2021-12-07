@@ -38,10 +38,10 @@ public class RollerBotAgent : Agent
 
     public override void CollectObservations(VectorSensor sensor)
     {
-        sensor.AddObservation(rb.transform.localPosition);
+        //sensor.AddObservation(rb.transform.localPosition);
    
-        sensor.AddObservation(rb.velocity.x);
-        sensor.AddObservation(rb.velocity.z);
+        //sensor.AddObservation(rb.velocity.x);
+        //sensor.AddObservation(rb.velocity.z);
     }
 
     public override void OnActionReceived(ActionBuffers actionBuffers)
