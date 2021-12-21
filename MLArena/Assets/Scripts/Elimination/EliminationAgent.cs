@@ -110,7 +110,6 @@ public class EliminationAgent : Agent
     }
 
 
-
     public int getTeam()
     {
         return team;
