@@ -5,13 +5,13 @@ using Unity.MLAgents;
 using Unity.MLAgents.Sensors;
 using Unity.MLAgents.Actuators;
 
-public class RollerBotAgent : Agent
+public class RollerBotAgentSymmetrical : Agent
 {
 
     [SerializeField] private float speed = 10;
     [SerializeField] private int health = 100;
     [SerializeField] private Rigidbody rb;
-    [SerializeField] private RollerBotAgent target;
+    [SerializeField] private RollerBotAgentSymmetrical target;
     [SerializeField] private Transform spawn;
     [SerializeField] private bool isAttacker;
     [SerializeField] private float meanReward;

@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 6200537273625066874}
   - component: {fileID: 6200537273625066877}
   - component: {fileID: 6200537273625066852}
-  - component: {fileID: 6200537273625066855}
   - component: {fileID: 6200537273625066851}
   - component: {fileID: 6200537273625066850}
   - component: {fileID: 6200537273625066853}
@@ -65,7 +64,7 @@ MonoBehaviour:
   m_Model: {fileID: 0}
   m_InferenceDevice: 0
   m_BehaviorType: 0
-  m_BehaviorName: RollerBotAtk
+  m_BehaviorName: RollerBotDef
   TeamId: 1
   m_UseChildSensors: 1
   m_UseChildActuators: 1
@@ -87,10 +86,12 @@ MonoBehaviour:
   hasUpgradedFromAgentParameters: 1
   MaxStep: 1000
   speed: 10
+  health: 100
   rb: {fileID: 0}
   target: {fileID: 0}
   spawn: {fileID: 0}
   isAttacker: 0
+  meanReward: 0
 --- !u!114 &6200537273625066874
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -147,20 +148,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.6
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &6200537273625066855
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6200537273625066876}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f08ca20852d83a49a56e25cf67460db, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  forceStrength: 0
-  filter: 
 --- !u!135 &6200537273625066851
 SphereCollider:
   m_ObjectHideFlags: 0

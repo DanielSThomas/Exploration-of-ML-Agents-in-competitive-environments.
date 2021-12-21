@@ -8,7 +8,7 @@ public class DamageTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        RollerBotAgent rba = other.GetComponent<RollerBotAgent>();
+        RollerBotAgentAsymmetric rba = other.GetComponent<RollerBotAgentAsymmetric>();
         if(rba != null)
         {
             rba.setHealth(damage);
