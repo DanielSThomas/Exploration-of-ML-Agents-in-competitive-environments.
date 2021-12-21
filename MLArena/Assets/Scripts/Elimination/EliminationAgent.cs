@@ -30,7 +30,7 @@ public class EliminationAgent : Agent
 
     public override void OnEpisodeBegin()
     {
-
+        this.gameObject.SetActive(true);
         rb.angularVelocity = Vector3.zero;
         rb.velocity = Vector3.zero;
         this.transform.localPosition = spawn.position;
@@ -82,8 +82,8 @@ public class EliminationAgent : Agent
         if (hp.getHealth() < 1)
         {
             AddReward(-1f);         
-            Debug.Log(this.gameObject.name + " Score: " + GetCumulativeReward());
-            Destroy(this);
+            Debug.Log(this.gameObject.name + " Died and Score: " + GetCumulativeReward());
+            this.gameObject.SetActive(false);
         }
 
     }

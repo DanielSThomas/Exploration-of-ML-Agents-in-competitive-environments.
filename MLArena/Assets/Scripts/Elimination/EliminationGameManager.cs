@@ -46,7 +46,7 @@ public class EliminationGameManager : MonoBehaviour
     {
         //Enviroment Timer
         matchtimer += 1;
-        if(matchtimer > maxSteps)
+        if(matchtimer >= maxSteps)
         {
             redTeamAgents.GroupEpisodeInterrupted();
             blueTeamAgents.GroupEpisodeInterrupted();
