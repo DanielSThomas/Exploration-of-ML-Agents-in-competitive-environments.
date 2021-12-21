@@ -8,6 +8,9 @@ TagManager:
   - Target
   - RedTeam
   - BlueTeam
+  - Wall
+  - BlueBullet
+  - RedBullet
   layers:
   - Default
   - TransparentFX
@@ -19,9 +22,9 @@ TagManager:
   - FakeWall
   - RedTeam
   - BlueTeam
-  - 
-  - 
-  - 
+  - Wall
+  - BlueBullet
+  - RedBullet
   - 
   - 
   - 

@@ -5,26 +5,20 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
 
-    private int bulletTeam;
-    [SerializeField] int damage;
-    [SerializeField] int bulletLifeTime;
-    private int bulletTimer = 0;
-
-    public Bullet(int _bulletTeam)
-    {
-        bulletTeam = _bulletTeam;
-    }
-   
-
+    [SerializeField] private int bulletTeam;
+    [SerializeField] private int damage;
+    [SerializeField] private int bulletLifeTime;
+    [SerializeField] private float speed;
+    
     // Update is called once per frame
     void Update()
     {
-        transform.position += Vector3.forward;
+        transform.position += transform.forward * speed;
 
-        bulletTimer += 1;
-        if (bulletTimer >= bulletLifeTime)
+        bulletLifeTime -= 1;
+        if (bulletLifeTime <= 0)
         {
-            Destroy(this);
+            Destroy(this.gameObject);
         }
 
     }
@@ -36,8 +30,10 @@ public class Bullet : MonoBehaviour
         if (hp != null && hitAgent.getTeam() != bulletTeam)
         {
             hp.setHealth(damage);
+            Destroy(this.gameObject);
         }
-        Destroy(this);
+
+        Destroy(this.gameObject);
     }
 
 

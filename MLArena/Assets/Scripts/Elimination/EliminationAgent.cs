@@ -10,16 +10,36 @@ public class EliminationAgent : Agent
 
     [SerializeField] private float speed = 10;
     private Rigidbody rb;
-    private Health hp; 
+    private Health hp;
+    private MeshRenderer mr;
     [SerializeField] private Transform spawn;
     [SerializeField] private float meanReward;
-    [SerializeField] int team;
+    [SerializeField] private int team;
+    [SerializeField] private Transform bulletSpawn;
+    [SerializeField] private GameObject bulletobject;
+
+    [SerializeField] private float firerate;
+    private float nextShoot;
+    private bool canShoot = true;
+    
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         hp = GetComponent<Health>();
+
+        mr = GetComponent<MeshRenderer>();
+
+        if (team == 0)
+        {
+            mr.material.color = Color.red;
+        }
+        else if (team == 1)
+        {
+            mr.material.color = Color.blue;
+        }
+
     }
 
     // Update is called once per frame
@@ -40,7 +60,7 @@ public class EliminationAgent : Agent
 
     public override void CollectObservations(VectorSensor sensor)
     {
-        //sensor.AddObservation(rb.transform.localPosition);
+        sensor.AddObservation(canShoot); // check if we can shoot
 
         //sensor.AddObservation(rb.velocity.x);
         //sensor.AddObservation(rb.velocity.z);
@@ -54,6 +74,7 @@ public class EliminationAgent : Agent
 
         int horizontalDir = actionBuffers.DiscreteActions[0];
         int verticalDir = actionBuffers.DiscreteActions[1];
+        int shooting = actionBuffers.DiscreteActions[2];
 
         switch (horizontalDir)
         {
@@ -67,6 +88,12 @@ public class EliminationAgent : Agent
             case 0: movedir.z = 0; break;
             case 1: movedir.z = 1; break;
             case 2: movedir.z = -1; break;
+        }
+
+        switch (shooting)
+        {
+            case 0: break;  
+            case 1: Shoot(); break;
         }
 
 
@@ -106,9 +133,37 @@ public class EliminationAgent : Agent
             case 1: discreteActionsOut[1] = 1; break;
         }
 
+        if(Input.GetKey(KeyCode.Space))
+        {
+            discreteActionsOut[2] = 1; 
+        }
+        else
+        {
+            discreteActionsOut[2] = 0;
+        }
+
 
     }
 
+    private void Shoot()
+    {
+        if (Time.time > nextShoot)
+        {
+            nextShoot = Time.time + firerate;
+
+            canShoot = true;
+        }
+
+        if(canShoot == true)
+        {
+            Instantiate(bulletobject, bulletSpawn.position, bulletSpawn.rotation);
+
+            canShoot = false;
+        }
+
+        
+
+    }
 
     public int getTeam()
     {
