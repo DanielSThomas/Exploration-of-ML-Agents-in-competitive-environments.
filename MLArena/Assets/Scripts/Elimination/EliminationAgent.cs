@@ -13,6 +13,7 @@ public class EliminationAgent : Agent
     private Health hp; 
     [SerializeField] private Transform spawn;
     [SerializeField] private float meanReward;
+    [SerializeField] int team;
 
     // Start is called before the first frame update
     void Start()
@@ -81,8 +82,8 @@ public class EliminationAgent : Agent
         if (hp.getHealth() < 1)
         {
             AddReward(-1f);         
-            Debug.Log(this.gameObject.name + " Score: " + GetCumulativeReward());                   
-            EndEpisode();
+            Debug.Log(this.gameObject.name + " Score: " + GetCumulativeReward());
+            Destroy(this);
         }
 
     }
@@ -107,6 +108,14 @@ public class EliminationAgent : Agent
 
 
     }
+
+
+
+    public int getTeam()
+    {
+        return team;
+    }
+
 
 
 }
