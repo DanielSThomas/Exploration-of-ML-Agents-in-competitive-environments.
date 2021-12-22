@@ -74,7 +74,8 @@ public class EliminationAgent : Agent
 
         int horizontalDir = actionBuffers.DiscreteActions[0];
         int verticalDir = actionBuffers.DiscreteActions[1];
-        int shooting = actionBuffers.DiscreteActions[2];
+        int rotDir = actionBuffers.DiscreteActions[2];
+        int shooting = actionBuffers.DiscreteActions[3];
 
         switch (horizontalDir)
         {
@@ -90,12 +91,22 @@ public class EliminationAgent : Agent
             case 2: movedir.z = -1; break;
         }
 
+        switch (rotDir)
+        {
+            case 0: rotDir = 0; break;
+            case 1: rotDir = 10; break;
+            case 2: rotDir = -10; break;
+        }
+
+
         switch (shooting)
         {
             case 0: break;  
             case 1: Shoot(); break;
         }
 
+        Quaternion deltaRotation = Quaternion.Euler(new Vector3(0,rotDir,0));
+        rb.MoveRotation(rb.rotation * deltaRotation);
 
         rb.AddForce(movedir * speed);
 
@@ -133,13 +144,26 @@ public class EliminationAgent : Agent
             case 1: discreteActionsOut[1] = 1; break;
         }
 
-        if(Input.GetKey(KeyCode.Space))
+        if (Input.GetKey(KeyCode.K))
         {
-            discreteActionsOut[2] = 1; 
+            discreteActionsOut[2] = 1;
+        }
+        else if (Input.GetKey(KeyCode.L))
+        {
+            discreteActionsOut[2] = 2;
         }
         else
         {
             discreteActionsOut[2] = 0;
+        }
+
+        if (Input.GetKey(KeyCode.Space))
+        {
+            discreteActionsOut[3] = 1; 
+        }
+        else
+        {
+            discreteActionsOut[3] = 0;
         }
 
 

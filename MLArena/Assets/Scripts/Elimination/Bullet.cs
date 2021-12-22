@@ -29,7 +29,7 @@ public class Bullet : MonoBehaviour
         EliminationAgent hitAgent = other.GetComponent<EliminationAgent>();
         if (hp != null && hitAgent.getTeam() != bulletTeam)
         {
-            hp.setHealth(damage);
+            hp.setHealth(hp.getHealth() - damage);
             Destroy(this.gameObject);
         }
 

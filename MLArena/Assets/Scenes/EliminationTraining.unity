@@ -410,7 +410,7 @@ Transform:
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &914205547
 PrefabInstance:
@@ -494,7 +494,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1125795225162279385, guid: 7fd09fe99bf96f14a8972b828efc61d7, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1125795225162279385, guid: 7fd09fe99bf96f14a8972b828efc61d7, type: 3}
       propertyPath: m_LocalScale.x
@@ -677,10 +677,6 @@ PrefabInstance:
       propertyPath: spawn
       value: 
       objectReference: {fileID: 445367080}
-    - target: {fileID: 6203896011107645362, guid: 432841a725ce0a64788941c0cec7b86a, type: 3}
-      propertyPath: firerate
-      value: 0.6
-      objectReference: {fileID: 0}
     - target: {fileID: 6203896011107645367, guid: 432841a725ce0a64788941c0cec7b86a, type: 3}
       propertyPath: m_Name
       value: EliminationAgent
