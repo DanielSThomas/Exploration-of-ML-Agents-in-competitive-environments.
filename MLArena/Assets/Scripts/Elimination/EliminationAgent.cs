@@ -180,7 +180,10 @@ public class EliminationAgent : Agent
 
         if(canShoot == true)
         {
-            Instantiate(bulletobject, bulletSpawn.position, bulletSpawn.rotation);
+            GameObject _bullet = Instantiate(bulletobject, bulletSpawn.position, bulletSpawn.rotation);
+            _bullet.GetComponent<Bullet>().setbulletOwner(this);
+            _bullet.GetComponent<Bullet>().setbulletTeam(team);
+
 
             canShoot = false;
         }

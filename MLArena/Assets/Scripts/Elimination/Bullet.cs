@@ -9,7 +9,24 @@ public class Bullet : MonoBehaviour
     [SerializeField] private int damage;
     [SerializeField] private int bulletLifeTime;
     [SerializeField] private float speed;
-    
+    [SerializeField] private EliminationAgent bulletOwner;
+    [SerializeField] MeshRenderer mr;
+
+
+    private void Start()
+    {
+        mr = GetComponent<MeshRenderer>();
+
+        if (bulletTeam == 0)
+        {
+            mr.material.color = Color.red;
+        }
+        else if (bulletTeam == 1)
+        {
+            mr.material.color = Color.blue;
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -34,6 +51,26 @@ public class Bullet : MonoBehaviour
         }
 
         Destroy(this.gameObject);
+    }
+
+    public EliminationAgent getbulletOwner()
+    {
+        return bulletOwner;
+    }
+
+    public void setbulletOwner(EliminationAgent value)
+    {
+        bulletOwner = value;
+    }
+
+    public int getbulletTeam()
+    {
+        return bulletTeam;
+    }
+
+    public void setbulletTeam(int value)
+    {
+        bulletTeam = value;
     }
 
 

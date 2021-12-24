@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2432733460895137413}
   - component: {fileID: 95247123585496202}
   m_Layer: 12
-  m_Name: RedBullet
+  m_Name: Bullet
   m_TagString: RedBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -113,3 +113,5 @@ MonoBehaviour:
   damage: 1
   bulletLifeTime: 500
   speed: 0.05
+  bulletOwner: {fileID: 0}
+  mr: {fileID: 0}
