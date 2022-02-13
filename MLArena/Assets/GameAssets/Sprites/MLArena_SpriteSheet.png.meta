@@ -179,6 +179,12 @@ TextureImporter:
   - first:
       213: 1867585497122447179
     second: MLArena_SpriteSheet_58
+  - first:
+      213: 2023548369093832910
+    second: MLArena_SpriteSheet_59
+  - first:
+      213: 2403800042563360191
+    second: MLArena_SpriteSheet_60
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -1502,6 +1508,48 @@ TextureImporter:
       bones: []
       spriteID: b4f97af5d1ffae910800000000000000
       internalID: 1867585497122447179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MLArena_SpriteSheet_59
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 51
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec0b8ad3586151c10800000000000000
+      internalID: 2023548369093832910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MLArena_SpriteSheet_60
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 51
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb5de0027630c5120800000000000000
+      internalID: 2403800042563360191
       vertices: []
       indices: 
       edges: []
