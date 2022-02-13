@@ -18,6 +18,7 @@ public class EliminationAgent : Agent
     [SerializeField] private int team;
     [SerializeField] private Transform bulletSpawn;
     [SerializeField] private GameObject bulletobject;
+    [SerializeField] private Rigidbody2D turretPivot;
 
     [SerializeField] private float firerate;
     private float nextShoot;
@@ -76,14 +77,14 @@ public class EliminationAgent : Agent
 
         int horizontalDir = actionBuffers.DiscreteActions[0];
         int verticalDir = actionBuffers.DiscreteActions[1];
-        int rotDir = actionBuffers.DiscreteActions[2];
+        int turretRotDir = actionBuffers.DiscreteActions[2];
         int shooting = actionBuffers.DiscreteActions[3];
 
         switch (horizontalDir)
         {
-            case 0: movedir.x = 0; break;
-            case 1: movedir.x = 1; break;
-            case 2: movedir.x = -1; break;
+            case 0: horizontalDir = 0; break;
+            case 1: horizontalDir = -10; break;
+            case 2: horizontalDir = 10; break;
         }
 
         switch (verticalDir)
@@ -93,11 +94,11 @@ public class EliminationAgent : Agent
             case 2: movedir.y = -1; break;
         }
 
-        switch (rotDir)
+        switch (turretRotDir)
         {
-            case 0: rotDir = 0; break;
-            case 1: rotDir = 10; break;
-            case 2: rotDir = -10; break;
+            case 0: turretRotDir = 0; break;
+            case 1: turretRotDir = 10; break;
+            case 2: turretRotDir = -10; break;
         }
 
 
@@ -108,9 +109,11 @@ public class EliminationAgent : Agent
         }
 
         
-        rb.MoveRotation(rb.rotation += rotDir * turnspeed);
+        rb.MoveRotation(rb.rotation += horizontalDir * turnspeed * Time.deltaTime);
 
-        rb.AddForce(movedir.normalized * speed);
+        turretPivot.MoveRotation(turretPivot.rotation += turretRotDir * turnspeed * Time.deltaTime);
+
+        rb.velocity = (Vector2)transform.up * movedir.y * speed * Time.deltaTime;
 
 
         //Rewards
