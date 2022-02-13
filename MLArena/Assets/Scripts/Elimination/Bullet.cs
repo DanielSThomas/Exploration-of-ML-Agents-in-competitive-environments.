@@ -19,10 +19,14 @@ public class Bullet : MonoBehaviour
 
         if (bulletTeam == 0)
         {
+            this.tag = "RedBullet";
+            this.gameObject.layer = 12;
             sr.color = Color.red;
         }
         else if (bulletTeam == 1)
         {
+            this.tag = "BlueBullet";
+            this.gameObject.layer = 11;
             sr.color = Color.blue;
         }
     }

@@ -12,7 +12,6 @@ public class EliminationAgent : Agent
     [SerializeField] private float turnspeed = 10;
     private Rigidbody2D rb;
     private Health hp;
-    private MeshRenderer mr;
     [SerializeField] private Transform spawn;
     [SerializeField] private float meanReward;
     [SerializeField] private int team;
@@ -33,7 +32,7 @@ public class EliminationAgent : Agent
 
         //mr = GetComponent<MeshRenderer>();
 
-        //update team colour----
+        //update team colour and tags and sensor layers----
         //if (team == 0)
         //{
         //    mr.material.color = Color.red;
