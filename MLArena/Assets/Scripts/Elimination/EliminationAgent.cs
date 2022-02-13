@@ -9,7 +9,8 @@ public class EliminationAgent : Agent
 {
 
     [SerializeField] private float speed = 10;
-    private Rigidbody rb;
+    [SerializeField] private float turnspeed = 10;
+    private Rigidbody2D rb;
     private Health hp;
     private MeshRenderer mr;
     [SerializeField] private Transform spawn;
@@ -26,19 +27,20 @@ public class EliminationAgent : Agent
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
+        rb = GetComponent<Rigidbody2D>();
         hp = GetComponent<Health>();
 
-        mr = GetComponent<MeshRenderer>();
+        //mr = GetComponent<MeshRenderer>();
 
-        if (team == 0)
-        {
-            mr.material.color = Color.red;
-        }
-        else if (team == 1)
-        {
-            mr.material.color = Color.blue;
-        }
+        //update team colour----
+        //if (team == 0)
+        //{
+        //    mr.material.color = Color.red;
+        //}
+        //else if (team == 1)
+        //{
+        //    mr.material.color = Color.blue;
+        //}
 
     }
 
@@ -51,8 +53,8 @@ public class EliminationAgent : Agent
     public override void OnEpisodeBegin()
     {
         this.gameObject.SetActive(true);
-        rb.angularVelocity = Vector3.zero;
-        rb.velocity = Vector3.zero;
+        rb.angularVelocity = 0;
+        rb.velocity = Vector2.zero;
         this.transform.localPosition = spawn.position;
         hp.setHealth(3);
 
@@ -70,7 +72,7 @@ public class EliminationAgent : Agent
     {
         // Actions
 
-        Vector3 movedir = new Vector3(0, 0, 0);
+        Vector2 movedir = new Vector2(0, 0);
 
         int horizontalDir = actionBuffers.DiscreteActions[0];
         int verticalDir = actionBuffers.DiscreteActions[1];
@@ -86,9 +88,9 @@ public class EliminationAgent : Agent
 
         switch (verticalDir)
         {
-            case 0: movedir.z = 0; break;
-            case 1: movedir.z = 1; break;
-            case 2: movedir.z = -1; break;
+            case 0: movedir.y = 0; break;
+            case 1: movedir.y = 1; break;
+            case 2: movedir.y = -1; break;
         }
 
         switch (rotDir)
@@ -105,10 +107,10 @@ public class EliminationAgent : Agent
             case 1: Shoot(); break;
         }
 
-        Quaternion deltaRotation = Quaternion.Euler(new Vector3(0,rotDir,0));
-        rb.MoveRotation(rb.rotation * deltaRotation);
+        
+        rb.MoveRotation(rb.rotation += rotDir * turnspeed);
 
-        rb.AddForce(movedir * speed);
+        rb.AddForce(movedir.normalized * speed);
 
 
         //Rewards

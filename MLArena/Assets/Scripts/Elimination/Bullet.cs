@@ -10,27 +10,27 @@ public class Bullet : MonoBehaviour
     [SerializeField] private int bulletLifeTime;
     [SerializeField] private float speed;
     [SerializeField] private EliminationAgent bulletOwner;
-    [SerializeField] MeshRenderer mr;
+    [SerializeField] SpriteRenderer sr;
 
 
     private void Start()
     {
-        mr = GetComponent<MeshRenderer>();
+        sr = GetComponent<SpriteRenderer>();
 
         if (bulletTeam == 0)
         {
-            mr.material.color = Color.red;
+            sr.color = Color.red;
         }
         else if (bulletTeam == 1)
         {
-            mr.material.color = Color.blue;
+            sr.color = Color.blue;
         }
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.position += transform.forward * speed;
+        transform.position += transform.up * speed;
 
         bulletLifeTime -= 1;
         if (bulletLifeTime <= 0)
@@ -40,7 +40,7 @@ public class Bullet : MonoBehaviour
 
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         Health hp = other.GetComponent<Health>();
         EliminationAgent hitAgent = other.GetComponent<EliminationAgent>();
