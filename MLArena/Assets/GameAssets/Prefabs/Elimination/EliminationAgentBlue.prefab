@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4917547411430874609}
   - component: {fileID: 4917547411430874608}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Tank_Body
-  m_TagString: Untagged
+  m_TagString: BlueTeam
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 158542660799358682}
   m_Layer: 9
   m_Name: Turret_Pivot
-  m_TagString: Untagged
+  m_TagString: BlueTeam
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -154,14 +154,14 @@ MonoBehaviour:
   - Wall
   - RedTeam
   - BlueTeam
-  - BlueBullet
+  - RedBullet
   m_RaysPerDirection: 5
   m_MaxRayDegrees: 70
   m_SphereCastRadius: 0.5
   m_RayLength: 44
   m_RayLayerMask:
     serializedVersion: 2
-    m_Bits: 4294966779
+    m_Bits: 4294964680
   m_ObservationStacks: 1
   rayHitColor: {r: 1, g: 0, b: 0, a: 1}
   rayMissColor: {r: 1, g: 1, b: 1, a: 1}
@@ -177,7 +177,7 @@ GameObject:
   - component: {fileID: 4917547412264403756}
   m_Layer: 9
   m_Name: Tank_Turret
-  m_TagString: Untagged
+  m_TagString: BlueTeam
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -238,7 +238,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 29143667591794786, guid: 1bf64aceb23130d42bc66c1156ef9008, type: 3}
+  m_Sprite: {fileID: 647406412915625284, guid: 1bf64aceb23130d42bc66c1156ef9008, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -261,7 +261,7 @@ GameObject:
   - component: {fileID: 6203896010511617687}
   m_Layer: 9
   m_Name: Gun
-  m_TagString: RedTeam
+  m_TagString: BlueTeam
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -304,7 +304,7 @@ GameObject:
   - component: {fileID: 4242205098267900495}
   - component: {fileID: 4242205098267900494}
   m_Layer: 9
-  m_Name: EliminationAgent
+  m_Name: EliminationAgentBlue
   m_TagString: BlueTeam
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -352,7 +352,7 @@ MonoBehaviour:
   m_InferenceDevice: 0
   m_BehaviorType: 1
   m_BehaviorName: My Behavior
-  TeamId: 0
+  TeamId: 1
   m_UseChildSensors: 1
   m_UseChildActuators: 1
   m_ObservableAttributeHandling: 0
@@ -421,7 +421,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 1
+  m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
