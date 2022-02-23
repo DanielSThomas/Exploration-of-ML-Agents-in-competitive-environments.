@@ -201,6 +201,11 @@ public class EliminationAgent : Agent
         return team;
     }
 
+    public void setSpawn(Transform _spawn)
+    {
+        spawn = _spawn;
+    }
+
 
 
 }
