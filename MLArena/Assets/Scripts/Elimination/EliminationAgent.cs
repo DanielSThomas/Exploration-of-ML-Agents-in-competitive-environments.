@@ -52,13 +52,16 @@ public class EliminationAgent : Agent
 
     public override void OnEpisodeBegin()
     {
-        this.gameObject.SetActive(true);
+        //this.gameObject.SetActive(true);
         rb.angularVelocity = 0;
         rb.velocity = Vector2.zero;
-        this.transform.localPosition = spawn.position;
+        rb.rotation = 0;
+        turretPivot.rotation = 0;
+        //this.transform.localPosition = spawn.position;
         hp.setHealth(3);
-
     }
+
+   
 
     public override void CollectObservations(VectorSensor sensor)
     {
@@ -203,7 +206,7 @@ public class EliminationAgent : Agent
 
     public void setSpawn(Transform _spawn)
     {
-        spawn = _spawn;
+        this.transform.localPosition = _spawn.position;
     }
 
 

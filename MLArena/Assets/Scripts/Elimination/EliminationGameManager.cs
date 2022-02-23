@@ -8,7 +8,9 @@ public class EliminationGameManager : MonoBehaviour
 
 
     [SerializeField] private int maxSteps = 10000;
-    int matchtimer;
+    [SerializeField] int matchtimer;
+
+    [SerializeField] private int roundNumber = 0;
 
     [SerializeField] private int redTeamBotCount;
     [SerializeField] private int blueTeamBotCount;
@@ -17,17 +19,20 @@ public class EliminationGameManager : MonoBehaviour
     [SerializeField] private GameObject blueTeamBotPrefab;
 
     [SerializeField] private GameObject[] levels;
-    [SerializeField] private LevelInfo currentLevel;
+    [SerializeField] private GameObject currentLevel;
+    [SerializeField] private LevelInfo currentLevelInfo;
 
-    [SerializeField] private List<GameObject> allAgentObjects = new List<GameObject>();
+    [SerializeField] private List<GameObject> redAgentObjects = new List<GameObject>();
+
+    [SerializeField] private List<GameObject> blueAgentObjects = new List<GameObject>();
 
     [SerializeField] private SimpleMultiAgentGroup redTeamAgents;
     [SerializeField] private SimpleMultiAgentGroup blueTeamAgents;
 
     [SerializeField] private int scoreTarget;
-    
-    private int redTeamScore;
-    private int blueTeamScore;
+
+    [SerializeField] private int redTeamScore;
+    [SerializeField] private int blueTeamScore;
 
 
     // Start is called before the first frame update
@@ -45,16 +50,13 @@ public class EliminationGameManager : MonoBehaviour
         blueTeamAgents = new SimpleMultiAgentGroup();
 
 
-        for (int i = 0; i < allAgentObjects.Count; i++)
+        for (int i = 0; i < redAgentObjects.Count; i++)
+        {     
+            redTeamAgents.RegisterAgent(redAgentObjects[i].GetComponent<EliminationAgent>());   
+        }
+        for (int i = 0; i < redAgentObjects.Count; i++)
         {
-            if(allAgentObjects[i].GetComponent<EliminationAgent>().getTeam() == 0)
-            {
-                redTeamAgents.RegisterAgent(allAgentObjects[i].GetComponent<EliminationAgent>());
-            }
-            else
-            {
-                blueTeamAgents.RegisterAgent(allAgentObjects[i].GetComponent<EliminationAgent>());
-            }
+            blueTeamAgents.RegisterAgent(blueAgentObjects[i].GetComponent<EliminationAgent>());
         }
 
     }
@@ -65,20 +67,22 @@ public class EliminationGameManager : MonoBehaviour
         matchtimer += 1;
         if(matchtimer >= maxSteps)
         {
+            Debug.Log("Time Limit Reached. Tie");
             redTeamAgents.GroupEpisodeInterrupted();
             blueTeamAgents.GroupEpisodeInterrupted();
+            
             RoundStart();
         }
 
         if (redTeamScore == scoreTarget)
         {
-            
+            Debug.Log("Red Team Won");
             RoundOver(redTeamAgents,blueTeamAgents);
         }
 
         if (blueTeamScore == scoreTarget)
         {
-            
+            Debug.Log("Blue Team Won");
             RoundOver(blueTeamAgents,redTeamAgents);
         }
 
@@ -93,7 +97,7 @@ public class EliminationGameManager : MonoBehaviour
         //Spawn in bots
         for (int i = 0; i < redTeamBotCount; i++)
         {
-            int randomNo = Random.Range(0, currentLevel.getSpawnPoints().Length);
+            int randomNo = Random.Range(0, currentLevelInfo.getSpawnPoints().Length);
 
             bool retrySpawn = false;
 
@@ -108,12 +112,22 @@ public class EliminationGameManager : MonoBehaviour
 
             if(retrySpawn == false)
             {
+                GameObject agentObject;
                 //On First Spawn Only//
-                GameObject agentObject = Instantiate(redTeamBotPrefab);
+                if (roundNumber == 0)
+                {
+                    agentObject = Instantiate(redTeamBotPrefab);
 
-                agentObject.GetComponent<EliminationAgent>().setSpawn(currentLevel.getSpawnPoints()[randomNo]);
+                    redAgentObjects.Add(agentObject);
+                }
+                else
+                {
+                    agentObject = redAgentObjects[i];
+                    agentObject.SetActive(true);
+                }
 
-                allAgentObjects.Add(agentObject);
+                agentObject.GetComponent<EliminationAgent>().setSpawn(currentLevelInfo.getSpawnPoints()[randomNo]);
+
 
                 occupiedSpawns.Add(randomNo);
             }
@@ -126,7 +140,7 @@ public class EliminationGameManager : MonoBehaviour
         // ! So much for DRY code !
         for (int i = 0; i < blueTeamBotCount; i++)
         {
-            int randomNo = Random.Range(0, currentLevel.getSpawnPoints().Length);
+            int randomNo = Random.Range(0, currentLevelInfo.getSpawnPoints().Length);
 
             bool retrySpawn = false;
 
@@ -141,12 +155,21 @@ public class EliminationGameManager : MonoBehaviour
 
             if (retrySpawn == false)
             {
+                GameObject agentObject;
                 //On First Spawn Only//
-                GameObject agentObject = Instantiate(blueTeamBotPrefab);
+                if (roundNumber == 0)
+                {
+                    agentObject = Instantiate(blueTeamBotPrefab);
 
-                agentObject.GetComponent<EliminationAgent>().setSpawn(currentLevel.getSpawnPoints()[randomNo]);
+                    blueAgentObjects.Add(agentObject);
+                }
+                else
+                {
+                    agentObject = blueAgentObjects[i];
+                    agentObject.SetActive(true);
+                }
 
-                allAgentObjects.Add(agentObject);
+                agentObject.GetComponent<EliminationAgent>().setSpawn(currentLevelInfo.getSpawnPoints()[randomNo]);
 
                 occupiedSpawns.Add(randomNo);
             }
@@ -163,32 +186,38 @@ public class EliminationGameManager : MonoBehaviour
     {
         int randomNo = Random.Range(0, levels.Length);
 
-        currentLevel = levels[randomNo].GetComponent<LevelInfo>();
+        currentLevelInfo = levels[randomNo].GetComponent<LevelInfo>();
 
-        Instantiate(levels[randomNo]);
+        currentLevel = Instantiate(levels[randomNo]);
 
     }
    
 
     private void RoundStart()
     {
+        Destroy(currentLevel);
+
         matchtimer = 0;
         redTeamScore = 0;
         blueTeamScore = 0;
-        //Revive all agents
-        //Respawn
+        roundNumber++;
+
+        NewRandomLevel();
+        SpawnAgents();
+        
     }
 
 
     private void RoundOver(SimpleMultiAgentGroup winningTeam, SimpleMultiAgentGroup losingTeam)
     {
-
-        Debug.Log(winningTeam + " Won");
+        
         winningTeam.AddGroupReward(1 - matchtimer / maxSteps);
         losingTeam.AddGroupReward(-1);
+            
 
         redTeamAgents.EndGroupEpisode();
         blueTeamAgents.EndGroupEpisode();
+        
 
         RoundStart();
     }
