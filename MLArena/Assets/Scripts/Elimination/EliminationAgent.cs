@@ -42,7 +42,7 @@ public class EliminationAgent : Agent
 
     public override void OnEpisodeBegin()
     {
-        
+        SetReward(0);
         rb.angularVelocity = 0;
         rb.velocity = Vector2.zero;
         rb.rotation = 0;
