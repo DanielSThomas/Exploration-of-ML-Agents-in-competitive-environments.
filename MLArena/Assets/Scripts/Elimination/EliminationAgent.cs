@@ -7,6 +7,7 @@ using Unity.MLAgents.Actuators;
 
 public class EliminationAgent : Agent
 {
+    private EliminationGameManager eliminationGameManager;
 
     [SerializeField] private float speed = 10;
     [SerializeField] private float turnspeed = 10;
@@ -14,7 +15,7 @@ public class EliminationAgent : Agent
     private Health hp;
     [SerializeField] private Transform spawn;
     [SerializeField] private float meanReward;
-    [SerializeField] private int team;
+    [SerializeField] private int team; // 0 = Red Team  1 = Blue Team
     [SerializeField] private Transform bulletSpawn;
     [SerializeField] private GameObject bulletobject;
     [SerializeField] private Rigidbody2D turretPivot;
@@ -27,20 +28,9 @@ public class EliminationAgent : Agent
     // Start is called before the first frame update
     void Start()
     {
+        eliminationGameManager = GameObject.Find("EliminationGameManager").GetComponent<EliminationGameManager>();
         rb = GetComponent<Rigidbody2D>();
         hp = GetComponent<Health>();
-
-        //mr = GetComponent<MeshRenderer>();
-
-        //update team colour and tags and sensor layers----
-        //if (team == 0)
-        //{
-        //    mr.material.color = Color.red;
-        //}
-        //else if (team == 1)
-        //{
-        //    mr.material.color = Color.blue;
-        //}
 
     }
 
@@ -52,12 +42,11 @@ public class EliminationAgent : Agent
 
     public override void OnEpisodeBegin()
     {
-        //this.gameObject.SetActive(true);
+        
         rb.angularVelocity = 0;
         rb.velocity = Vector2.zero;
         rb.rotation = 0;
         turretPivot.rotation = 0;
-        //this.transform.localPosition = spawn.position;
         hp.setHealth(3);
     }
 
@@ -121,13 +110,28 @@ public class EliminationAgent : Agent
         //Rewards
 
         meanReward = GetCumulativeReward();
-        
+
+        //Idle Penalty
         AddReward(-1f / MaxStep);
 
         if (hp.getHealth() < 1)
         {
-            AddReward(-1f);         
-            Debug.Log(this.gameObject.name + " Died and Score: " + GetCumulativeReward());
+            AddReward(-1f); 
+            
+            //Give blue team a score
+            if(team == 0)
+            {
+                eliminationGameManager.addBlueScore();
+            }
+            //Give red team a score
+            if (team == 1)
+            {
+                eliminationGameManager.addRedScore();
+            }
+
+
+
+            Debug.Log(this.gameObject.name + " Died with a score of: " + GetCumulativeReward());
             this.gameObject.SetActive(false);
         }
 
@@ -209,6 +213,10 @@ public class EliminationAgent : Agent
         this.transform.localPosition = _spawn.position;
     }
 
+    public void giveReward(float value)
+    {
+        AddReward(value);
+    }
 
 
 }

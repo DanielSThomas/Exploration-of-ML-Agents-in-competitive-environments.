@@ -26,10 +26,9 @@ public class EliminationGameManager : MonoBehaviour
 
     [SerializeField] private List<GameObject> blueAgentObjects = new List<GameObject>();
 
-    [SerializeField] private SimpleMultiAgentGroup redTeamAgents;
-    [SerializeField] private SimpleMultiAgentGroup blueTeamAgents;
+    private SimpleMultiAgentGroup redTeamAgents;
+    private SimpleMultiAgentGroup blueTeamAgents;
 
-    [SerializeField] private int scoreTarget;
 
     [SerializeField] private int redTeamScore;
     [SerializeField] private int blueTeamScore;
@@ -74,13 +73,13 @@ public class EliminationGameManager : MonoBehaviour
             RoundStart();
         }
 
-        if (redTeamScore == scoreTarget)
+        if (redTeamScore == blueTeamBotCount)
         {
             Debug.Log("Red Team Won");
             RoundOver(redTeamAgents,blueTeamAgents);
         }
 
-        if (blueTeamScore == scoreTarget)
+        if (blueTeamScore == redTeamBotCount)
         {
             Debug.Log("Blue Team Won");
             RoundOver(blueTeamAgents,redTeamAgents);
@@ -228,19 +227,19 @@ public class EliminationGameManager : MonoBehaviour
         return redTeamScore;
     }
 
-    public void setRedScore(int value)
+    public void addRedScore()
     {
-        redTeamScore = value;
+        redTeamScore++;
     }
 
     public int getBlueScore()
     {
-        return redTeamScore;
+        return blueTeamScore;
     }
 
-    public void setBlueScore(int value)
+    public void addBlueScore()
     {
-        redTeamScore = value;
+        blueTeamScore ++;
     }
 
 

@@ -56,8 +56,24 @@ public class Bullet : MonoBehaviour
         if (hp != null && hitAgent.getTeam() != bulletTeam)
         {
             hp.setHealth(hp.getHealth() - damage);
+
+            //Give reward for hitting an enemy
+            bulletOwner.AddReward(1/3f);
+
+            //Minus reward for getting hit
+            hitAgent.AddReward(-1/3f);
+
+            if (hp.getHealth() == 0)
+            {
+                //Give reward for elim
+                bulletOwner.AddReward(1);
+            }
+
+
             Destroy(this.gameObject);
         }
+        //Miss penalty
+        bulletOwner.AddReward(-0.1f);
 
         Destroy(this.gameObject);
     }
