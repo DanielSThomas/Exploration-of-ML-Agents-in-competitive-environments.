@@ -262,10 +262,9 @@ MonoBehaviour:
   m_DetectableTags:
   - Wall
   - RedTeam
-  - BlueTeam
   - RedBullet
-  m_RaysPerDirection: 5
-  m_MaxRayDegrees: 70
+  m_RaysPerDirection: 10
+  m_MaxRayDegrees: 180
   m_SphereCastRadius: 0.5
   m_RayLength: 44
   m_RayLayerMask:
@@ -461,8 +460,8 @@ MonoBehaviour:
     hasUpgradedBrainParametersWithActionSpec: 1
   m_Model: {fileID: 0}
   m_InferenceDevice: 0
-  m_BehaviorType: 1
-  m_BehaviorName: My Behavior
+  m_BehaviorType: 0
+  m_BehaviorName: EliminationAgent
   TeamId: 1
   m_UseChildSensors: 1
   m_UseChildActuators: 1
@@ -518,7 +517,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a41f632584625ad41a796f2aba5d1f1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  health: 3
 --- !u!50 &4242205098267900495
 Rigidbody2D:
   serializedVersion: 4
@@ -581,4 +580,4 @@ MonoBehaviour:
   - {x: 0.37229443, y: -0.3691039, z: 0}
   m_ShapePathHash: 447784005
   m_Mesh: {fileID: 0}
-  m_InstanceId: -1226
+  m_InstanceId: 28384

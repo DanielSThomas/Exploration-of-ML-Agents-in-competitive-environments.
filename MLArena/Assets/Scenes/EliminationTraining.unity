@@ -152,11 +152,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee6ebf9ce085f0946bff7d798c8b6c12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSteps: 5000
+  maxSteps: 10000
   matchtimer: 0
   roundNumber: 0
-  redTeamBotCount: 2
-  blueTeamBotCount: 2
+  redTeamBotCount: 1
+  blueTeamBotCount: 1
   redTeamBotPrefab: {fileID: 8640573599010613503, guid: 6214f5a1470dfba449315f52270c1e2d, type: 3}
   blueTeamBotPrefab: {fileID: 6203896011107645367, guid: 432841a725ce0a64788941c0cec7b86a, type: 3}
   levels:
@@ -165,7 +165,6 @@ MonoBehaviour:
   currentLevelInfo: {fileID: 0}
   redAgentObjects: []
   blueAgentObjects: []
-  scoreTarget: 1
   redTeamScore: 0
   blueTeamScore: 0
 --- !u!4 &359867187
