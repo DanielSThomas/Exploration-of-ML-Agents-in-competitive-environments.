@@ -37,9 +37,9 @@ public class Bullet : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        transform.position += transform.up * speed * Time.deltaTime;
+        transform.position += transform.up * speed;
 
         bulletLifeTime -= 1;
         if (bulletLifeTime <= 0)

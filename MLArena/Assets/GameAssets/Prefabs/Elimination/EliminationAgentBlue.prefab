@@ -364,6 +364,7 @@ MonoBehaviour:
   - Wall
   - RedTeam
   - RedBullet
+  - BlueTeam
   m_RaysPerDirection: 10
   m_MaxRayDegrees: 180
   m_SphereCastRadius: 0.5
@@ -559,7 +560,7 @@ MonoBehaviour:
     VectorActionDescriptions: []
     VectorActionSpaceType: 0
     hasUpgradedBrainParametersWithActionSpec: 1
-  m_Model: {fileID: 5022602860645237092, guid: f94f8c57317f5784d87f8b7a0e730fee, type: 3}
+  m_Model: {fileID: 0}
   m_InferenceDevice: 0
   m_BehaviorType: 0
   m_BehaviorName: EliminationAgent
@@ -682,7 +683,7 @@ MonoBehaviour:
   - {x: 0.37229443, y: -0.3691039, z: 0}
   m_ShapePathHash: 447784005
   m_Mesh: {fileID: 0}
-  m_InstanceId: 36314
+  m_InstanceId: 38558
 --- !u!1 &7726643503866179063
 GameObject:
   m_ObjectHideFlags: 0

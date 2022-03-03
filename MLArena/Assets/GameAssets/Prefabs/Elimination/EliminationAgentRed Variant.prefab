@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2062095037, guid: 432841a725ce0a64788941c0cec7b86a, type: 3}
       propertyPath: m_InstanceId
-      value: -527578
+      value: -1545698
       objectReference: {fileID: 0}
     - target: {fileID: 158542660799358682, guid: 432841a725ce0a64788941c0cec7b86a, type: 3}
       propertyPath: m_RayLayerMask.m_Bits
@@ -25,7 +25,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 158542660799358682, guid: 432841a725ce0a64788941c0cec7b86a, type: 3}
       propertyPath: m_DetectableTags.Array.data[3]
-      value: BlueBullet
+      value: RedTeam
       objectReference: {fileID: 0}
     - target: {fileID: 4917547411430874610, guid: 432841a725ce0a64788941c0cec7b86a, type: 3}
       propertyPath: m_Layer

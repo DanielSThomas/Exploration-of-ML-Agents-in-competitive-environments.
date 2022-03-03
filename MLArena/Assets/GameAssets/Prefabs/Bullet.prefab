@@ -48,8 +48,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletTeam: 0
   damage: 1
-  bulletLifeTime: 2000
-  speed: 4
+  bulletLifeTime: 250
+  speed: 0.1
   bulletOwner: {fileID: 0}
   sr: {fileID: 0}
   li: {fileID: 0}

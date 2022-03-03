@@ -48,7 +48,6 @@ public class EliminationGameManager : MonoBehaviour
         redTeamAgents = new SimpleMultiAgentGroup();
         blueTeamAgents = new SimpleMultiAgentGroup();
 
-
         for (int i = 0; i < redAgentObjects.Count; i++)
         {     
             redTeamAgents.RegisterAgent(redAgentObjects[i].GetComponent<EliminationAgent>());   
@@ -76,13 +75,13 @@ public class EliminationGameManager : MonoBehaviour
         if (redTeamScore == blueTeamBotCount)
         {
             Debug.Log("Red Team Won");
-            RoundOver(redTeamAgents,blueTeamAgents);
+            RoundOver(redTeamAgents);
         }
 
         if (blueTeamScore == redTeamBotCount)
         {
             Debug.Log("Blue Team Won");
-            RoundOver(blueTeamAgents,redTeamAgents);
+            RoundOver(blueTeamAgents);
         }
 
 
@@ -221,21 +220,19 @@ public class EliminationGameManager : MonoBehaviour
     }
 
 
-    private void RoundOver(SimpleMultiAgentGroup winningTeam, SimpleMultiAgentGroup losingTeam)
+    private void RoundOver(SimpleMultiAgentGroup winningTeam)
     {
         
-        winningTeam.AddGroupReward(1 - matchtimer / maxSteps);
-        losingTeam.AddGroupReward(-1);
+        winningTeam.AddGroupReward(1 - (float)matchtimer / maxSteps);
 
-        RoundStart();
-
-
+        
+  
 
         redTeamAgents.EndGroupEpisode();
         blueTeamAgents.EndGroupEpisode();
-        
 
-        
+        RoundStart();
+
     }
 
 

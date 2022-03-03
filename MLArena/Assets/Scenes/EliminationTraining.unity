@@ -160,7 +160,7 @@ MonoBehaviour:
   redTeamBotPrefab: {fileID: 8640573599010613503, guid: 6214f5a1470dfba449315f52270c1e2d, type: 3}
   blueTeamBotPrefab: {fileID: 6203896011107645367, guid: 432841a725ce0a64788941c0cec7b86a, type: 3}
   levels:
-  - {fileID: 1551220425490093467, guid: 4646ff9ef9d43f94d8d9771c97ac8b11, type: 3}
+  - {fileID: 2581254283074040010, guid: fa397a12913330f4e98ce488f1910f16, type: 3}
   currentLevel: {fileID: 0}
   currentLevelInfo: {fileID: 0}
   redAgentObjects: []
