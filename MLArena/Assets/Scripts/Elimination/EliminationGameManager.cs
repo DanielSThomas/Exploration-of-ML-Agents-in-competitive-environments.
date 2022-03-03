@@ -59,7 +59,7 @@ public class EliminationGameManager : MonoBehaviour
 
     }
 
-    void Update()
+    void FixedUpdate()
     {
         //Enviroment Timer
         matchtimer += 1;

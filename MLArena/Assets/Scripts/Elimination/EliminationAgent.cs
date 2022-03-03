@@ -39,7 +39,7 @@ public class EliminationAgent : Agent
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         healthText.text = hp.getHealth().ToString();
     }
