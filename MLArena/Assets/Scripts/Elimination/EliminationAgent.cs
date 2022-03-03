@@ -4,11 +4,13 @@ using UnityEngine;
 using Unity.MLAgents;
 using Unity.MLAgents.Sensors;
 using Unity.MLAgents.Actuators;
+using UnityEngine.UI;
 
 public class EliminationAgent : Agent
 {
     private EliminationGameManager eliminationGameManager;
 
+    [SerializeField] private Text healthText;
     [SerializeField] private float speed = 10;
     [SerializeField] private float turnspeed = 10;
     private Rigidbody2D rb;
@@ -25,8 +27,10 @@ public class EliminationAgent : Agent
     private bool canShoot = true;
     
 
+     
+
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         eliminationGameManager = GameObject.Find("EliminationGameManager").GetComponent<EliminationGameManager>();
         rb = GetComponent<Rigidbody2D>();
@@ -37,20 +41,22 @@ public class EliminationAgent : Agent
     // Update is called once per frame
     void Update()
     {
-        
+        healthText.text = hp.getHealth().ToString();
     }
 
     public override void OnEpisodeBegin()
     {
-        SetReward(0);
         rb.angularVelocity = 0;
         rb.velocity = Vector2.zero;
         rb.rotation = 0;
         turretPivot.rotation = 0;
-        hp.setHealth(3);
+        
+        //(Both of these are being reset by the manager. For some reason OnEpisodeBegin is not always settings these values.)
+        //SetReward(0);
+        
     }
 
-   
+
 
     public override void CollectObservations(VectorSensor sensor)
     {

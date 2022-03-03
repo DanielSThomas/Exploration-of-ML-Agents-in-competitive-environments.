@@ -60,7 +60,7 @@ public class EliminationGameManager : MonoBehaviour
 
     }
 
-    void FixedUpdate()
+    void Update()
     {
         //Enviroment Timer
         matchtimer += 1;
@@ -122,11 +122,17 @@ public class EliminationGameManager : MonoBehaviour
                 else
                 {
                     agentObject = redAgentObjects[i];
-                    agentObject.SetActive(true);
+                    agentObject.SetActive(true);               
                 }
 
-                agentObject.GetComponent<EliminationAgent>().setSpawn(currentLevelInfo.getSpawnPoints()[randomNo]);
+                //Reset the agent values
+                EliminationAgent _agent = agentObject.GetComponent<EliminationAgent>();
+                Health _agentHealth = agentObject.GetComponent<Health>();
 
+                _agent.setSpawn(currentLevelInfo.getSpawnPoints()[randomNo]);
+                //Doing this in the manager rather than OnEpisodeBegin
+                _agent.SetReward(0);          
+                _agentHealth.setHealth(3);
 
                 occupiedSpawns.Add(randomNo);
             }
@@ -137,6 +143,7 @@ public class EliminationGameManager : MonoBehaviour
         }
 
         // ! So much for DRY code !
+        // Should realy find a better solution.....
         for (int i = 0; i < blueTeamBotCount; i++)
         {
             int randomNo = Random.Range(0, currentLevelInfo.getSpawnPoints().Length);
@@ -168,9 +175,16 @@ public class EliminationGameManager : MonoBehaviour
                     agentObject.SetActive(true);
                 }
 
-                agentObject.GetComponent<EliminationAgent>().setSpawn(currentLevelInfo.getSpawnPoints()[randomNo]);
+                //Reset the agent values
+                EliminationAgent _agent = agentObject.GetComponent<EliminationAgent>();
+                Health _agentHealth = agentObject.GetComponent<Health>();
 
-                occupiedSpawns.Add(randomNo);
+                _agent.setSpawn(currentLevelInfo.getSpawnPoints()[randomNo]);
+                //Doing this in the manager rather than OnEpisodeBegin
+                _agent.SetReward(0);
+                _agentHealth.setHealth(3);
+
+                occupiedSpawns.Add(randomNo);              
             }
             else if (retrySpawn == true)
             {
@@ -212,13 +226,16 @@ public class EliminationGameManager : MonoBehaviour
         
         winningTeam.AddGroupReward(1 - matchtimer / maxSteps);
         losingTeam.AddGroupReward(-1);
-            
+
+        RoundStart();
+
+
 
         redTeamAgents.EndGroupEpisode();
         blueTeamAgents.EndGroupEpisode();
         
 
-        RoundStart();
+        
     }
 
 
@@ -241,7 +258,5 @@ public class EliminationGameManager : MonoBehaviour
     {
         blueTeamScore ++;
     }
-
-
 
 }
