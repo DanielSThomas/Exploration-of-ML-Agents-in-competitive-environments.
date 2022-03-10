@@ -10,7 +10,7 @@
 
 Call UnityMLToolKit\ml-env\Scripts\activate.bat
 
-mlagents-learn Config\CoinCollector.yaml --env=MLArena --run-id=CoinCollector --time-scale=10 --force --width 1920 --height 1080
+mlagents-learn Config\EliminationAgentNoMem.yaml --run-id=EliminationAgent --width 1920 --height 1080
 
 start "" http://localhost:6006/
 tensorboard --logdir results
