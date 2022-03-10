@@ -4,19 +4,30 @@ using UnityEngine;
 
 public class FollowTransform : MonoBehaviour
 {
-    public Transform followTarget;
-    
+    [SerializeField] private Transform target;
+    [SerializeField] private float smoothing;
+    private Camera cam;
 
-    // Start is called before the first frame update
-    private void Update()
+    [SerializeField] private Vector3 offset;
+
+    [SerializeField] private float camDistance;
+
+    //public float threshold;
+
+    // Use this for initialization
+    void Start()
     {
-        this.transform.position = followTarget.TransformPoint(Vector3.zero);
-        //this.transform.rotation = followTarget.rotation * Quaternion.Euler(Vector3.zero);
+        cam = GetComponent<Camera>();
+        offset = transform.position - target.position;
     }
 
-    public void Map()
-    {
-               
+    // Update is called once per frame
+    void FixedUpdate()
+    {           
+        Vector3 targetCamPos = target.position + offset;
+        transform.position = Vector3.Lerp(transform.position, targetCamPos, smoothing * Time.deltaTime);
+                 
     }
+
 
 }
