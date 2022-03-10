@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee6ebf9ce085f0946bff7d798c8b6c12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSteps: 10000
+  maxSteps: 10001
   matchtimer: 0
   roundNumber: 0
   redTeamBotCount: 1

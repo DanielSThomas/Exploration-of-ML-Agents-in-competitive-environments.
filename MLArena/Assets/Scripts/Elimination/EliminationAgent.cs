@@ -32,7 +32,9 @@ public class EliminationAgent : Agent
     // Start is called before the first frame update
     void Awake()
     {
+        
         eliminationGameManager = GameObject.Find("EliminationGameManager").GetComponent<EliminationGameManager>();
+        MaxStep = eliminationGameManager.getMaxStep();
         rb = GetComponent<Rigidbody2D>();
         hp = GetComponent<Health>();
 

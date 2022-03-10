@@ -7,7 +7,7 @@ public class EliminationGameManager : MonoBehaviour
 {
 
 
-    [SerializeField] private int maxSteps = 10000;
+    [SerializeField] private int maxSteps = 10001;
     [SerializeField] int matchtimer;
 
     [SerializeField] private int roundNumber = 0;
@@ -19,8 +19,8 @@ public class EliminationGameManager : MonoBehaviour
     [SerializeField] private GameObject blueTeamBotPrefab;
 
     [SerializeField] private GameObject[] levels;
-    [SerializeField] private GameObject currentLevel;
-    [SerializeField] private LevelInfo currentLevelInfo;
+    [SerializeField] private GameObject currentLevel; 
+    [SerializeField] private LevelInfo currentLevelInfo; 
 
     [SerializeField] private List<GameObject> redAgentObjects = new List<GameObject>();
 
@@ -254,6 +254,11 @@ public class EliminationGameManager : MonoBehaviour
     public void addBlueScore()
     {
         blueTeamScore ++;
+    }
+
+    public int getMaxStep()
+    {
+        return maxSteps;
     }
 
 }
