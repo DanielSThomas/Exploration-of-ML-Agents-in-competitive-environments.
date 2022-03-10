@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class FollowTransform : MonoBehaviour
 {
+    
     [SerializeField] private Transform target;
     [SerializeField] private float smoothing;
     private Camera cam;
@@ -19,6 +20,7 @@ public class FollowTransform : MonoBehaviour
     {
         cam = GetComponent<Camera>();
         offset = transform.position - target.position;
+        transform.parent = null;
     }
 
     // Update is called once per frame
@@ -28,6 +30,8 @@ public class FollowTransform : MonoBehaviour
         transform.position = Vector3.Lerp(transform.position, targetCamPos, smoothing * Time.deltaTime);
                  
     }
+
+   
 
 
 }

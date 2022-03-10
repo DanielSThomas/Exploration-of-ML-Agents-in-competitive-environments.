@@ -13,14 +13,14 @@ public class EliminationAgent : Agent
     [SerializeField] private Text healthText;
     [SerializeField] private float speed = 10;
     [SerializeField] private float turnspeed = 10;
-    private Rigidbody2D rb;
+    [SerializeField] protected  Rigidbody2D rb;
     private Health hp;
-    [SerializeField] private Transform spawn;
+    protected Transform spawn;
     [SerializeField] private float meanReward;
     [SerializeField] private int team; // 0 = Red Team  1 = Blue Team
     [SerializeField] private Transform bulletSpawn;
     [SerializeField] private GameObject bulletobject;
-    [SerializeField] private Rigidbody2D turretPivot;
+    [SerializeField] protected  Rigidbody2D turretPivot;
 
     [SerializeField] private float firerate;
     private float nextShoot;
@@ -35,7 +35,7 @@ public class EliminationAgent : Agent
         
         eliminationGameManager = GameObject.Find("EliminationGameManager").GetComponent<EliminationGameManager>();
         MaxStep = eliminationGameManager.getMaxStep();
-        rb = GetComponent<Rigidbody2D>();
+        
         hp = GetComponent<Health>();
 
     }
@@ -144,6 +144,14 @@ public class EliminationAgent : Agent
             this.gameObject.SetActive(false);
         }
 
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Wall")
+        {
+            AddReward(-0.1f);
+        }
     }
 
     public override void Heuristic(in ActionBuffers actionsOut) // Player Control

@@ -18,14 +18,14 @@ TagManager:
   - 
   - Water
   - UI
-  - Target
-  - FakeWall
+  - Decor
+  - Floor
   - RedTeam
   - BlueTeam
   - Wall
   - BlueBullet
   - RedBullet
-  - 
+  - AIVision
   - 
   - 
   - 
