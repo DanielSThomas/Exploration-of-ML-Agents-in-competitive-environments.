@@ -62,8 +62,9 @@ public class EliminationAgent : Agent
     {
         sensor.AddObservation(canShoot); // check if we can shoot
 
-        //sensor.AddObservation(rb.velocity.x);
-        //sensor.AddObservation(rb.velocity.z);
+        //Distance sensor ? Would be needed for waypoints
+        
+
     }
 
     public override void OnActionReceived(ActionBuffers actionBuffers)
