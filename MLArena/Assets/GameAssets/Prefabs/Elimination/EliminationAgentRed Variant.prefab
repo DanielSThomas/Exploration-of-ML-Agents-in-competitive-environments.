@@ -67,6 +67,22 @@ PrefabInstance:
       propertyPath: team
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6203896011107645362, guid: 432841a725ce0a64788941c0cec7b86a, type: 3}
+      propertyPath: bulletobject
+      value: 
+      objectReference: {fileID: 2561967876597214993, guid: 80ebcc2a5119cf94faa5a520fb8945c1, type: 3}
+    - target: {fileID: 6203896011107645362, guid: 432841a725ce0a64788941c0cec7b86a, type: 3}
+      propertyPath: radarMask.layerMask.m_Bits
+      value: 13815
+      objectReference: {fileID: 0}
+    - target: {fileID: 6203896011107645362, guid: 432841a725ce0a64788941c0cec7b86a, type: 3}
+      propertyPath: radarEnemyMask.layerMask.m_Bits
+      value: 512
+      objectReference: {fileID: 0}
+    - target: {fileID: 6203896011107645362, guid: 432841a725ce0a64788941c0cec7b86a, type: 3}
+      propertyPath: radarBulletMask.layerMask.m_Bits
+      value: 2048
+      objectReference: {fileID: 0}
     - target: {fileID: 6203896011107645363, guid: 432841a725ce0a64788941c0cec7b86a, type: 3}
       propertyPath: TeamId
       value: 0
@@ -93,11 +109,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6203896011107645375, guid: 432841a725ce0a64788941c0cec7b86a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.465984
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6203896011107645375, guid: 432841a725ce0a64788941c0cec7b86a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.58
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6203896011107645375, guid: 432841a725ce0a64788941c0cec7b86a, type: 3}
       propertyPath: m_LocalPosition.z

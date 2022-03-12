@@ -365,14 +365,14 @@ MonoBehaviour:
   - RedTeam
   - RedBullet
   - BlueTeam
-  m_RaysPerDirection: 10
+  m_RaysPerDirection: 20
   m_MaxRayDegrees: 180
   m_SphereCastRadius: 0.5
   m_RayLength: 44
   m_RayLayerMask:
     serializedVersion: 2
     m_Bits: 4294964680
-  m_ObservationStacks: 1
+  m_ObservationStacks: 5
   rayHitColor: {r: 1, g: 0, b: 0, a: 1}
   rayMissColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &4917547412264403758
@@ -459,6 +459,53 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &5149578929343022026
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7862684768498938517}
+  - component: {fileID: 1676726462527327107}
+  m_Layer: 13
+  m_Name: Radar
+  m_TagString: Radar
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7862684768498938517
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5149578929343022026}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6203896011107645375}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &1676726462527327107
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5149578929343022026}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 8
 --- !u!1 &6203896010511617684
 GameObject:
   m_ObjectHideFlags: 0
@@ -535,6 +582,7 @@ Transform:
   - {fileID: 4917547411430874609}
   - {fileID: 4917547411490899122}
   - {fileID: 2096479371}
+  - {fileID: 7862684768498938517}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -551,7 +599,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BrainParameters:
-    VectorObservationSize: 1
+    VectorObservationSize: 20
     NumStackedVectorObservations: 1
     m_ActionSpec:
       m_NumContinuousActions: 0
@@ -587,12 +635,14 @@ MonoBehaviour:
   healthText: {fileID: 6131294632219690993}
   speed: 50
   turnspeed: 10
-  spawn: {fileID: 0}
+  rb: {fileID: 4242205098267900495}
   meanReward: 0
   team: 1
   bulletSpawn: {fileID: 6203896010511617685}
   bulletobject: {fileID: 2912846600683251682, guid: 3ca3621232180f34ebf763387306a019, type: 3}
   turretPivot: {fileID: 1496635210}
+  enemyRadar: []
+  bulletRadar: []
   firerate: 0.6
 --- !u!114 &6203896011107645361
 MonoBehaviour:
@@ -683,7 +733,7 @@ MonoBehaviour:
   - {x: 0.37229443, y: -0.3691039, z: 0}
   m_ShapePathHash: 447784005
   m_Mesh: {fileID: 0}
-  m_InstanceId: 38558
+  m_InstanceId: 54686
 --- !u!1 &7726643503866179063
 GameObject:
   m_ObjectHideFlags: 0

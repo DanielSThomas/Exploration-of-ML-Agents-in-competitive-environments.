@@ -11,6 +11,7 @@ TagManager:
   - Wall
   - BlueBullet
   - RedBullet
+  - Radar
   layers:
   - Default
   - TransparentFX
@@ -25,7 +26,7 @@ TagManager:
   - Wall
   - BlueBullet
   - RedBullet
-  - AIVision
+  - Radar
   - 
   - 
   - 

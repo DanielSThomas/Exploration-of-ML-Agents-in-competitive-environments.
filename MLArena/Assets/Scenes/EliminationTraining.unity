@@ -157,10 +157,11 @@ MonoBehaviour:
   roundNumber: 0
   redTeamBotCount: 1
   blueTeamBotCount: 1
-  redTeamBotPrefab: {fileID: 375892323031248554, guid: a6fc7ff1aae35494eaed82adbd8d9949, type: 3}
-  blueTeamBotPrefab: {fileID: 6873844481238614749, guid: 59f25ccbebd993843a54058f33348c2d, type: 3}
+  redTeamBotPrefab: {fileID: 8640573599010613503, guid: 6214f5a1470dfba449315f52270c1e2d, type: 3}
+  blueTeamBotPrefab: {fileID: 6203896011107645367, guid: 432841a725ce0a64788941c0cec7b86a, type: 3}
   levels:
   - {fileID: 2581254283074040010, guid: fa397a12913330f4e98ce488f1910f16, type: 3}
+  - {fileID: 1551220425490093467, guid: 4646ff9ef9d43f94d8d9771c97ac8b11, type: 3}
   currentLevel: {fileID: 0}
   currentLevelInfo: {fileID: 0}
   redAgentObjects: []

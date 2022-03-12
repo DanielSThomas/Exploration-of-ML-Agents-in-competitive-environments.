@@ -15,22 +15,16 @@ public class Bullet : MonoBehaviour
     [SerializeField] Light2D li;
 
 
-    private void Start()
+    private void Awake()
     {
-        li = GetComponent<Light2D>();
-        sr = GetComponent<SpriteRenderer>();
-
+      
         if (bulletTeam == 0)
-        {
-            this.tag = "RedBullet";
-            this.gameObject.layer = 12;
+        {       
             sr.color = new Color(1.0f, 0.30f, 0.0f); //orange
             li.color = new Color(1.0f, 0.30f, 0.0f);
         }
         else if (bulletTeam == 1)
         {
-            this.tag = "BlueBullet";
-            this.gameObject.layer = 11;
             sr.color = Color.cyan;
             li.color = Color.cyan;
         }
@@ -51,6 +45,13 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+
+        if(other.gameObject.tag == "Radar")
+        {
+            return;
+        }
+
+
         Health hp = other.GetComponent<Health>();
         EliminationAgent hitAgent = other.GetComponent<EliminationAgent>();
         if (hp != null && hitAgent.getTeam() != bulletTeam)
@@ -73,12 +74,18 @@ public class Bullet : MonoBehaviour
             Destroy(this.gameObject);
         }
         //Miss penalty
+
         else
         {
             bulletOwner.AddReward(-0.01f);
         }
        
+        
+
         Destroy(this.gameObject);
+        
+
+       
     }
 
     public EliminationAgent getbulletOwner()

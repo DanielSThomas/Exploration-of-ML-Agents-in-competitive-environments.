@@ -13,14 +13,18 @@ public class EliminationAgent : Agent
     [SerializeField] private Text healthText;
     [SerializeField] private float speed = 10;
     [SerializeField] private float turnspeed = 10;
-    [SerializeField] protected  Rigidbody2D rb;
+    [SerializeField] private Rigidbody2D rb;
     private Health hp;
-    protected Transform spawn;
+    private Transform spawn;
     [SerializeField] private float meanReward;
     [SerializeField] private int team; // 0 = Red Team  1 = Blue Team
     [SerializeField] private Transform bulletSpawn;
     [SerializeField] private GameObject bulletobject;
-    [SerializeField] protected  Rigidbody2D turretPivot;
+    [SerializeField] private Rigidbody2D turretPivot;
+
+
+    [SerializeField] private List<GameObject> enemyRadar;
+    [SerializeField] private List<GameObject> bulletRadar;
 
     [SerializeField] private float firerate;
     private float nextShoot;
@@ -64,6 +68,28 @@ public class EliminationAgent : Agent
     {
         sensor.AddObservation(canShoot); // check if we can shoot
 
+        sensor.AddObservation(this.transform.position);
+
+
+        try
+        {
+            for (int i = 0; i < 3; i++)
+            {
+                sensor.AddObservation(enemyRadar[i].transform.position);
+            }
+
+            for (int i = 0; i < 5; i++)
+            {
+                sensor.AddObservation(bulletRadar[i].transform.position);
+            }
+        }
+        catch (System.Exception)
+        {
+
+            
+        }
+
+      
         //Distance sensor ? Would be needed for waypoints
         
 
@@ -154,6 +180,105 @@ public class EliminationAgent : Agent
         }
     }
 
+
+    //Handleing what the agent can see in terms of radius
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (team == 0)
+        {
+            if (collision.gameObject.tag == "BlueTeam" && !enemyRadar.Contains(collision.gameObject))
+            {
+                enemyRadar.Add(collision.gameObject);
+            }
+            if (collision.gameObject.tag == "BlueBullet" && !bulletRadar.Contains(collision.gameObject))
+            {
+                bulletRadar.Add(collision.gameObject);
+            }
+        }
+
+        if (team == 1)
+        {
+            if (collision.gameObject.tag == "RedTeam" && !enemyRadar.Contains(collision.gameObject))
+            {
+                enemyRadar.Add(collision.gameObject);
+            }
+            if (collision.gameObject.tag == "RedBullet" && !bulletRadar.Contains(collision.gameObject))
+            {
+                bulletRadar.Add(collision.gameObject);
+            }
+        }
+
+
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+
+        //Clean up
+        for (var i = bulletRadar.Count - 1; i > -1; i--)
+        {
+            if (bulletRadar[i] == null)
+            {
+                bulletRadar.RemoveAt(i);
+            }           
+        }
+
+
+
+        if (team == 0)
+        {
+            if (collision.gameObject.tag == "BlueTeam")
+            {
+                for (int i = 0; i < enemyRadar.Count; i++)
+                {
+                    if (collision.gameObject == enemyRadar[i])
+                    {
+                        enemyRadar.RemoveAt(i);
+                    }
+                }                
+            }
+
+            if (collision.gameObject.tag == "BlueBullet")
+            {
+                for (int i = 0; i < bulletRadar.Count; i++)
+                {
+                    if (collision.gameObject == bulletRadar[i])
+                    {
+                        bulletRadar.RemoveAt(i);
+                    }
+                }
+            }
+        }
+
+        if (team == 1)
+        {
+            if (collision.gameObject.tag == "RedTeam")
+            {
+                for (int i = 0; i < enemyRadar.Count; i++)
+                {
+                    if (collision.gameObject == enemyRadar[i])
+                    {
+                        enemyRadar.RemoveAt(i);
+                    }
+                }
+            }
+
+            if (collision.gameObject.tag == "RedBullet")
+            {
+                for (int i = 0; i < bulletRadar.Count; i++)
+                {
+                    if (collision.gameObject == bulletRadar[i])
+                    {
+                        bulletRadar.RemoveAt(i);
+                    }
+                }
+            }
+
+        }
+    }
+
+
+
     public override void Heuristic(in ActionBuffers actionsOut) // Player Control
     {
         var discreteActionsOut = actionsOut.DiscreteActions;
@@ -229,6 +354,9 @@ public class EliminationAgent : Agent
     {
         this.transform.localPosition = _spawn.position;
     }
+
+    
+
 
     public void giveReward(float value)
     {
