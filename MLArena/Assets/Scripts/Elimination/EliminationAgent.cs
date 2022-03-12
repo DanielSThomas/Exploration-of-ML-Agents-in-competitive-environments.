@@ -22,9 +22,10 @@ public class EliminationAgent : Agent
     [SerializeField] private GameObject bulletobject;
     [SerializeField] private Rigidbody2D turretPivot;
 
-
     [SerializeField] private List<GameObject> enemyRadar;
-    [SerializeField] private List<GameObject> bulletRadar;
+    [SerializeField] private List<GameObject> bulletRadar; // Maybe sort this by closest distance to longest ? Might not matter tho.
+    [SerializeField] private BufferSensorComponent bufferSensorBullet;
+    [SerializeField] private BufferSensorComponent bufferSensorEnemy;
 
     [SerializeField] private float firerate;
     private float nextShoot;
@@ -41,6 +42,7 @@ public class EliminationAgent : Agent
         MaxStep = eliminationGameManager.getMaxStep();
         
         hp = GetComponent<Health>();
+       
 
     }
 
@@ -71,26 +73,49 @@ public class EliminationAgent : Agent
         sensor.AddObservation(this.transform.position);
 
 
-        try
+        //Enemy and bullet buffer observastions
+        for (int i = 0; i < enemyRadar.Count; i++)
         {
-            for (int i = 0; i < 3; i++)
+
+            if (enemyRadar[i] == null)
             {
-                sensor.AddObservation(enemyRadar[i].transform.position);
+                return;
             }
 
-            for (int i = 0; i < 5; i++)
+            float[] enemyObservation = new float[]
             {
-                sensor.AddObservation(bulletRadar[i].transform.position);
-            }
+               
+                enemyRadar[i].transform.position.x,
+                enemyRadar[i].transform.position.y
+                           
+            };
+
+           
+
+            bufferSensorEnemy.AppendObservation(enemyObservation);
         }
-        catch (System.Exception)
+
+        for (int i = 0; i < bulletRadar.Count; i++) // Do check if is above max obs. Might also need to feed in distance aka (bullet transform - agent transform) 
         {
+            if(bulletRadar[i] == null)
+            {
+                return;
+            }
+
+            float[] bulletObservation = new float[]
+            {
+                bulletRadar[i].transform.position.x,
+                bulletRadar[i].transform.position.y
+            };
 
             
+
+            bufferSensorBullet.AppendObservation(bulletObservation);
         }
+       
 
       
-        //Distance sensor ? Would be needed for waypoints
+        //Waypoint sensor ? Would be needed for waypoints
         
 
     }
@@ -182,7 +207,7 @@ public class EliminationAgent : Agent
 
 
     //Handleing what the agent can see in terms of radius
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision) // Make into a method to fix not dry code
     {
         if (team == 0)
         {

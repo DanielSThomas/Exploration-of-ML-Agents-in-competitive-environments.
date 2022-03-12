@@ -561,6 +561,8 @@ GameObject:
   - component: {fileID: 4242205098267900495}
   - component: {fileID: 4242205098267900494}
   - component: {fileID: 2062095037}
+  - component: {fileID: 6529093401467090110}
+  - component: {fileID: 821380381381583635}
   m_Layer: 9
   m_Name: EliminationAgentBlue
   m_TagString: BlueTeam
@@ -576,7 +578,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6203896011107645367}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4917547411430874609}
@@ -599,7 +601,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BrainParameters:
-    VectorObservationSize: 20
+    VectorObservationSize: 4
     NumStackedVectorObservations: 1
     m_ActionSpec:
       m_NumContinuousActions: 0
@@ -643,6 +645,8 @@ MonoBehaviour:
   turretPivot: {fileID: 1496635210}
   enemyRadar: []
   bulletRadar: []
+  bufferSensorBullet: {fileID: 6529093401467090110}
+  bufferSensorEnemy: {fileID: 821380381381583635}
   firerate: 0.6
 --- !u!114 &6203896011107645361
 MonoBehaviour:
@@ -733,7 +737,37 @@ MonoBehaviour:
   - {x: 0.37229443, y: -0.3691039, z: 0}
   m_ShapePathHash: 447784005
   m_Mesh: {fileID: 0}
-  m_InstanceId: 54686
+  m_InstanceId: 26930
+--- !u!114 &6529093401467090110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6203896011107645367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd8012d5925524537b27131fef517017, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SensorName: BufferSensorBullet
+  m_ObservableSize: 2
+  m_MaxNumObservables: 10
+--- !u!114 &821380381381583635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6203896011107645367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd8012d5925524537b27131fef517017, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SensorName: BufferSensorEnemy
+  m_ObservableSize: 2
+  m_MaxNumObservables: 3
 --- !u!1 &7726643503866179063
 GameObject:
   m_ObjectHideFlags: 0
