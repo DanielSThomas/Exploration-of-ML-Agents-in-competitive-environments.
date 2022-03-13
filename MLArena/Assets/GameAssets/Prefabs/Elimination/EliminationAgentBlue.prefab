@@ -457,53 +457,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &5149578929343022026
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7862684768498938517}
-  - component: {fileID: 1676726462527327107}
-  m_Layer: 13
-  m_Name: Radar
-  m_TagString: Radar
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &7862684768498938517
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5149578929343022026}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 6203896011107645375}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &1676726462527327107
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5149578929343022026}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 20
 --- !u!1 &6203896010511617684
 GameObject:
   m_ObjectHideFlags: 0
@@ -563,7 +516,7 @@ GameObject:
   - component: {fileID: 821380381381583635}
   m_Layer: 9
   m_Name: EliminationAgentBlue
-  m_TagString: BlueTeam
+  m_TagString: BlueTeamParent
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -582,7 +535,6 @@ Transform:
   - {fileID: 4917547411430874609}
   - {fileID: 4917547411490899122}
   - {fileID: 2096479371}
-  - {fileID: 7862684768498938517}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -645,6 +597,8 @@ MonoBehaviour:
   bulletRadar: []
   bufferSensorBullet: {fileID: 6529093401467090110}
   bufferSensorEnemy: {fileID: 821380381381583635}
+  bulletNumber: 0
+  enemyNumber: 0
   firerate: 0.6
 --- !u!114 &6203896011107645361
 MonoBehaviour:
@@ -735,7 +689,7 @@ MonoBehaviour:
   - {x: 0.37229443, y: -0.3691039, z: 0}
   m_ShapePathHash: 447784005
   m_Mesh: {fileID: 0}
-  m_InstanceId: 28290
+  m_InstanceId: 29316
 --- !u!114 &6529093401467090110
 MonoBehaviour:
   m_ObjectHideFlags: 0

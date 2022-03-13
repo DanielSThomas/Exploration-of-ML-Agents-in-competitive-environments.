@@ -22,10 +22,12 @@ public class EliminationAgent : Agent
     [SerializeField] private GameObject bulletobject;
     [SerializeField] private Rigidbody2D turretPivot;
 
-    [SerializeField] private List<GameObject> enemyRadar;
-    [SerializeField] private List<GameObject> bulletRadar; // Maybe sort this by closest distance to longest ? Might not matter tho.
+    [SerializeField] private GameObject[] enemyRadar;
+    [SerializeField] private GameObject[] bulletRadar; 
     [SerializeField] private BufferSensorComponent bufferSensorBullet;
     [SerializeField] private BufferSensorComponent bufferSensorEnemy;
+    [SerializeField] private int bulletNumber = 0;
+    [SerializeField] private int enemyNumber = 0;
 
     [SerializeField] private float firerate;
     private float nextShoot;
@@ -50,6 +52,7 @@ public class EliminationAgent : Agent
     void FixedUpdate()
     {
         healthText.text = hp.getHealth().ToString();
+
     }
 
     public override void OnEpisodeBegin()
@@ -59,8 +62,7 @@ public class EliminationAgent : Agent
         rb.rotation = 0;
         turretPivot.rotation = 0;
         
-        //(Both of these are being reset by the manager. For some reason OnEpisodeBegin is not always settings these values.)
-        //SetReward(0);
+       
         
     }
 
@@ -73,8 +75,30 @@ public class EliminationAgent : Agent
         sensor.AddObservation(this.transform.position);
 
 
+        switch (team)
+        {
+            case 0:
+
+                bulletRadar = GameObject.FindGameObjectsWithTag("BlueBullet");
+                enemyRadar = GameObject.FindGameObjectsWithTag("BlueTeamParent"); // Needs fixing
+                
+                break;
+
+            case 1:
+
+                bulletRadar = GameObject.FindGameObjectsWithTag("RedBullet");
+                enemyRadar = GameObject.FindGameObjectsWithTag("RedTeamParent"); // Needs fixing
+                break;         
+        }
+
+        System.Array.Sort(bulletRadar, (a, b) => (Vector3.Distance(a.transform.position, transform.position)).CompareTo(Vector3.Distance(b.transform.position, transform.position)));
+
+        bulletNumber = 0;
+
+        enemyNumber = 0;
+
         //Enemy and bullet buffer observastions
-        for (int i = 0; i < enemyRadar.Count; i++)
+        for (int i = 0; i < enemyRadar.Length; i++)
         {
 
             if (enemyRadar[i] == null)
@@ -90,14 +114,14 @@ public class EliminationAgent : Agent
                            
             };
 
-           
+            enemyNumber++;
 
             bufferSensorEnemy.AppendObservation(enemyObservation);
         }
 
-        for (int i = 0; i < bulletRadar.Count; i++) // Do check if is above max obs. Might also need to feed in distance aka (bullet transform - agent transform) 
+        for (int i = 0; i < bulletRadar.Length; i++)
         {
-            if(bulletRadar[i] == null)
+            if(bulletRadar[i] == null || bulletNumber >= 10)
             {
                 return;
             }
@@ -108,7 +132,7 @@ public class EliminationAgent : Agent
                 bulletRadar[i].transform.position.y - transform.position.y
             };
 
-            
+            bulletNumber ++;
 
             bufferSensorBullet.AppendObservation(bulletObservation);
         }
@@ -203,104 +227,6 @@ public class EliminationAgent : Agent
             AddReward(-0.1f);
         }
     }
-
-
-    //Handleing what the agent can see in terms of radius
-    private void OnTriggerEnter2D(Collider2D collision) // Make into a method to fix not dry code
-    {
-        if (team == 0)
-        {
-            if (collision.gameObject.tag == "BlueTeam" && !enemyRadar.Contains(collision.gameObject))
-            {
-                enemyRadar.Add(collision.gameObject);
-            }
-            if (collision.gameObject.tag == "BlueBullet" && !bulletRadar.Contains(collision.gameObject))
-            {
-                bulletRadar.Add(collision.gameObject);
-            }
-        }
-
-        if (team == 1)
-        {
-            if (collision.gameObject.tag == "RedTeam" && !enemyRadar.Contains(collision.gameObject))
-            {
-                enemyRadar.Add(collision.gameObject);
-            }
-            if (collision.gameObject.tag == "RedBullet" && !bulletRadar.Contains(collision.gameObject))
-            {
-                bulletRadar.Add(collision.gameObject);
-            }
-        }
-
-
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-
-        //Clean up
-        for (var i = bulletRadar.Count - 1; i > -1; i--)
-        {
-            if (bulletRadar[i] == null)
-            {
-                bulletRadar.RemoveAt(i);
-            }           
-        }
-
-
-
-        if (team == 0)
-        {
-            if (collision.gameObject.tag == "BlueTeam")
-            {
-                for (int i = 0; i < enemyRadar.Count; i++)
-                {
-                    if (collision.gameObject == enemyRadar[i])
-                    {
-                        enemyRadar.RemoveAt(i);
-                    }
-                }                
-            }
-
-            if (collision.gameObject.tag == "BlueBullet")
-            {
-                for (int i = 0; i < bulletRadar.Count; i++)
-                {
-                    if (collision.gameObject == bulletRadar[i])
-                    {
-                        bulletRadar.RemoveAt(i);
-                    }
-                }
-            }
-        }
-
-        if (team == 1)
-        {
-            if (collision.gameObject.tag == "RedTeam")
-            {
-                for (int i = 0; i < enemyRadar.Count; i++)
-                {
-                    if (collision.gameObject == enemyRadar[i])
-                    {
-                        enemyRadar.RemoveAt(i);
-                    }
-                }
-            }
-
-            if (collision.gameObject.tag == "RedBullet")
-            {
-                for (int i = 0; i < bulletRadar.Count; i++)
-                {
-                    if (collision.gameObject == bulletRadar[i])
-                    {
-                        bulletRadar.RemoveAt(i);
-                    }
-                }
-            }
-
-        }
-    }
-
 
 
     public override void Heuristic(in ActionBuffers actionsOut) // Player Control
