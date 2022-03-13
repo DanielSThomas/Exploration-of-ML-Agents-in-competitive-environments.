@@ -49,10 +49,10 @@ public class EliminationGameManager : MonoBehaviour
         blueTeamAgents = new SimpleMultiAgentGroup();
 
         for (int i = 0; i < redAgentObjects.Count; i++)
-        {     
-            redTeamAgents.RegisterAgent(redAgentObjects[i].GetComponent<EliminationAgent>());   
+        {
+            redTeamAgents.RegisterAgent(redAgentObjects[i].GetComponent<EliminationAgent>());
         }
-        for (int i = 0; i < redAgentObjects.Count; i++)
+        for (int i = 0; i < blueAgentObjects.Count; i++)
         {
             blueTeamAgents.RegisterAgent(blueAgentObjects[i].GetComponent<EliminationAgent>());
         }
@@ -121,16 +121,19 @@ public class EliminationGameManager : MonoBehaviour
                 else
                 {
                     agentObject = redAgentObjects[i];
-                    agentObject.SetActive(true);               
+                    agentObject.SetActive(true);
+                    redTeamAgents.RegisterAgent(agentObject.GetComponent<EliminationAgent>());
                 }
 
                 //Reset the agent values
                 EliminationAgent _agent = agentObject.GetComponent<EliminationAgent>();
                 Health _agentHealth = agentObject.GetComponent<Health>();
 
+                
                 _agent.setSpawn(currentLevelInfo.getSpawnPoints()[randomNo]);
                 //Doing this in the manager rather than OnEpisodeBegin
-                _agent.SetReward(0);          
+                //_agent.SetReward(0);
+                
                 _agentHealth.setHealth(3);
 
                 occupiedSpawns.Add(randomNo);
@@ -172,6 +175,7 @@ public class EliminationGameManager : MonoBehaviour
                 {
                     agentObject = blueAgentObjects[i];
                     agentObject.SetActive(true);
+                    blueTeamAgents.RegisterAgent(agentObject.GetComponent<EliminationAgent>());
                 }
 
                 //Reset the agent values
@@ -180,9 +184,9 @@ public class EliminationGameManager : MonoBehaviour
 
                 _agent.setSpawn(currentLevelInfo.getSpawnPoints()[randomNo]);
                 //Doing this in the manager rather than OnEpisodeBegin
-                _agent.SetReward(0);
+                //_agent.SetReward(0);
                 _agentHealth.setHealth(3);
-
+                //blueTeamAgents.RegisterAgent(_agent);
                 occupiedSpawns.Add(randomNo);              
             }
             else if (retrySpawn == true)
@@ -225,7 +229,7 @@ public class EliminationGameManager : MonoBehaviour
         
         winningTeam.AddGroupReward(1 - (float)matchtimer / maxSteps);
 
-        
+        Debug.Log(winningTeam + "with team score of" + (1 - (float)matchtimer / maxSteps));
   
 
         redTeamAgents.EndGroupEpisode();

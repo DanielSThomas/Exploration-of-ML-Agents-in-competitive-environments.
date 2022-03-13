@@ -85,8 +85,8 @@ public class EliminationAgent : Agent
             float[] enemyObservation = new float[]
             {
                
-                enemyRadar[i].transform.position.x,
-                enemyRadar[i].transform.position.y
+                enemyRadar[i].transform.position.x - transform.position.x,
+                enemyRadar[i].transform.position.y - transform.position.y
                            
             };
 
@@ -104,8 +104,8 @@ public class EliminationAgent : Agent
 
             float[] bulletObservation = new float[]
             {
-                bulletRadar[i].transform.position.x,
-                bulletRadar[i].transform.position.y
+                bulletRadar[i].transform.position.x - transform.position.x,
+                bulletRadar[i].transform.position.y - transform.position.y
             };
 
             
@@ -176,8 +176,7 @@ public class EliminationAgent : Agent
 
         if (hp.getHealth() < 1)
         {
-            AddReward(-1f); 
-            
+                       
             //Give blue team a score
             if(team == 0)
             {

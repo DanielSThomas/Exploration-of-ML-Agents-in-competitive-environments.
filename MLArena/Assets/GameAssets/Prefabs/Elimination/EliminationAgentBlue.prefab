@@ -363,15 +363,13 @@ MonoBehaviour:
   m_DetectableTags:
   - Wall
   - RedTeam
-  - RedBullet
-  - BlueTeam
   m_RaysPerDirection: 20
   m_MaxRayDegrees: 180
   m_SphereCastRadius: 0.5
   m_RayLength: 44
   m_RayLayerMask:
     serializedVersion: 2
-    m_Bits: 4294964680
+    m_Bits: 4294952200
   m_ObservationStacks: 5
   rayHitColor: {r: 1, g: 0, b: 0, a: 1}
   rayMissColor: {r: 1, g: 1, b: 1, a: 1}
@@ -505,7 +503,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 8
+  m_Radius: 20
 --- !u!1 &6203896010511617684
 GameObject:
   m_ObjectHideFlags: 0
@@ -737,7 +735,7 @@ MonoBehaviour:
   - {x: 0.37229443, y: -0.3691039, z: 0}
   m_ShapePathHash: 447784005
   m_Mesh: {fileID: 0}
-  m_InstanceId: 26930
+  m_InstanceId: 28290
 --- !u!114 &6529093401467090110
 MonoBehaviour:
   m_ObjectHideFlags: 0
