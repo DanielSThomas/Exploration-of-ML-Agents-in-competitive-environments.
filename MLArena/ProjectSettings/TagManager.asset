@@ -12,6 +12,8 @@ TagManager:
   - BlueBullet
   - RedBullet
   - Radar
+  - BlueTeamParent
+  - RedTeamParent
   layers:
   - Default
   - TransparentFX

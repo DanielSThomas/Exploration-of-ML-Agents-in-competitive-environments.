@@ -16,6 +16,7 @@ public class EliminationAgent : Agent
     [SerializeField] private Rigidbody2D rb;
     private Health hp;
     private Transform spawn;
+    
     [SerializeField] private float meanReward;
     [SerializeField] private int team; // 0 = Red Team  1 = Blue Team
     [SerializeField] private Transform bulletSpawn;
@@ -25,9 +26,8 @@ public class EliminationAgent : Agent
     [SerializeField] private GameObject[] enemyRadar;
     [SerializeField] private GameObject[] bulletRadar; 
     [SerializeField] private BufferSensorComponent bufferSensorBullet;
-    [SerializeField] private BufferSensorComponent bufferSensorEnemy;
+    //[SerializeField] private BufferSensorComponent bufferSensorEnemy;
     [SerializeField] private int bulletNumber = 0;
-    [SerializeField] private int enemyNumber = 0;
 
     [SerializeField] private float firerate;
     private float nextShoot;
@@ -72,7 +72,7 @@ public class EliminationAgent : Agent
     {
         sensor.AddObservation(canShoot); // check if we can shoot
 
-        sensor.AddObservation(this.transform.position);
+        //sensor.AddObservation(this.transform.position);
 
 
         switch (team)
@@ -80,44 +80,42 @@ public class EliminationAgent : Agent
             case 0:
 
                 bulletRadar = GameObject.FindGameObjectsWithTag("BlueBullet");
-                enemyRadar = GameObject.FindGameObjectsWithTag("BlueTeamParent"); // Needs fixing
+                //enemyRadar = GameObject.FindGameObjectsWithTag("BlueTeamParent"); // Needs fixing
                 
                 break;
 
             case 1:
 
                 bulletRadar = GameObject.FindGameObjectsWithTag("RedBullet");
-                enemyRadar = GameObject.FindGameObjectsWithTag("RedTeamParent"); // Needs fixing
+                //enemyRadar = GameObject.FindGameObjectsWithTag("RedTeamParent"); // Needs fixing
                 break;         
         }
 
         System.Array.Sort(bulletRadar, (a, b) => (Vector3.Distance(a.transform.position, transform.position)).CompareTo(Vector3.Distance(b.transform.position, transform.position)));
 
+       // System.Array.Sort(enemyRadar, (a, b) => (Vector3.Distance(a.transform.position, transform.position)).CompareTo(Vector3.Distance(b.transform.position, transform.position)));
+
         bulletNumber = 0;
 
-        enemyNumber = 0;
-
         //Enemy and bullet buffer observastions
-        for (int i = 0; i < enemyRadar.Length; i++)
-        {
+        //for (int i = 0; i < enemyRadar.Length; i++)
+        //{
 
-            if (enemyRadar[i] == null)
-            {
-                return;
-            }
+        //    if (enemyRadar[i] == null)
+        //    {
+        //        return;
+        //    }
 
-            float[] enemyObservation = new float[]
-            {
+        //    float[] enemyObservation = new float[]
+        //    {
                
-                enemyRadar[i].transform.position.x - transform.position.x,
-                enemyRadar[i].transform.position.y - transform.position.y
+        //        enemyRadar[i].transform.position.x - transform.position.x,
+        //        enemyRadar[i].transform.position.y - transform.position.y
                            
-            };
+        //    };
 
-            enemyNumber++;
-
-            bufferSensorEnemy.AppendObservation(enemyObservation);
-        }
+        //    bufferSensorEnemy.AppendObservation(enemyObservation);
+        //}
 
         for (int i = 0; i < bulletRadar.Length; i++)
         {
@@ -196,7 +194,9 @@ public class EliminationAgent : Agent
         meanReward = GetCumulativeReward();
 
         //Idle Penalty
+
         AddReward(-1f / MaxStep);
+        
 
         if (hp.getHealth() < 1)
         {
@@ -220,13 +220,13 @@ public class EliminationAgent : Agent
 
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "Wall")
-        {
-            AddReward(-0.1f);
-        }
-    }
+    //private void OnCollisionEnter2D(Collision2D collision)
+    //{
+    //    if (collision.gameObject.tag == "Wall")
+    //    {
+    //        AddReward(-0.1f);
+    //    }
+    //}
 
 
     public override void Heuristic(in ActionBuffers actionsOut) // Player Control

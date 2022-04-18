@@ -370,7 +370,7 @@ MonoBehaviour:
   m_RayLayerMask:
     serializedVersion: 2
     m_Bits: 4294952200
-  m_ObservationStacks: 5
+  m_ObservationStacks: 1
   rayHitColor: {r: 1, g: 0, b: 0, a: 1}
   rayMissColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &4917547412264403758
@@ -551,7 +551,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BrainParameters:
-    VectorObservationSize: 4
+    VectorObservationSize: 1
     NumStackedVectorObservations: 1
     m_ActionSpec:
       m_NumContinuousActions: 0
@@ -563,7 +563,7 @@ MonoBehaviour:
   m_Model: {fileID: 0}
   m_InferenceDevice: 0
   m_BehaviorType: 0
-  m_BehaviorName: EliminationAgent
+  m_BehaviorName: EliminationAgent3
   TeamId: 1
   m_UseChildSensors: 1
   m_UseChildActuators: 1
@@ -585,8 +585,8 @@ MonoBehaviour:
   hasUpgradedFromAgentParameters: 1
   MaxStep: 10000
   healthText: {fileID: 6131294632219690993}
-  speed: 50
-  turnspeed: 10
+  speed: 100
+  turnspeed: 15
   rb: {fileID: 4242205098267900495}
   meanReward: 0
   team: 1
@@ -596,9 +596,7 @@ MonoBehaviour:
   enemyRadar: []
   bulletRadar: []
   bufferSensorBullet: {fileID: 6529093401467090110}
-  bufferSensorEnemy: {fileID: 821380381381583635}
   bulletNumber: 0
-  enemyNumber: 0
   firerate: 0.6
 --- !u!114 &6203896011107645361
 MonoBehaviour:
@@ -626,7 +624,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a41f632584625ad41a796f2aba5d1f1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 3
+  health: 1
 --- !u!50 &4242205098267900495
 Rigidbody2D:
   serializedVersion: 4
@@ -689,7 +687,7 @@ MonoBehaviour:
   - {x: 0.37229443, y: -0.3691039, z: 0}
   m_ShapePathHash: 447784005
   m_Mesh: {fileID: 0}
-  m_InstanceId: 29316
+  m_InstanceId: 50658
 --- !u!114 &6529093401467090110
 MonoBehaviour:
   m_ObjectHideFlags: 0
