@@ -1,0 +1,48 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Coin : MonoBehaviour
+{
+    Collider2D col;
+    SpriteRenderer sr;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        col = this.GetComponent<Collider2D>();
+        sr = this.GetComponent<SpriteRenderer>();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+
+        if(collision.GetComponent<EliminationAgent>() != null)
+        {
+            collision.GetComponent<EliminationAgent>().AddReward(0.5f);
+            
+            col.enabled = false;
+
+            sr.color = Color.gray;
+
+            Invoke("Reactivate", 20);
+
+        }
+        
+
+    }
+
+    private void Reactivate()
+    {
+        col.enabled = true;
+
+        sr.color = Color.yellow;
+    }
+
+}

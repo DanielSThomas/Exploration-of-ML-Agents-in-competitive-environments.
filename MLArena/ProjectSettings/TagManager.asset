@@ -14,6 +14,7 @@ TagManager:
   - Radar
   - BlueTeamParent
   - RedTeamParent
+  - Coin
   layers:
   - Default
   - TransparentFX
@@ -29,7 +30,7 @@ TagManager:
   - BlueBullet
   - RedBullet
   - Radar
-  - 
+  - Coin
   - 
   - 
   - 

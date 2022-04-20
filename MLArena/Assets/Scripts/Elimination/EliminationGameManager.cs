@@ -26,8 +26,8 @@ public class EliminationGameManager : MonoBehaviour
 
     [SerializeField] private List<GameObject> blueAgentObjects = new List<GameObject>();
 
-    //private SimpleMultiAgentGroup redTeamAgents;
-    //private SimpleMultiAgentGroup blueTeamAgents;
+    private SimpleMultiAgentGroup redTeamAgents;
+    private SimpleMultiAgentGroup blueTeamAgents;
 
 
     [SerializeField] private int redTeamScore;
@@ -45,17 +45,17 @@ public class EliminationGameManager : MonoBehaviour
 
 
         //Register bots to teams
-        //redTeamAgents = new SimpleMultiAgentGroup();
-        //blueTeamAgents = new SimpleMultiAgentGroup();
+        redTeamAgents = new SimpleMultiAgentGroup();
+        blueTeamAgents = new SimpleMultiAgentGroup();
 
-        //for (int i = 0; i < redAgentObjects.Count; i++)
-        //{
-        //    redTeamAgents.RegisterAgent(redAgentObjects[i].GetComponent<EliminationAgent>());
-        //}
-        //for (int i = 0; i < blueAgentObjects.Count; i++)
-        //{
-        //    blueTeamAgents.RegisterAgent(blueAgentObjects[i].GetComponent<EliminationAgent>());
-        //}
+        for (int i = 0; i < redAgentObjects.Count; i++)
+        {
+            redTeamAgents.RegisterAgent(redAgentObjects[i].GetComponent<EliminationAgent>());
+        }
+        for (int i = 0; i < blueAgentObjects.Count; i++)
+        {
+            blueTeamAgents.RegisterAgent(blueAgentObjects[i].GetComponent<EliminationAgent>());
+        }
 
     }
 
@@ -66,21 +66,23 @@ public class EliminationGameManager : MonoBehaviour
         if(matchtimer >= maxSteps)
         {
             Debug.Log("Time Limit Reached. Tie");
-    
-            
+
+            redTeamAgents.GroupEpisodeInterrupted();
+            blueTeamAgents.GroupEpisodeInterrupted();
+
             RoundStart();
         }
 
         if (redTeamScore == blueTeamBotCount)
         {
             Debug.Log("Red Team Won");
-            RoundOver();
+            RoundOver(redTeamAgents);
         }
 
         if (blueTeamScore == redTeamBotCount)
         {
             Debug.Log("Blue Team Won");
-            RoundOver();
+            RoundOver(blueTeamAgents);
         }
 
 
@@ -121,7 +123,7 @@ public class EliminationGameManager : MonoBehaviour
                 {
                     agentObject = redAgentObjects[i];
                     agentObject.SetActive(true);
-                    
+                    redTeamAgents.RegisterAgent(agentObject.GetComponent<EliminationAgent>());
                 }
 
                 //Reset the agent values
@@ -133,7 +135,7 @@ public class EliminationGameManager : MonoBehaviour
                 //Doing this in the manager rather than OnEpisodeBegin
                 //_agent.SetReward(0);
                 
-                _agentHealth.setHealth(1);
+                _agentHealth.setHealth(3);
 
                 occupiedSpawns.Add(randomNo);
             }
@@ -174,7 +176,7 @@ public class EliminationGameManager : MonoBehaviour
                 {
                     agentObject = blueAgentObjects[i];
                     agentObject.SetActive(true);
-                    
+                    blueTeamAgents.RegisterAgent(agentObject.GetComponent<EliminationAgent>());
                 }
 
                 //Reset the agent values
@@ -184,8 +186,8 @@ public class EliminationGameManager : MonoBehaviour
                 _agent.setSpawn(currentLevelInfo.getSpawnPoints()[randomNo]);
                 //Doing this in the manager rather than OnEpisodeBegin
                 //_agent.SetReward(0);
-                _agentHealth.setHealth(1);
-                //blueTeamAgents.RegisterAgent(_agent);
+                _agentHealth.setHealth(3);
+                
                 occupiedSpawns.Add(randomNo);              
             }
             else if (retrySpawn == true)
@@ -201,9 +203,13 @@ public class EliminationGameManager : MonoBehaviour
     {
         int randomNo = Random.Range(0, levels.Length);
 
-        currentLevelInfo = levels[randomNo].GetComponent<LevelInfo>();
+        
 
         currentLevel = Instantiate(levels[randomNo]);
+
+        currentLevelInfo = currentLevel.GetComponent<LevelInfo>();
+
+       // currentLevelInfo = levels[randomNo].GetComponent<LevelInfo>();
 
     }
    
@@ -223,24 +229,17 @@ public class EliminationGameManager : MonoBehaviour
     }
 
 
-    private void RoundOver()
+    private void RoundOver(SimpleMultiAgentGroup winningTeam)
     {
-        
-        //End all red team episodes
-        for (int i = 0; i < redAgentObjects.Count; i++)
-        {
-            EliminationAgent _currentagent = redAgentObjects[i].GetComponent<EliminationAgent>();
-            _currentagent.EndEpisode();
-        }
 
-        //End all blue team episodes
-        for (int i = 0; i < blueAgentObjects.Count; i++)
-        {
-            EliminationAgent _currentagent = redAgentObjects[i].GetComponent<EliminationAgent>();
-            _currentagent.EndEpisode();
-        }
+        winningTeam.AddGroupReward(1 - (float)matchtimer / maxSteps);
 
 
+        Debug.Log(winningTeam + "with team score of" + (1 - (float)matchtimer / maxSteps));
+
+
+        redTeamAgents.EndGroupEpisode();
+        blueTeamAgents.EndGroupEpisode();
 
         RoundStart();
 

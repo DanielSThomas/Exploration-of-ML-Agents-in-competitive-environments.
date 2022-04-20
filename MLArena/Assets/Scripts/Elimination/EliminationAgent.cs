@@ -16,7 +16,12 @@ public class EliminationAgent : Agent
     [SerializeField] private Rigidbody2D rb;
     private Health hp;
     private Transform spawn;
+
+    [SerializeField] private Transform target;
+
+    [SerializeField] private bool oddballcarrier = false;
     
+
     [SerializeField] private float meanReward;
     [SerializeField] private int team; // 0 = Red Team  1 = Blue Team
     [SerializeField] private Transform bulletSpawn;
@@ -24,15 +29,15 @@ public class EliminationAgent : Agent
     [SerializeField] private Rigidbody2D turretPivot;
 
     [SerializeField] private GameObject[] enemyRadar;
-    [SerializeField] private GameObject[] bulletRadar; 
+    [SerializeField] private GameObject[] bulletRadar;
     [SerializeField] private BufferSensorComponent bufferSensorBullet;
-    //[SerializeField] private BufferSensorComponent bufferSensorEnemy;
+    [SerializeField] private BufferSensorComponent bufferSensorEnemy;
     [SerializeField] private int bulletNumber = 0;
 
     [SerializeField] private float firerate;
     private float nextShoot;
     private bool canShoot = true;
-    
+    [SerializeField] float idleReward = 0;
 
      
 
@@ -52,7 +57,7 @@ public class EliminationAgent : Agent
     void FixedUpdate()
     {
         healthText.text = hp.getHealth().ToString();
-
+        
     }
 
     public override void OnEpisodeBegin()
@@ -61,9 +66,10 @@ public class EliminationAgent : Agent
         rb.velocity = Vector2.zero;
         rb.rotation = 0;
         turretPivot.rotation = 0;
-        
-       
-        
+        idleReward = 0;
+
+        target = GameObject.Find("OddBall").transform;
+
     }
 
 
@@ -72,54 +78,34 @@ public class EliminationAgent : Agent
     {
         sensor.AddObservation(canShoot); // check if we can shoot
 
-        //sensor.AddObservation(this.transform.position);
+        sensor.AddObservation(this.transform.localPosition);
 
+        sensor.AddObservation(target.localPosition);
+
+        sensor.AddObservation(oddballcarrier);
 
         switch (team)
         {
             case 0:
 
-                bulletRadar = GameObject.FindGameObjectsWithTag("BlueBullet");
-                //enemyRadar = GameObject.FindGameObjectsWithTag("BlueTeamParent"); // Needs fixing
-                
+                bulletRadar = GameObject.FindGameObjectsWithTag("BlueBullet");             
                 break;
 
             case 1:
 
-                bulletRadar = GameObject.FindGameObjectsWithTag("RedBullet");
-                //enemyRadar = GameObject.FindGameObjectsWithTag("RedTeamParent"); // Needs fixing
-                break;         
+                bulletRadar = GameObject.FindGameObjectsWithTag("RedBullet");                
+                break;
         }
 
         System.Array.Sort(bulletRadar, (a, b) => (Vector3.Distance(a.transform.position, transform.position)).CompareTo(Vector3.Distance(b.transform.position, transform.position)));
 
-       // System.Array.Sort(enemyRadar, (a, b) => (Vector3.Distance(a.transform.position, transform.position)).CompareTo(Vector3.Distance(b.transform.position, transform.position)));
-
         bulletNumber = 0;
 
-        //Enemy and bullet buffer observastions
-        //for (int i = 0; i < enemyRadar.Length; i++)
-        //{
-
-        //    if (enemyRadar[i] == null)
-        //    {
-        //        return;
-        //    }
-
-        //    float[] enemyObservation = new float[]
-        //    {
-               
-        //        enemyRadar[i].transform.position.x - transform.position.x,
-        //        enemyRadar[i].transform.position.y - transform.position.y
-                           
-        //    };
-
-        //    bufferSensorEnemy.AppendObservation(enemyObservation);
-        //}
-
+        //bullet buffer observastions
+       
         for (int i = 0; i < bulletRadar.Length; i++)
         {
-            if(bulletRadar[i] == null || bulletNumber >= 10)
+            if (bulletRadar[i] == null || bulletNumber >= 10)
             {
                 return;
             }
@@ -130,15 +116,13 @@ public class EliminationAgent : Agent
                 bulletRadar[i].transform.position.y - transform.position.y
             };
 
-            bulletNumber ++;
+            bulletNumber++;
 
             bufferSensorBullet.AppendObservation(bulletObservation);
         }
-       
 
-      
-        //Waypoint sensor ? Would be needed for waypoints
-        
+    
+
 
     }
 
@@ -195,8 +179,8 @@ public class EliminationAgent : Agent
 
         //Idle Penalty
 
-        AddReward(-1f / MaxStep);
-        
+        idleReward += 1.1f / MaxStep;
+
 
         if (hp.getHealth() < 1)
         {
@@ -212,21 +196,25 @@ public class EliminationAgent : Agent
                 eliminationGameManager.addRedScore();
             }
 
+            if(oddballcarrier == true)
+            {
+                target.parent = null;
+                target.GetComponent<OddBall>().carried = false;
+            }
 
-
-            Debug.Log(this.gameObject.name + " Died with a score of: " + GetCumulativeReward());
+            Debug.Log(this.gameObject.name + " Lost with a score of : " + GetCumulativeReward());
             this.gameObject.SetActive(false);
         }
 
     }
 
-    //private void OnCollisionEnter2D(Collision2D collision)
-    //{
-    //    if (collision.gameObject.tag == "Wall")
-    //    {
-    //        AddReward(-0.1f);
-    //    }
-    //}
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Wall")
+        {
+            AddReward(-0.1f);
+        }
+    }
 
 
     public override void Heuristic(in ActionBuffers actionsOut) // Player Control
@@ -274,7 +262,7 @@ public class EliminationAgent : Agent
 
     private void Shoot()
     {
-        if (Time.time > nextShoot)
+        if (Time.time > nextShoot && oddballcarrier == false)
         {
             nextShoot = Time.time + firerate;
 
@@ -305,12 +293,24 @@ public class EliminationAgent : Agent
         this.transform.localPosition = _spawn.position;
     }
 
-    
-
-
+  
     public void giveReward(float value)
     {
         AddReward(value);
+    }
+
+    public void endEpisodeWithPenalties()
+    {
+        AddReward(1.1f - idleReward);
+        Debug.Log(this.gameObject.name + " Won with a score of : " + GetCumulativeReward());
+        //EndEpisode();
+    }
+
+    public void setCarry(bool _value)
+    {
+        oddballcarrier = _value;
+       
+
     }
 
 

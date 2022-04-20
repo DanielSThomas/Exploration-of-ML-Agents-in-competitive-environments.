@@ -219,6 +219,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4917547411430874609}
   - component: {fileID: 4917547411430874608}
+  - component: {fileID: 6094663585793424157}
   m_Layer: 9
   m_Name: Tank_Body
   m_TagString: BlueTeam
@@ -292,6 +293,31 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &6094663585793424157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4917547411430874610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f67c7e722ba14acd9153bb4488bff6e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SensorName: RayPerceptionSensor2
+  m_DetectableTags:
+  - Wall
+  m_RaysPerDirection: 6
+  m_MaxRayDegrees: 180
+  m_SphereCastRadius: 0.5
+  m_RayLength: 20
+  m_RayLayerMask:
+    serializedVersion: 2
+    m_Bits: 4294952200
+  m_ObservationStacks: 1
+  rayHitColor: {r: 0.96933174, g: 0, b: 1, a: 1}
+  rayMissColor: {r: 0.41509432, g: 0.41509432, b: 0.41509432, a: 1}
 --- !u!1 &4917547411490899123
 GameObject:
   m_ObjectHideFlags: 0
@@ -361,7 +387,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_SensorName: RayPerceptionSensor
   m_DetectableTags:
-  - Wall
   - RedTeam
   m_RaysPerDirection: 20
   m_MaxRayDegrees: 180
@@ -369,7 +394,7 @@ MonoBehaviour:
   m_RayLength: 44
   m_RayLayerMask:
     serializedVersion: 2
-    m_Bits: 4294952200
+    m_Bits: 4294935816
   m_ObservationStacks: 1
   rayHitColor: {r: 1, g: 0, b: 0, a: 1}
   rayMissColor: {r: 1, g: 1, b: 1, a: 1}
@@ -512,11 +537,11 @@ GameObject:
   - component: {fileID: 4242205098267900495}
   - component: {fileID: 4242205098267900494}
   - component: {fileID: 2062095037}
-  - component: {fileID: 6529093401467090110}
-  - component: {fileID: 821380381381583635}
+  - component: {fileID: -1912345129971441409}
+  - component: {fileID: 144521427754040637}
   m_Layer: 9
   m_Name: EliminationAgentBlue
-  m_TagString: BlueTeamParent
+  m_TagString: BlueTeam
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -551,7 +576,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BrainParameters:
-    VectorObservationSize: 1
+    VectorObservationSize: 8
     NumStackedVectorObservations: 1
     m_ActionSpec:
       m_NumContinuousActions: 0
@@ -563,7 +588,7 @@ MonoBehaviour:
   m_Model: {fileID: 0}
   m_InferenceDevice: 0
   m_BehaviorType: 0
-  m_BehaviorName: EliminationAgent3
+  m_BehaviorName: EliminationAgent8
   TeamId: 1
   m_UseChildSensors: 1
   m_UseChildActuators: 1
@@ -583,11 +608,14 @@ MonoBehaviour:
   agentParameters:
     maxStep: 0
   hasUpgradedFromAgentParameters: 1
-  MaxStep: 10000
+  MaxStep: 5000
   healthText: {fileID: 6131294632219690993}
   speed: 100
-  turnspeed: 15
+  turnspeed: 12
   rb: {fileID: 4242205098267900495}
+  target: {fileID: 0}
+  oddballcarrier: 0
+  oddballtracker: {fileID: 4043798963883184189, guid: 29c485433944e754389530f4dda2f133, type: 3}
   meanReward: 0
   team: 1
   bulletSpawn: {fileID: 6203896010511617685}
@@ -595,9 +623,11 @@ MonoBehaviour:
   turretPivot: {fileID: 1496635210}
   enemyRadar: []
   bulletRadar: []
-  bufferSensorBullet: {fileID: 6529093401467090110}
+  bufferSensorBullet: {fileID: -1912345129971441409}
+  bufferSensorEnemy: {fileID: 144521427754040637}
   bulletNumber: 0
   firerate: 0.6
+  idleReward: 0
 --- !u!114 &6203896011107645361
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -624,7 +654,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a41f632584625ad41a796f2aba5d1f1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 1
+  health: 3
 --- !u!50 &4242205098267900495
 Rigidbody2D:
   serializedVersion: 4
@@ -687,8 +717,8 @@ MonoBehaviour:
   - {x: 0.37229443, y: -0.3691039, z: 0}
   m_ShapePathHash: 447784005
   m_Mesh: {fileID: 0}
-  m_InstanceId: 50658
---- !u!114 &6529093401467090110
+  m_InstanceId: 39732
+--- !u!114 &-1912345129971441409
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -703,7 +733,7 @@ MonoBehaviour:
   m_SensorName: BufferSensorBullet
   m_ObservableSize: 2
   m_MaxNumObservables: 10
---- !u!114 &821380381381583635
+--- !u!114 &144521427754040637
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
