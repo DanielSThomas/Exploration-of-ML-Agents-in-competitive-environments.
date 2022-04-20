@@ -538,7 +538,6 @@ GameObject:
   - component: {fileID: 4242205098267900494}
   - component: {fileID: 2062095037}
   - component: {fileID: -1912345129971441409}
-  - component: {fileID: 144521427754040637}
   m_Layer: 9
   m_Name: EliminationAgentBlue
   m_TagString: BlueTeam
@@ -614,17 +613,13 @@ MonoBehaviour:
   turnspeed: 12
   rb: {fileID: 4242205098267900495}
   target: {fileID: 0}
-  oddballcarrier: 0
-  oddballtracker: {fileID: 4043798963883184189, guid: 29c485433944e754389530f4dda2f133, type: 3}
   meanReward: 0
   team: 1
   bulletSpawn: {fileID: 6203896010511617685}
   bulletobject: {fileID: 2912846600683251682, guid: 3ca3621232180f34ebf763387306a019, type: 3}
   turretPivot: {fileID: 1496635210}
-  enemyRadar: []
   bulletRadar: []
   bufferSensorBullet: {fileID: -1912345129971441409}
-  bufferSensorEnemy: {fileID: 144521427754040637}
   bulletNumber: 0
   firerate: 0.6
   idleReward: 0
@@ -733,21 +728,6 @@ MonoBehaviour:
   m_SensorName: BufferSensorBullet
   m_ObservableSize: 2
   m_MaxNumObservables: 10
---- !u!114 &144521427754040637
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6203896011107645367}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd8012d5925524537b27131fef517017, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SensorName: BufferSensorEnemy
-  m_ObservableSize: 2
-  m_MaxNumObservables: 3
 --- !u!1 &7726643503866179063
 GameObject:
   m_ObjectHideFlags: 0

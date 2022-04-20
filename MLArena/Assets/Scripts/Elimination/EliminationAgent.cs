@@ -17,10 +17,7 @@ public class EliminationAgent : Agent
     private Health hp;
     private Transform spawn;
 
-    [SerializeField] private Transform target;
-
-    [SerializeField] private bool oddballcarrier = false;
-    
+    [SerializeField] private Transform target; // buffer ?
 
     [SerializeField] private float meanReward;
     [SerializeField] private int team; // 0 = Red Team  1 = Blue Team
@@ -28,10 +25,10 @@ public class EliminationAgent : Agent
     [SerializeField] private GameObject bulletobject;
     [SerializeField] private Rigidbody2D turretPivot;
 
-    [SerializeField] private GameObject[] enemyRadar;
+    
     [SerializeField] private GameObject[] bulletRadar;
     [SerializeField] private BufferSensorComponent bufferSensorBullet;
-    [SerializeField] private BufferSensorComponent bufferSensorEnemy;
+    
     [SerializeField] private int bulletNumber = 0;
 
     [SerializeField] private float firerate;
@@ -80,9 +77,7 @@ public class EliminationAgent : Agent
 
         sensor.AddObservation(this.transform.localPosition);
 
-        sensor.AddObservation(target.localPosition);
-
-        sensor.AddObservation(oddballcarrier);
+        //sensor.AddObservation(target.localPosition);    
 
         switch (team)
         {
@@ -196,11 +191,6 @@ public class EliminationAgent : Agent
                 eliminationGameManager.addRedScore();
             }
 
-            if(oddballcarrier == true)
-            {
-                target.parent = null;
-                target.GetComponent<OddBall>().carried = false;
-            }
 
             Debug.Log(this.gameObject.name + " Lost with a score of : " + GetCumulativeReward());
             this.gameObject.SetActive(false);
@@ -262,7 +252,7 @@ public class EliminationAgent : Agent
 
     private void Shoot()
     {
-        if (Time.time > nextShoot && oddballcarrier == false)
+        if (Time.time > nextShoot)
         {
             nextShoot = Time.time + firerate;
 
@@ -304,13 +294,6 @@ public class EliminationAgent : Agent
         AddReward(1.1f - idleReward);
         Debug.Log(this.gameObject.name + " Won with a score of : " + GetCumulativeReward());
         //EndEpisode();
-    }
-
-    public void setCarry(bool _value)
-    {
-        oddballcarrier = _value;
-       
-
     }
 
 
