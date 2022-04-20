@@ -20,7 +20,7 @@ public class EliminationGameManager : MonoBehaviour
 
     [SerializeField] private GameObject[] levels;
     [SerializeField] private GameObject currentLevel; 
-    [SerializeField] private LevelInfo currentLevelInfo; 
+    [SerializeField] private LevelInfo currentLevelInfo;
 
     [SerializeField] private List<GameObject> redAgentObjects = new List<GameObject>();
 
@@ -201,9 +201,25 @@ public class EliminationGameManager : MonoBehaviour
 
     private void NewRandomLevel()
     {
-        int randomNo = Random.Range(0, levels.Length);
 
-        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        int randomNo = Random.Range(0, levels.Length);
 
         currentLevel = Instantiate(levels[randomNo]);
 
@@ -212,6 +228,11 @@ public class EliminationGameManager : MonoBehaviour
        // currentLevelInfo = levels[randomNo].GetComponent<LevelInfo>();
 
     }
+
+
+
+
+
    
 
     private void RoundStart()
