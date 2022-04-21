@@ -308,13 +308,18 @@ MonoBehaviour:
   m_SensorName: RayPerceptionSensor2
   m_DetectableTags:
   - Wall
+  - Coin
+  - Coin1
+  - Coin2
+  - Coin3
+  - Coin4
   m_RaysPerDirection: 6
   m_MaxRayDegrees: 180
   m_SphereCastRadius: 0.5
   m_RayLength: 20
   m_RayLayerMask:
     serializedVersion: 2
-    m_Bits: 4294952200
+    m_Bits: 4294903048
   m_ObservationStacks: 1
   rayHitColor: {r: 0.96933174, g: 0, b: 1, a: 1}
   rayMissColor: {r: 0.41509432, g: 0.41509432, b: 0.41509432, a: 1}
@@ -394,7 +399,7 @@ MonoBehaviour:
   m_RayLength: 44
   m_RayLayerMask:
     serializedVersion: 2
-    m_Bits: 4294935816
+    m_Bits: 4294837512
   m_ObservationStacks: 1
   rayHitColor: {r: 1, g: 0, b: 0, a: 1}
   rayMissColor: {r: 1, g: 1, b: 1, a: 1}
@@ -575,7 +580,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BrainParameters:
-    VectorObservationSize: 8
+    VectorObservationSize: 4
     NumStackedVectorObservations: 1
     m_ActionSpec:
       m_NumContinuousActions: 0
@@ -587,7 +592,7 @@ MonoBehaviour:
   m_Model: {fileID: 0}
   m_InferenceDevice: 0
   m_BehaviorType: 0
-  m_BehaviorName: EliminationAgent8
+  m_BehaviorName: EliminationAgentBasic
   TeamId: 1
   m_UseChildSensors: 1
   m_UseChildActuators: 1
@@ -612,7 +617,7 @@ MonoBehaviour:
   speed: 100
   turnspeed: 12
   rb: {fileID: 4242205098267900495}
-  target: {fileID: 0}
+  ray: {fileID: 0}
   meanReward: 0
   team: 1
   bulletSpawn: {fileID: 6203896010511617685}
@@ -712,7 +717,7 @@ MonoBehaviour:
   - {x: 0.37229443, y: -0.3691039, z: 0}
   m_ShapePathHash: 447784005
   m_Mesh: {fileID: 0}
-  m_InstanceId: 39732
+  m_InstanceId: 66576
 --- !u!114 &-1912345129971441409
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -726,7 +731,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_SensorName: BufferSensorBullet
-  m_ObservableSize: 2
+  m_ObservableSize: 4
   m_MaxNumObservables: 10
 --- !u!1 &7726643503866179063
 GameObject:

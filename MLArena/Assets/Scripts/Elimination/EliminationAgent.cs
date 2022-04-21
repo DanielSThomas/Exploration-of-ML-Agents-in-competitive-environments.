@@ -17,7 +17,8 @@ public class EliminationAgent : Agent
     private Health hp;
     private Transform spawn;
 
-    [SerializeField] private Transform target; // buffer ?
+    [SerializeField] private RayPerceptionSensorComponent2D ray;
+
 
     [SerializeField] private float meanReward;
     [SerializeField] private int team; // 0 = Red Team  1 = Blue Team
@@ -27,8 +28,10 @@ public class EliminationAgent : Agent
 
     
     [SerializeField] private GameObject[] bulletRadar;
+   
     [SerializeField] private BufferSensorComponent bufferSensorBullet;
-    
+   
+
     [SerializeField] private int bulletNumber = 0;
 
     [SerializeField] private float firerate;
@@ -65,8 +68,6 @@ public class EliminationAgent : Agent
         turretPivot.rotation = 0;
         idleReward = 0;
 
-        target = GameObject.Find("OddBall").transform;
-
     }
 
 
@@ -75,7 +76,9 @@ public class EliminationAgent : Agent
     {
         sensor.AddObservation(canShoot); // check if we can shoot
 
-        sensor.AddObservation(this.transform.localPosition);
+        sensor.AddObservation(this.transform.position);
+
+        
 
         //sensor.AddObservation(target.localPosition);    
 
@@ -91,6 +94,7 @@ public class EliminationAgent : Agent
                 bulletRadar = GameObject.FindGameObjectsWithTag("RedBullet");                
                 break;
         }
+     
 
         System.Array.Sort(bulletRadar, (a, b) => (Vector3.Distance(a.transform.position, transform.position)).CompareTo(Vector3.Distance(b.transform.position, transform.position)));
 
@@ -108,7 +112,9 @@ public class EliminationAgent : Agent
             float[] bulletObservation = new float[]
             {
                 bulletRadar[i].transform.position.x - transform.position.x,
-                bulletRadar[i].transform.position.y - transform.position.y
+                bulletRadar[i].transform.position.y - transform.position.y,
+                bulletRadar[i].transform.forward.x,
+                bulletRadar[i].transform.forward.y
             };
 
             bulletNumber++;
@@ -116,8 +122,7 @@ public class EliminationAgent : Agent
             bufferSensorBullet.AppendObservation(bulletObservation);
         }
 
-    
-
+     
 
     }
 
@@ -174,7 +179,7 @@ public class EliminationAgent : Agent
 
         //Idle Penalty
 
-        idleReward += 1.1f / MaxStep;
+        idleReward += 1f / MaxStep;
 
 
         if (hp.getHealth() < 1)
@@ -291,7 +296,7 @@ public class EliminationAgent : Agent
 
     public void endEpisodeWithPenalties()
     {
-        AddReward(1.1f - idleReward);
+        AddReward(2f - idleReward);
         Debug.Log(this.gameObject.name + " Won with a score of : " + GetCumulativeReward());
         //EndEpisode();
     }

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7465679356404650402}
   - component: {fileID: 7465679356404650403}
   m_Layer: 14
-  m_Name: Coin
+  m_Name: CoinRed
   m_TagString: Coin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 2
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0.9245283, g: 0.660713, b: 0.2747419, a: 1}
+  m_Color: {r: 0.9254902, g: 0.4614694, b: 0.27450988, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -97,6 +97,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70e09d8f4be168e46ab0bd423c3c0899, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timesCollected: 0
+  coinTeam: 0
 --- !u!58 &7465679356404650403
 CircleCollider2D:
   m_ObjectHideFlags: 0

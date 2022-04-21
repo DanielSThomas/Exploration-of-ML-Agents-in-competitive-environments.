@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee6ebf9ce085f0946bff7d798c8b6c12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSteps: 5001
+  maxSteps: 10001
   matchtimer: 0
   roundNumber: 0
   redTeamBotCount: 1
@@ -161,6 +161,8 @@ MonoBehaviour:
   blueTeamBotPrefab: {fileID: 6203896011107645367, guid: 432841a725ce0a64788941c0cec7b86a, type: 3}
   levels:
   - {fileID: 2581254283074040010, guid: fa397a12913330f4e98ce488f1910f16, type: 3}
+  - {fileID: 6796048946439098496, guid: 8ec6b9f6167d3fe4fa120eb5c754eb4c, type: 3}
+  - {fileID: 8450027085455230000, guid: 664d8c23f508ec34180dc2cfdee4353c, type: 3}
   currentLevel: {fileID: 0}
   currentLevelInfo: {fileID: 0}
   redAgentObjects: []
@@ -303,6 +305,7 @@ GameObject:
   - component: {fileID: 1401130196}
   - component: {fileID: 1401130199}
   - component: {fileID: 1401130200}
+  - component: {fileID: 1401130201}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -427,3 +430,16 @@ MonoBehaviour:
   m_CropFrameX: 1
   m_CropFrameY: 1
   m_StretchFill: 0
+--- !u!114 &1401130201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1401130195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d3e8329d2a052645a574949c4e18c0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mouseSensitivity: 0.016

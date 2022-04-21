@@ -59,7 +59,7 @@ public class Bullet : MonoBehaviour
             hp.setHealth(hp.getHealth() - damage);
 
             //Give reward for hitting an enemy
-            bulletOwner.AddReward(0.3f);  // Change this to update if max health is changed
+            bulletOwner.AddReward(1f);  // Change this to update if max health is changed
 
             //Minus reward for getting hit
             hitAgent.AddReward(-0.3f);
@@ -68,7 +68,7 @@ public class Bullet : MonoBehaviour
             {
                 //Give reward for elim
 
-                hitAgent.AddReward(-1.1f);
+                hitAgent.AddReward(-1f);
                 bulletOwner.endEpisodeWithPenalties(); // only works for 1v1 need to put this in the end of game instead
                 
             }
@@ -82,8 +82,8 @@ public class Bullet : MonoBehaviour
         //{
         //    bulletOwner.AddReward(-0.001f);
         //}
-       
-        
+
+
 
         Destroy(this.gameObject);
         

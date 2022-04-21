@@ -7,6 +7,9 @@ public class Coin : MonoBehaviour
     Collider2D col;
     SpriteRenderer sr;
 
+    [SerializeField] private float timesCollected = 0;
+    [SerializeField] private int coinTeam;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,9 +26,18 @@ public class Coin : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
 
-        if(collision.GetComponent<EliminationAgent>() != null)
+        if(collision.GetComponent<EliminationAgent>() != null && coinTeam == collision.GetComponent<EliminationAgent>().getTeam())
         {
-            collision.GetComponent<EliminationAgent>().AddReward(0.5f);
+            
+
+            if(timesCollected <= 3)
+            {
+                collision.GetComponent<EliminationAgent>().AddReward(0.3f - timesCollected / 10);
+
+                timesCollected += 1f;
+
+                this.gameObject.tag = "Coin" + timesCollected;
+            }
             
             col.enabled = false;
 
