@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7465679356404650400, guid: 96b0f2319a7dc38428a951c51fab9c82, type: 3}
       propertyPath: m_Name
-      value: CoinBlue
+      value: CoinBlue Variant
       objectReference: {fileID: 0}
     - target: {fileID: 7465679356404650400, guid: 96b0f2319a7dc38428a951c51fab9c82, type: 3}
       propertyPath: m_Layer
@@ -74,6 +74,10 @@ PrefabInstance:
     - target: {fileID: 7465679356404650429, guid: 96b0f2319a7dc38428a951c51fab9c82, type: 3}
       propertyPath: m_Color.r
       value: 0.27450988
+      objectReference: {fileID: 0}
+    - target: {fileID: 7465679356404650429, guid: 96b0f2319a7dc38428a951c51fab9c82, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 96b0f2319a7dc38428a951c51fab9c82, type: 3}

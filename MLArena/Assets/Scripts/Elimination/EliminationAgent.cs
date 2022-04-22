@@ -26,17 +26,12 @@ public class EliminationAgent : Agent
     [SerializeField] private GameObject bulletobject;
     [SerializeField] private Rigidbody2D turretPivot;
 
-    
-    [SerializeField] private GameObject[] bulletRadar;
-   
-    [SerializeField] private BufferSensorComponent bufferSensorBullet;
-   
-
-    [SerializeField] private int bulletNumber = 0;
-
     [SerializeField] private float firerate;
+    [SerializeField] private float magAmmo = 5;
+    [SerializeField] private bool isReloading = false;
     private float nextShoot;
     private bool canShoot = true;
+    [SerializeField] float wallReward = 0;
     [SerializeField] float idleReward = 0;
 
      
@@ -67,7 +62,8 @@ public class EliminationAgent : Agent
         rb.rotation = 0;
         turretPivot.rotation = 0;
         idleReward = 0;
-
+        wallReward = 0;
+        magAmmo = 5;
     }
 
 
@@ -76,53 +72,7 @@ public class EliminationAgent : Agent
     {
         sensor.AddObservation(canShoot); // check if we can shoot
 
-        sensor.AddObservation(this.transform.position);
-
-        
-
-        //sensor.AddObservation(target.localPosition);    
-
-        switch (team)
-        {
-            case 0:
-
-                bulletRadar = GameObject.FindGameObjectsWithTag("BlueBullet");             
-                break;
-
-            case 1:
-
-                bulletRadar = GameObject.FindGameObjectsWithTag("RedBullet");                
-                break;
-        }
-     
-
-        System.Array.Sort(bulletRadar, (a, b) => (Vector3.Distance(a.transform.position, transform.position)).CompareTo(Vector3.Distance(b.transform.position, transform.position)));
-
-        bulletNumber = 0;
-
-        //bullet buffer observastions
-       
-        for (int i = 0; i < bulletRadar.Length; i++)
-        {
-            if (bulletRadar[i] == null || bulletNumber >= 10)
-            {
-                return;
-            }
-
-            float[] bulletObservation = new float[]
-            {
-                bulletRadar[i].transform.position.x - transform.position.x,
-                bulletRadar[i].transform.position.y - transform.position.y,
-                bulletRadar[i].transform.forward.x,
-                bulletRadar[i].transform.forward.y
-            };
-
-            bulletNumber++;
-
-            bufferSensorBullet.AppendObservation(bulletObservation);
-        }
-
-     
+        sensor.AddObservation(magAmmo);
 
     }
 
@@ -170,7 +120,7 @@ public class EliminationAgent : Agent
 
         turretPivot.MoveRotation(turretPivot.rotation += turretRotDir * turnspeed * Time.deltaTime);
 
-        rb.velocity = (Vector2)transform.up * movedir.y * speed * Time.deltaTime;
+        rb.AddForce((Vector2)transform.up * movedir.y * speed * Time.deltaTime);
 
 
         //Rewards
@@ -196,7 +146,7 @@ public class EliminationAgent : Agent
                 eliminationGameManager.addRedScore();
             }
 
-
+            AddReward(-1f - wallReward);
             Debug.Log(this.gameObject.name + " Lost with a score of : " + GetCumulativeReward());
             this.gameObject.SetActive(false);
         }
@@ -205,9 +155,11 @@ public class EliminationAgent : Agent
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        //Bumping into walls penalty
         if (collision.gameObject.tag == "Wall")
         {
-            AddReward(-0.1f);
+            wallReward += 0.1f;
+            
         }
     }
 
@@ -264,18 +216,32 @@ public class EliminationAgent : Agent
             canShoot = true;
         }
 
-        if(canShoot == true)
+        if(canShoot == true && magAmmo > 0)
         {
             GameObject _bullet = Instantiate(bulletobject, bulletSpawn.position, bulletSpawn.rotation);
             _bullet.GetComponent<Bullet>().setbulletOwner(this);
             _bullet.GetComponent<Bullet>().setbulletTeam(team);
 
+            magAmmo--;
 
             canShoot = false;
         }
 
+
+        else if (magAmmo == 0 && isReloading == false)
+        {
+            Invoke("reload", 5);
+            isReloading = true;
+        }
+
         
 
+    }
+
+    private void reload()
+    {
+        magAmmo = 5;
+        isReloading = false;
     }
 
     public int getTeam()
@@ -296,7 +262,8 @@ public class EliminationAgent : Agent
 
     public void endEpisodeWithPenalties()
     {
-        AddReward(2f - idleReward);
+        float _penalties = idleReward + wallReward;
+        AddReward(1f - _penalties);
         Debug.Log(this.gameObject.name + " Won with a score of : " + GetCumulativeReward());
         //EndEpisode();
     }

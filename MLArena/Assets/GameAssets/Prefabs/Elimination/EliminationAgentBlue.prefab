@@ -220,6 +220,7 @@ GameObject:
   - component: {fileID: 4917547411430874609}
   - component: {fileID: 4917547411430874608}
   - component: {fileID: 6094663585793424157}
+  - component: {fileID: 7161815359505861898}
   m_Layer: 9
   m_Name: Tank_Body
   m_TagString: BlueTeam
@@ -313,7 +314,7 @@ MonoBehaviour:
   - Coin2
   - Coin3
   - Coin4
-  m_RaysPerDirection: 6
+  m_RaysPerDirection: 10
   m_MaxRayDegrees: 180
   m_SphereCastRadius: 0.5
   m_RayLength: 20
@@ -323,6 +324,31 @@ MonoBehaviour:
   m_ObservationStacks: 1
   rayHitColor: {r: 0.96933174, g: 0, b: 1, a: 1}
   rayMissColor: {r: 0.41509432, g: 0.41509432, b: 0.41509432, a: 1}
+--- !u!114 &7161815359505861898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4917547411430874610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f67c7e722ba14acd9153bb4488bff6e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SensorName: RayPerceptionSensor3
+  m_DetectableTags:
+  - RedBullet
+  m_RaysPerDirection: 20
+  m_MaxRayDegrees: 180
+  m_SphereCastRadius: 0.5
+  m_RayLength: 20
+  m_RayLayerMask:
+    serializedVersion: 2
+    m_Bits: 4294841352
+  m_ObservationStacks: 1
+  rayHitColor: {r: 1, g: 0.79510856, b: 0, a: 1}
+  rayMissColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &4917547411490899123
 GameObject:
   m_ObjectHideFlags: 0
@@ -542,7 +568,6 @@ GameObject:
   - component: {fileID: 4242205098267900495}
   - component: {fileID: 4242205098267900494}
   - component: {fileID: 2062095037}
-  - component: {fileID: -1912345129971441409}
   m_Layer: 9
   m_Name: EliminationAgentBlue
   m_TagString: BlueTeam
@@ -580,7 +605,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BrainParameters:
-    VectorObservationSize: 4
+    VectorObservationSize: 2
     NumStackedVectorObservations: 1
     m_ActionSpec:
       m_NumContinuousActions: 0
@@ -592,7 +617,7 @@ MonoBehaviour:
   m_Model: {fileID: 0}
   m_InferenceDevice: 0
   m_BehaviorType: 0
-  m_BehaviorName: EliminationAgentBasic
+  m_BehaviorName: EliminationAgentBasic2
   TeamId: 1
   m_UseChildSensors: 1
   m_UseChildActuators: 1
@@ -623,10 +648,10 @@ MonoBehaviour:
   bulletSpawn: {fileID: 6203896010511617685}
   bulletobject: {fileID: 2912846600683251682, guid: 3ca3621232180f34ebf763387306a019, type: 3}
   turretPivot: {fileID: 1496635210}
-  bulletRadar: []
-  bufferSensorBullet: {fileID: -1912345129971441409}
-  bulletNumber: 0
   firerate: 0.6
+  magAmmo: 3
+  isReloading: 0
+  wallReward: 0
   idleReward: 0
 --- !u!114 &6203896011107645361
 MonoBehaviour:
@@ -667,9 +692,9 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_Mass: 0.1
+  m_LinearDrag: 7
+  m_AngularDrag: 0.5
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
@@ -717,22 +742,7 @@ MonoBehaviour:
   - {x: 0.37229443, y: -0.3691039, z: 0}
   m_ShapePathHash: 447784005
   m_Mesh: {fileID: 0}
-  m_InstanceId: 66576
---- !u!114 &-1912345129971441409
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6203896011107645367}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd8012d5925524537b27131fef517017, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SensorName: BufferSensorBullet
-  m_ObservableSize: 4
-  m_MaxNumObservables: 10
+  m_InstanceId: 30124
 --- !u!1 &7726643503866179063
 GameObject:
   m_ObjectHideFlags: 0

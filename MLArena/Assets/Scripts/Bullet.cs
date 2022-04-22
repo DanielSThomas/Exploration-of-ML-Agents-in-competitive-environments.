@@ -59,7 +59,7 @@ public class Bullet : MonoBehaviour
             hp.setHealth(hp.getHealth() - damage);
 
             //Give reward for hitting an enemy
-            bulletOwner.AddReward(1f);  // Change this to update if max health is changed
+            bulletOwner.AddReward(0.3f);  // Change this to update if max health is changed
 
             //Minus reward for getting hit
             hitAgent.AddReward(-0.3f);
