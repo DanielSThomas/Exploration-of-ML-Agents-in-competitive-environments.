@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Unity.MLAgents;
-
+using UnityEngine.SceneManagement;
 public class EliminationGameManager : MonoBehaviour
 {
-
+    [SerializeField] Menus menu;
 
     [SerializeField] private int maxSteps = 10001;
     [SerializeField] int matchtimer;
@@ -14,6 +14,8 @@ public class EliminationGameManager : MonoBehaviour
 
     [SerializeField] private int redTeamBotCount;
     [SerializeField] private int blueTeamBotCount;
+
+    [SerializeField] private bool humanPlayer;
 
     [SerializeField] private GameObject redTeamBotPrefab;
     [SerializeField] private GameObject blueTeamBotPrefab;
@@ -34,9 +36,20 @@ public class EliminationGameManager : MonoBehaviour
     [SerializeField] private int blueTeamScore;
 
 
+    private void Awake()
+    {
+        menu = GameObject.FindGameObjectWithTag("MenuManager").GetComponent<Menus>();
+
+        redTeamBotCount = menu.GetRedTeamCount();
+        blueTeamBotCount = menu.GetBlueTeamCount();
+        humanPlayer = menu.GetHumanPlayer();
+    }
+
+
     // Start is called before the first frame update
     void Start()
     {
+       
 
         NewRandomLevel();
 
@@ -59,8 +72,21 @@ public class EliminationGameManager : MonoBehaviour
 
     }
 
+    private void Update()
+    {
+        //Restart Scene
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadScene("EliminationTraining");
+        }
+    }
+
     void FixedUpdate()
     {
+
+        
+
+
         //Enviroment Timer
         matchtimer += 1;
         if(matchtimer >= maxSteps)
@@ -116,6 +142,11 @@ public class EliminationGameManager : MonoBehaviour
                 if (roundNumber == 0)
                 {
                     agentObject = Instantiate(redTeamBotPrefab);
+                    //Make first bot player
+                    if(humanPlayer == true && i == 0)
+                    {
+                        agentObject.GetComponent<Unity.MLAgents.Policies.BehaviorParameters>().BehaviorType = Unity.MLAgents.Policies.BehaviorType.HeuristicOnly;
+                    }
 
                     redAgentObjects.Add(agentObject);
                 }
@@ -252,6 +283,20 @@ public class EliminationGameManager : MonoBehaviour
 
     private void RoundOver(SimpleMultiAgentGroup winningTeam)
     {
+
+        //Delete left over bullets
+        GameObject[] _leftoverredbullets = GameObject.FindGameObjectsWithTag("RedBullet");      
+        GameObject[] _leftoverbluebullets = GameObject.FindGameObjectsWithTag("BlueBullet");
+
+        for (int i = 0; i < _leftoverredbullets.Length; i++)
+        {
+            GameObject.Destroy(_leftoverredbullets[i]);
+        }
+        for (int i = 0; i < _leftoverbluebullets.Length; i++)
+        {
+            GameObject.Destroy(_leftoverbluebullets[i]);
+        }
+
 
         winningTeam.AddGroupReward(1 - (float)matchtimer / maxSteps);
 

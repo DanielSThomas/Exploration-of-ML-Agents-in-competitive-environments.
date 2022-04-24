@@ -68,7 +68,7 @@ public class Bullet : MonoBehaviour
             {
                 //Give reward for elim
 
-                hitAgent.AddReward(-1f);
+                
                 bulletOwner.endEpisodeWithPenalties(); // only works for 1v1 need to put this in the end of game instead
                 
             }
@@ -78,10 +78,10 @@ public class Bullet : MonoBehaviour
         }
         //Miss penalty
 
-        //else
-        //{
-        //    bulletOwner.AddReward(-0.001f);
-        //}
+        else
+        {
+            bulletOwner.AddReward(-0.05f);
+        }
 
 
 

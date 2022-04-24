@@ -17,7 +17,7 @@ public class EliminationAgent : Agent
     private Health hp;
     private Transform spawn;
 
-    [SerializeField] private RayPerceptionSensorComponent2D ray;
+   
 
 
     [SerializeField] private float meanReward;
@@ -27,12 +27,11 @@ public class EliminationAgent : Agent
     [SerializeField] private Rigidbody2D turretPivot;
 
     [SerializeField] private float firerate;
-    [SerializeField] private float magAmmo = 5;
-    [SerializeField] private bool isReloading = false;
+   
+    
     private float nextShoot;
     private bool canShoot = true;
-    [SerializeField] float wallReward = 0;
-    [SerializeField] float idleReward = 0;
+
 
      
 
@@ -40,7 +39,7 @@ public class EliminationAgent : Agent
     void Awake()
     {
         
-        eliminationGameManager = GameObject.Find("EliminationGameManager").GetComponent<EliminationGameManager>();
+        eliminationGameManager = GameObject.FindGameObjectWithTag("GameController").GetComponent<EliminationGameManager>();
         MaxStep = eliminationGameManager.getMaxStep();
         
         hp = GetComponent<Health>();
@@ -61,19 +60,15 @@ public class EliminationAgent : Agent
         rb.velocity = Vector2.zero;
         rb.rotation = 0;
         turretPivot.rotation = 0;
-        idleReward = 0;
-        wallReward = 0;
-        magAmmo = 5;
+       
     }
 
 
 
     public override void CollectObservations(VectorSensor sensor)
     {
-        sensor.AddObservation(canShoot); // check if we can shoot
-
-        sensor.AddObservation(magAmmo);
-
+        sensor.AddObservation(canShoot);
+        
     }
 
     public override void OnActionReceived(ActionBuffers actionBuffers)
@@ -120,7 +115,7 @@ public class EliminationAgent : Agent
 
         turretPivot.MoveRotation(turretPivot.rotation += turretRotDir * turnspeed * Time.deltaTime);
 
-        rb.AddForce((Vector2)transform.up * movedir.y * speed * Time.deltaTime);
+        rb.velocity = (Vector2)transform.up * movedir.y * speed * Time.deltaTime;
 
 
         //Rewards
@@ -129,7 +124,7 @@ public class EliminationAgent : Agent
 
         //Idle Penalty
 
-        idleReward += 1f / MaxStep;
+        AddReward(-1f / MaxStep);
 
 
         if (hp.getHealth() < 1)
@@ -146,7 +141,7 @@ public class EliminationAgent : Agent
                 eliminationGameManager.addRedScore();
             }
 
-            AddReward(-1f - wallReward);
+            AddReward(-1f);
             Debug.Log(this.gameObject.name + " Lost with a score of : " + GetCumulativeReward());
             this.gameObject.SetActive(false);
         }
@@ -158,7 +153,7 @@ public class EliminationAgent : Agent
         //Bumping into walls penalty
         if (collision.gameObject.tag == "Wall")
         {
-            wallReward += 0.1f;
+            AddReward(-0.1f);
             
         }
     }
@@ -216,33 +211,19 @@ public class EliminationAgent : Agent
             canShoot = true;
         }
 
-        if(canShoot == true && magAmmo > 0)
+        if(canShoot == true)
         {
             GameObject _bullet = Instantiate(bulletobject, bulletSpawn.position, bulletSpawn.rotation);
             _bullet.GetComponent<Bullet>().setbulletOwner(this);
             _bullet.GetComponent<Bullet>().setbulletTeam(team);
 
-            magAmmo--;
-
             canShoot = false;
         }
 
-
-        else if (magAmmo == 0 && isReloading == false)
-        {
-            Invoke("reload", 5);
-            isReloading = true;
-        }
-
-        
+ 
 
     }
 
-    private void reload()
-    {
-        magAmmo = 5;
-        isReloading = false;
-    }
 
     public int getTeam()
     {
@@ -261,9 +242,8 @@ public class EliminationAgent : Agent
     }
 
     public void endEpisodeWithPenalties()
-    {
-        float _penalties = idleReward + wallReward;
-        AddReward(1f - _penalties);
+    {    
+        AddReward(1f);
         Debug.Log(this.gameObject.name + " Won with a score of : " + GetCumulativeReward());
         //EndEpisode();
     }

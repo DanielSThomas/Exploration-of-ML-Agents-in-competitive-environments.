@@ -8,6 +8,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 7465679356404650400, guid: 96b0f2319a7dc38428a951c51fab9c82, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 8418204508859773708, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 7465679356404650400, guid: 96b0f2319a7dc38428a951c51fab9c82, type: 3}
       propertyPath: m_Name
       value: CoinBlue Variant
       objectReference: {fileID: 0}

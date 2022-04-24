@@ -314,6 +314,7 @@ MonoBehaviour:
   - Coin2
   - Coin3
   - Coin4
+  - RedTeam
   m_RaysPerDirection: 10
   m_MaxRayDegrees: 180
   m_SphereCastRadius: 0.5
@@ -605,7 +606,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BrainParameters:
-    VectorObservationSize: 2
+    VectorObservationSize: 1
     NumStackedVectorObservations: 1
     m_ActionSpec:
       m_NumContinuousActions: 0
@@ -617,7 +618,7 @@ MonoBehaviour:
   m_Model: {fileID: 0}
   m_InferenceDevice: 0
   m_BehaviorType: 0
-  m_BehaviorName: EliminationAgentBasic2
+  m_BehaviorName: EliminationAgentBasicTeam
   TeamId: 1
   m_UseChildSensors: 1
   m_UseChildActuators: 1
@@ -642,17 +643,12 @@ MonoBehaviour:
   speed: 100
   turnspeed: 12
   rb: {fileID: 4242205098267900495}
-  ray: {fileID: 0}
   meanReward: 0
   team: 1
   bulletSpawn: {fileID: 6203896010511617685}
   bulletobject: {fileID: 2912846600683251682, guid: 3ca3621232180f34ebf763387306a019, type: 3}
   turretPivot: {fileID: 1496635210}
   firerate: 0.6
-  magAmmo: 3
-  isReloading: 0
-  wallReward: 0
-  idleReward: 0
 --- !u!114 &6203896011107645361
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -693,14 +689,14 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 0.1
-  m_LinearDrag: 7
+  m_LinearDrag: 0
   m_AngularDrag: 0.5
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!58 &4242205098267900494
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -742,7 +738,7 @@ MonoBehaviour:
   - {x: 0.37229443, y: -0.3691039, z: 0}
   m_ShapePathHash: 447784005
   m_Mesh: {fileID: 0}
-  m_InstanceId: 30124
+  m_InstanceId: 28950
 --- !u!1 &7726643503866179063
 GameObject:
   m_ObjectHideFlags: 0

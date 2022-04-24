@@ -14364,6 +14364,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CoinBlue Variant (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 4040957089371368074, guid: 4cdbf12c80fbab04ca204afcf6f7279a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4040957089371368086, guid: 4cdbf12c80fbab04ca204afcf6f7279a, type: 3}
       propertyPath: m_RootOrder
       value: 20
@@ -14425,6 +14429,10 @@ PrefabInstance:
     - target: {fileID: 4040957089371368074, guid: 4cdbf12c80fbab04ca204afcf6f7279a, type: 3}
       propertyPath: m_Name
       value: CoinBlue Variant (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4040957089371368074, guid: 4cdbf12c80fbab04ca204afcf6f7279a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4040957089371368086, guid: 4cdbf12c80fbab04ca204afcf6f7279a, type: 3}
       propertyPath: m_RootOrder
@@ -14488,6 +14496,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CoinRed (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 7465679356404650400, guid: 96b0f2319a7dc38428a951c51fab9c82, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7465679356404650428, guid: 96b0f2319a7dc38428a951c51fab9c82, type: 3}
       propertyPath: m_RootOrder
       value: 11
@@ -14549,6 +14561,10 @@ PrefabInstance:
     - target: {fileID: 7465679356404650400, guid: 96b0f2319a7dc38428a951c51fab9c82, type: 3}
       propertyPath: m_Name
       value: CoinRed (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7465679356404650400, guid: 96b0f2319a7dc38428a951c51fab9c82, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7465679356404650428, guid: 96b0f2319a7dc38428a951c51fab9c82, type: 3}
       propertyPath: m_RootOrder
@@ -14612,6 +14628,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CoinBlue Variant (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 4040957089371368074, guid: 4cdbf12c80fbab04ca204afcf6f7279a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4040957089371368086, guid: 4cdbf12c80fbab04ca204afcf6f7279a, type: 3}
       propertyPath: m_RootOrder
       value: 21
@@ -14673,6 +14693,10 @@ PrefabInstance:
     - target: {fileID: 4040957089371368074, guid: 4cdbf12c80fbab04ca204afcf6f7279a, type: 3}
       propertyPath: m_Name
       value: CoinBlue Variant (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4040957089371368074, guid: 4cdbf12c80fbab04ca204afcf6f7279a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4040957089371368086, guid: 4cdbf12c80fbab04ca204afcf6f7279a, type: 3}
       propertyPath: m_RootOrder
@@ -14736,6 +14760,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CoinRed (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 7465679356404650400, guid: 96b0f2319a7dc38428a951c51fab9c82, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7465679356404650428, guid: 96b0f2319a7dc38428a951c51fab9c82, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -14797,6 +14825,10 @@ PrefabInstance:
     - target: {fileID: 7465679356404650400, guid: 96b0f2319a7dc38428a951c51fab9c82, type: 3}
       propertyPath: m_Name
       value: CoinRed (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7465679356404650400, guid: 96b0f2319a7dc38428a951c51fab9c82, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7465679356404650428, guid: 96b0f2319a7dc38428a951c51fab9c82, type: 3}
       propertyPath: m_RootOrder
@@ -14860,6 +14892,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CoinBlue Variant (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 4040957089371368074, guid: 4cdbf12c80fbab04ca204afcf6f7279a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4040957089371368086, guid: 4cdbf12c80fbab04ca204afcf6f7279a, type: 3}
       propertyPath: m_RootOrder
       value: 18
@@ -14921,6 +14957,10 @@ PrefabInstance:
     - target: {fileID: 4040957089371368074, guid: 4cdbf12c80fbab04ca204afcf6f7279a, type: 3}
       propertyPath: m_Name
       value: CoinBlue Variant (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4040957089371368074, guid: 4cdbf12c80fbab04ca204afcf6f7279a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4040957089371368086, guid: 4cdbf12c80fbab04ca204afcf6f7279a, type: 3}
       propertyPath: m_RootOrder
@@ -14984,6 +15024,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CoinRed (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 7465679356404650400, guid: 96b0f2319a7dc38428a951c51fab9c82, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7465679356404650428, guid: 96b0f2319a7dc38428a951c51fab9c82, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -15045,6 +15089,10 @@ PrefabInstance:
     - target: {fileID: 4040957089371368074, guid: 4cdbf12c80fbab04ca204afcf6f7279a, type: 3}
       propertyPath: m_Name
       value: CoinBlue Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 4040957089371368074, guid: 4cdbf12c80fbab04ca204afcf6f7279a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4040957089371368086, guid: 4cdbf12c80fbab04ca204afcf6f7279a, type: 3}
       propertyPath: m_RootOrder
@@ -15108,6 +15156,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CoinRed (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 7465679356404650400, guid: 96b0f2319a7dc38428a951c51fab9c82, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7465679356404650428, guid: 96b0f2319a7dc38428a951c51fab9c82, type: 3}
       propertyPath: m_RootOrder
       value: 13
@@ -15169,6 +15221,10 @@ PrefabInstance:
     - target: {fileID: 7465679356404650400, guid: 96b0f2319a7dc38428a951c51fab9c82, type: 3}
       propertyPath: m_Name
       value: CoinRed (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7465679356404650400, guid: 96b0f2319a7dc38428a951c51fab9c82, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7465679356404650428, guid: 96b0f2319a7dc38428a951c51fab9c82, type: 3}
       propertyPath: m_RootOrder
@@ -15232,6 +15288,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CoinRed (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 7465679356404650400, guid: 96b0f2319a7dc38428a951c51fab9c82, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7465679356404650428, guid: 96b0f2319a7dc38428a951c51fab9c82, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -15293,6 +15353,10 @@ PrefabInstance:
     - target: {fileID: 4040957089371368074, guid: 4cdbf12c80fbab04ca204afcf6f7279a, type: 3}
       propertyPath: m_Name
       value: CoinBlue Variant (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4040957089371368074, guid: 4cdbf12c80fbab04ca204afcf6f7279a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4040957089371368086, guid: 4cdbf12c80fbab04ca204afcf6f7279a, type: 3}
       propertyPath: m_RootOrder
@@ -15356,6 +15420,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CoinRed
       objectReference: {fileID: 0}
+    - target: {fileID: 7465679356404650400, guid: 96b0f2319a7dc38428a951c51fab9c82, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7465679356404650428, guid: 96b0f2319a7dc38428a951c51fab9c82, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -15417,6 +15485,10 @@ PrefabInstance:
     - target: {fileID: 4040957089371368074, guid: 4cdbf12c80fbab04ca204afcf6f7279a, type: 3}
       propertyPath: m_Name
       value: CoinBlue Variant (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4040957089371368074, guid: 4cdbf12c80fbab04ca204afcf6f7279a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4040957089371368086, guid: 4cdbf12c80fbab04ca204afcf6f7279a, type: 3}
       propertyPath: m_RootOrder
