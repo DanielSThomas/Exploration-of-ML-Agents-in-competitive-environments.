@@ -5,7 +5,7 @@ using UnityEngine.Experimental.Rendering.Universal;
 
 public class Bullet : MonoBehaviour
 {
-
+    [SerializeField] bool agentlessbullet;
     [SerializeField] private int bulletTeam;
     [SerializeField] private int damage;
     [SerializeField] private int bulletLifeTime;
@@ -52,8 +52,11 @@ public class Bullet : MonoBehaviour
             hitAgent.setHealth(hitAgent.getHealth() - damage);
 
             //Give reward for hitting an enemy
-            bulletOwner.AddReward(0.3f);  // Change this to update if max health is changed
-
+            if(agentlessbullet == false)
+            {
+                bulletOwner.AddReward(0.3f);
+            }
+            
             //Minus reward for getting hit
             hitAgent.AddReward(-0.3f);
 
@@ -63,25 +66,29 @@ public class Bullet : MonoBehaviour
 
                 hitAgent.AddReward(-1f);
 
-                bulletOwner.AddReward(1f); // only works for 1v1 need to put this in the end of game instead
-                
+                if (agentlessbullet == false)
+                {
+                    bulletOwner.AddReward(1f);
+                }
+
             }
 
 
         Destroy(this.gameObject);
         }
-        //Miss penalty
 
+        //Miss penalty
         else
         {
-            bulletOwner.AddReward(-0.05f);
+            if (agentlessbullet == false)
+            {
+                bulletOwner.AddReward(-0.03f);
+            }
+    
         }
 
 
-
-        Destroy(this.gameObject);
-        
-
+        Destroy(this.gameObject);   
        
     }
 
