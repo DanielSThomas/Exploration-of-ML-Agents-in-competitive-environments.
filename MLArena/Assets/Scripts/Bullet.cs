@@ -45,18 +45,11 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-
-        //if(other.gameObject.tag == "Radar")
-        //{
-        //    return;
-        //}
-
-
-        Health hp = other.GetComponent<Health>();
+   
         EliminationAgent hitAgent = other.GetComponent<EliminationAgent>();
-        if (hp != null && hitAgent.getTeam() != bulletTeam)
+        if (hitAgent != null && hitAgent.getTeam() != bulletTeam)
         {
-            hp.setHealth(hp.getHealth() - damage);
+            hitAgent.setHealth(hitAgent.getHealth() - damage);
 
             //Give reward for hitting an enemy
             bulletOwner.AddReward(0.3f);  // Change this to update if max health is changed
@@ -64,12 +57,13 @@ public class Bullet : MonoBehaviour
             //Minus reward for getting hit
             hitAgent.AddReward(-0.3f);
 
-            if (hp.getHealth() == 0)
+            if (hitAgent.getHealth() == 0)
             {
                 //Give reward for elim
 
-                
-                bulletOwner.endEpisodeWithPenalties(); // only works for 1v1 need to put this in the end of game instead
+                hitAgent.AddReward(-1f);
+
+                bulletOwner.AddReward(1f); // only works for 1v1 need to put this in the end of game instead
                 
             }
 

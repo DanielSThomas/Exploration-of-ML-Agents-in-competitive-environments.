@@ -10,16 +10,12 @@ public class EliminationAgent : Agent
 {
     private EliminationGameManager eliminationGameManager;
 
+    [SerializeField] int health;
     [SerializeField] private Text healthText;
     [SerializeField] private float speed = 10;
     [SerializeField] private float turnspeed = 10;
     [SerializeField] private Rigidbody2D rb;
-    private Health hp;
-    private Transform spawn;
-
-   
-
-
+  
     [SerializeField] private float meanReward;
     [SerializeField] private int team; // 0 = Red Team  1 = Blue Team
     [SerializeField] private Transform bulletSpawn;
@@ -42,15 +38,12 @@ public class EliminationAgent : Agent
         eliminationGameManager = GameObject.FindGameObjectWithTag("GameController").GetComponent<EliminationGameManager>();
         MaxStep = eliminationGameManager.getMaxStep();
         
-        hp = GetComponent<Health>();
-       
-
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        healthText.text = hp.getHealth().ToString();
+        healthText.text = health.ToString();
         
     }
 
@@ -127,7 +120,7 @@ public class EliminationAgent : Agent
         AddReward(-1f / MaxStep);
 
 
-        if (hp.getHealth() < 1)
+        if (health < 1)
         {
                        
             //Give blue team a score
@@ -141,7 +134,7 @@ public class EliminationAgent : Agent
                 eliminationGameManager.addRedScore();
             }
 
-            AddReward(-1f);
+            
             Debug.Log(this.gameObject.name + " Lost with a score of : " + GetCumulativeReward());
             this.gameObject.SetActive(false);
         }
@@ -153,7 +146,7 @@ public class EliminationAgent : Agent
         //Bumping into walls penalty
         if (collision.gameObject.tag == "Wall")
         {
-            AddReward(-0.1f);
+            AddReward(-0.3f);
             
         }
     }
@@ -202,6 +195,15 @@ public class EliminationAgent : Agent
 
     }
 
+    public int getHealth()
+    {
+        return health;
+    }
+
+    public void setHealth(int value)
+    {
+        health = value;
+    }
     private void Shoot()
     {
         if (Time.time > nextShoot)
@@ -220,8 +222,6 @@ public class EliminationAgent : Agent
             canShoot = false;
         }
 
- 
-
     }
 
 
@@ -236,17 +236,9 @@ public class EliminationAgent : Agent
     }
 
   
-    public void giveReward(float value)
-    {
-        AddReward(value);
-    }
+   
 
-    public void endEpisodeWithPenalties()
-    {    
-        AddReward(1f);
-        Debug.Log(this.gameObject.name + " Won with a score of : " + GetCumulativeReward());
-        //EndEpisode();
-    }
+   
 
 
 }

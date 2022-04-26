@@ -54,6 +54,11 @@ public class Menus : MonoBehaviour
         Instantiate (eliminationGameManager);
     }
 
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
+
     public int GetRedTeamCount()
     {
         return redTeamBotCount;

@@ -15,7 +15,7 @@ public class EliminationGameManager : MonoBehaviour
     [SerializeField] private int redTeamBotCount;
     [SerializeField] private int blueTeamBotCount;
 
-    [SerializeField] private bool humanPlayer;
+    private bool humanPlayer;
 
     [SerializeField] private GameObject redTeamBotPrefab;
     [SerializeField] private GameObject blueTeamBotPrefab;
@@ -84,9 +84,6 @@ public class EliminationGameManager : MonoBehaviour
     void FixedUpdate()
     {
 
-        
-
-
         //Enviroment Timer
         matchtimer += 1;
         if(matchtimer >= maxSteps)
@@ -142,7 +139,7 @@ public class EliminationGameManager : MonoBehaviour
                 if (roundNumber == 0)
                 {
                     agentObject = Instantiate(redTeamBotPrefab);
-                    //Make first bot player
+                    //Make first red bot a player
                     if(humanPlayer == true && i == 0)
                     {
                         agentObject.GetComponent<Unity.MLAgents.Policies.BehaviorParameters>().BehaviorType = Unity.MLAgents.Policies.BehaviorType.HeuristicOnly;
@@ -159,14 +156,10 @@ public class EliminationGameManager : MonoBehaviour
 
                 //Reset the agent values
                 EliminationAgent _agent = agentObject.GetComponent<EliminationAgent>();
-                Health _agentHealth = agentObject.GetComponent<Health>();
-
-                
+ 
                 _agent.setSpawn(currentLevelInfo.getSpawnPoints()[randomNo]);
-                //Doing this in the manager rather than OnEpisodeBegin
-                //_agent.SetReward(0);
-                
-                _agentHealth.setHealth(3);
+               
+                _agent.setHealth(3);
 
                 occupiedSpawns.Add(randomNo);
             }
@@ -176,8 +169,7 @@ public class EliminationGameManager : MonoBehaviour
             }
         }
 
-        // ! So much for DRY code !
-        // Should realy find a better solution.....
+        // So much for DRY code      
         for (int i = 0; i < blueTeamBotCount; i++)
         {
             int randomNo = Random.Range(0, currentLevelInfo.getSpawnPoints().Length);
@@ -212,12 +204,9 @@ public class EliminationGameManager : MonoBehaviour
 
                 //Reset the agent values
                 EliminationAgent _agent = agentObject.GetComponent<EliminationAgent>();
-                Health _agentHealth = agentObject.GetComponent<Health>();
-
-                _agent.setSpawn(currentLevelInfo.getSpawnPoints()[randomNo]);
-                //Doing this in the manager rather than OnEpisodeBegin
-                //_agent.SetReward(0);
-                _agentHealth.setHealth(3);
+                
+                _agent.setSpawn(currentLevelInfo.getSpawnPoints()[randomNo]);         
+                _agent.setHealth(3);
                 
                 occupiedSpawns.Add(randomNo);              
             }
@@ -233,30 +222,11 @@ public class EliminationGameManager : MonoBehaviour
     private void NewRandomLevel()
     {
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         int randomNo = Random.Range(0, levels.Length);
 
         currentLevel = Instantiate(levels[randomNo]);
 
         currentLevelInfo = currentLevel.GetComponent<LevelInfo>();
-
-       // currentLevelInfo = levels[randomNo].GetComponent<LevelInfo>();
 
     }
 
@@ -297,7 +267,7 @@ public class EliminationGameManager : MonoBehaviour
             GameObject.Destroy(_leftoverbluebullets[i]);
         }
 
-
+        //Team reward
         winningTeam.AddGroupReward(1 - (float)matchtimer / maxSteps);
 
 
