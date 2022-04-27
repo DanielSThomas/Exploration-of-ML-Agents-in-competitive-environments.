@@ -106,7 +106,7 @@ PrefabInstance:
     - target: {fileID: 6203896011107645363, guid: 432841a725ce0a64788941c0cec7b86a, type: 3}
       propertyPath: m_Model
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 5022602860645237092, guid: 4f6694870e9de00458ef6c14ef71d73e, type: 3}
     - target: {fileID: 6203896011107645367, guid: 432841a725ce0a64788941c0cec7b86a, type: 3}
       propertyPath: m_Name
       value: EliminationAgentRed Variant

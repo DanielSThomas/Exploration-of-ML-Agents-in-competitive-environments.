@@ -5,9 +5,11 @@ using UnityEngine.UI;
 
 public class Menus : MonoBehaviour
 {
-    [SerializeField] GameObject eliminationGameManager;
+    EliminationGameManager eliminationGameManager;
+    [SerializeField] GameObject eliminationGameManagerGameObject;
 
     [SerializeField] GameObject menugameobject;
+    [SerializeField] GameObject scoremenugameobject;
     int redTeamBotCount = 1;
     int blueTeamBotCount = 1;
     bool humanPlayer = false;
@@ -18,6 +20,10 @@ public class Menus : MonoBehaviour
     [SerializeField] Slider redSlider;
     [SerializeField] Toggle humanPlayerToggle;
 
+    [SerializeField] Text blueTeamWinsText;
+    [SerializeField] Text redTeamWinsText;
+    [SerializeField] Text blueTeamAvgText;
+    [SerializeField] Text redTeamAvgText;
 
     // Start is called before the first frame update
     void Start()
@@ -32,12 +38,26 @@ public class Menus : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        humanPlayer = humanPlayerToggle.isOn;
-        blueTeamBotCount = (int)blueSlider.value;
-        redTeamBotCount = (int)redSlider.value;
+        if (menugameobject.activeInHierarchy == true)
+        {
+            humanPlayer = humanPlayerToggle.isOn;
+            blueTeamBotCount = (int)blueSlider.value;
+            redTeamBotCount = (int)redSlider.value;
 
-        blueTeamText.text = "Blue Team Count : " + blueTeamBotCount;
-        redTeamText.text = "Red Team Count : " + redTeamBotCount;
+            blueTeamText.text = "Blue Team Count : " + blueTeamBotCount;
+            redTeamText.text = "Red Team Count : " + redTeamBotCount;
+        }
+        else if (scoremenugameobject.activeInHierarchy == true && eliminationGameManager !=null)
+        {
+            blueTeamWinsText.text = "Blue Team Wins : " + eliminationGameManager.getBlueWins().ToString();
+            redTeamWinsText.text = "Red Team Wins : " + eliminationGameManager.getRedWins().ToString();
+
+            blueTeamAvgText.text = "Average : " + eliminationGameManager.getBlueAvg().ToString();
+            redTeamAvgText.text = "Average : " + eliminationGameManager.getRedAvg().ToString();
+        }
+
+
+       
     }
 
    
@@ -51,7 +71,12 @@ public class Menus : MonoBehaviour
     {
         menugameobject.SetActive(false);
 
-        Instantiate (eliminationGameManager);
+        scoremenugameobject.SetActive(true);
+
+        GameObject eliminationGameManagerObject = Instantiate(eliminationGameManagerGameObject);
+
+        eliminationGameManager = eliminationGameManagerObject.GetComponent<EliminationGameManager>();
+
     }
 
     public void QuitGame()

@@ -11,6 +11,7 @@ public class EliminationAgent : Agent
     private EliminationGameManager eliminationGameManager;
 
     [SerializeField] int health;
+    [SerializeField] bool skipManager = false;
     [SerializeField] private Text healthText;
     [SerializeField] private float speed = 10;
     [SerializeField] private float turnspeed = 10;
@@ -35,8 +36,13 @@ public class EliminationAgent : Agent
     void Awake()
     {
         
-        eliminationGameManager = GameObject.FindGameObjectWithTag("GameController").GetComponent<EliminationGameManager>();
-        MaxStep = eliminationGameManager.getMaxStep();
+     
+        if (skipManager == false)
+        {
+            eliminationGameManager = GameObject.FindGameObjectWithTag("GameController").GetComponent<EliminationGameManager>();
+            MaxStep = eliminationGameManager.getMaxStep();
+        }
+            
         
     }
 
@@ -135,7 +141,7 @@ public class EliminationAgent : Agent
             }
 
             
-            Debug.Log(this.gameObject.name + " Lost with a score of : " + GetCumulativeReward());
+            //Debug.Log(this.gameObject.name + " Lost with a score of : " + GetCumulativeReward());
             this.gameObject.SetActive(false);
         }
 

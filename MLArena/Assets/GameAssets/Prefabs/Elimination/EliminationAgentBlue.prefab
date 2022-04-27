@@ -614,10 +614,10 @@ MonoBehaviour:
     VectorActionDescriptions: []
     VectorActionSpaceType: 0
     hasUpgradedBrainParametersWithActionSpec: 1
-  m_Model: {fileID: 0}
+  m_Model: {fileID: 5022602860645237092, guid: 65ab2b776e111134cb6028579aceeade, type: 3}
   m_InferenceDevice: 0
   m_BehaviorType: 0
-  m_BehaviorName: EliminationAgentBasic
+  m_BehaviorName: EliminationAgentMemory
   TeamId: 1
   m_UseChildSensors: 1
   m_UseChildActuators: 1
@@ -639,6 +639,7 @@ MonoBehaviour:
   hasUpgradedFromAgentParameters: 1
   MaxStep: 5000
   health: 3
+  skipManager: 0
   healthText: {fileID: 6131294632219690993}
   speed: 100
   turnspeed: 12

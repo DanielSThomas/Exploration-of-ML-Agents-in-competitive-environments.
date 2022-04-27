@@ -33,8 +33,20 @@ public class EliminationGameManager : MonoBehaviour
 
 
     [SerializeField] private int redTeamScore;
+
+    [SerializeField] private int redTeamTotalWins;
+
+    [SerializeField] private List<float> redTeamRewards;
+ 
+    [SerializeField] private float meanRedTeamReward;
+
     [SerializeField] private int blueTeamScore;
 
+    [SerializeField] private int blueTeamTotalWins;
+
+    [SerializeField] private List<float> blueTeamRewards;
+
+    [SerializeField] private float meanBlueTeamReward;
 
     private void Awake()
     {
@@ -99,12 +111,38 @@ public class EliminationGameManager : MonoBehaviour
         if (redTeamScore == blueTeamBotCount)
         {
             Debug.Log("Red Team Won");
+            redTeamTotalWins++;
+
+            redTeamRewards.Add(1 - (float)matchtimer / maxSteps);
+
+            float tempMath = 0;
+
+            for (int i = 0; i < redTeamRewards.Count; i++)
+            {
+                tempMath += redTeamRewards[i];
+            }
+            meanRedTeamReward = tempMath / redTeamRewards.Count;
+
+
             RoundOver(redTeamAgents);
         }
 
         if (blueTeamScore == redTeamBotCount)
         {
             Debug.Log("Blue Team Won");
+            blueTeamTotalWins++;
+
+            blueTeamRewards.Add(1 - (float)matchtimer / maxSteps);
+
+            float tempMath = 0;
+
+            for (int i = 0; i < blueTeamRewards.Count; i++)
+            {
+                tempMath += blueTeamRewards[i];
+            }
+            meanBlueTeamReward = tempMath / blueTeamRewards.Count;
+
+
             RoundOver(blueTeamAgents);
         }
 
@@ -230,12 +268,6 @@ public class EliminationGameManager : MonoBehaviour
 
     }
 
-
-
-
-
-   
-
     private void RoundStart()
     {
         Destroy(currentLevel);
@@ -250,11 +282,10 @@ public class EliminationGameManager : MonoBehaviour
         
     }
 
-
     private void RoundOver(SimpleMultiAgentGroup winningTeam)
     {
 
-        //Delete left over bullets
+        //Delete leftover bullets
         GameObject[] _leftoverredbullets = GameObject.FindGameObjectsWithTag("RedBullet");      
         GameObject[] _leftoverbluebullets = GameObject.FindGameObjectsWithTag("BlueBullet");
 
@@ -270,6 +301,7 @@ public class EliminationGameManager : MonoBehaviour
         //Team reward
         winningTeam.AddGroupReward(1 - (float)matchtimer / maxSteps);
 
+        
 
         Debug.Log(winningTeam + "with team score of" + (1 - (float)matchtimer / maxSteps));
 
@@ -279,6 +311,25 @@ public class EliminationGameManager : MonoBehaviour
 
         RoundStart();
 
+    }
+
+    public int getRedWins()
+    {
+        return redTeamTotalWins;
+    }
+
+    public int getBlueWins()
+    {
+        return blueTeamTotalWins;
+    }
+
+    public float getRedAvg()
+    {
+        return meanRedTeamReward;
+    }
+    public float getBlueAvg()
+    {
+        return meanBlueTeamReward;
     }
 
 
