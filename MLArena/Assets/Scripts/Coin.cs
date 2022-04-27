@@ -32,7 +32,7 @@ public class Coin : MonoBehaviour
 
             if(timesCollected <= 3)
             {
-                collision.GetComponent<EliminationAgent>().AddReward(0.2f - timesCollected / 10);
+                collision.GetComponent<EliminationAgent>().AddReward(0.3f - timesCollected / 10);
 
                 timesCollected += 1f;
 
@@ -43,7 +43,7 @@ public class Coin : MonoBehaviour
 
             sr.color = Color.gray;
 
-            Invoke("Reactivate", 15);
+            Invoke("Reactivate", 20);
 
         }
         

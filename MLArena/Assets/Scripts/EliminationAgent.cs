@@ -16,6 +16,8 @@ public class EliminationAgent : Agent
     [SerializeField] private float speed = 10;
     [SerializeField] private float turnspeed = 10;
     [SerializeField] private Rigidbody2D rb;
+    [SerializeField] private Collider2D collider2D;
+    [SerializeField] private Transform target;
   
     [SerializeField] private float meanReward;
     [SerializeField] private int team; // 0 = Red Team  1 = Blue Team
@@ -24,6 +26,8 @@ public class EliminationAgent : Agent
     [SerializeField] private Rigidbody2D turretPivot;
 
     [SerializeField] private float firerate;
+
+    [SerializeField] private bool stunned;
    
     
     private float nextShoot;
@@ -46,11 +50,20 @@ public class EliminationAgent : Agent
         
     }
 
+    private void Update()
+    {
+        
+         SetReward(-1);
+        
+
+    }
+
     // Update is called once per frame
     void FixedUpdate()
     {
         healthText.text = health.ToString();
-        
+
+       
     }
 
     public override void OnEpisodeBegin()
@@ -59,7 +72,10 @@ public class EliminationAgent : Agent
         rb.velocity = Vector2.zero;
         rb.rotation = 0;
         turretPivot.rotation = 0;
-       
+        Debug.Log("Episode " + CompletedEpisodes);
+        health = 3;
+        collider2D.enabled = true;
+        stunned = false;
     }
 
 
@@ -67,82 +83,92 @@ public class EliminationAgent : Agent
     public override void CollectObservations(VectorSensor sensor)
     {
         sensor.AddObservation(canShoot);
-        
+        sensor.AddObservation(stunned);
+       
     }
 
     public override void OnActionReceived(ActionBuffers actionBuffers)
     {
         // Actions
 
-        Vector2 movedir = new Vector2(0, 0);
-
-        int horizontalDir = actionBuffers.DiscreteActions[0];
-        int verticalDir = actionBuffers.DiscreteActions[1];
-        int turretRotDir = actionBuffers.DiscreteActions[2];
-        int shooting = actionBuffers.DiscreteActions[3];
-
-        switch (horizontalDir)
+        if(stunned == false)
         {
-            case 0: horizontalDir = 0; break;
-            case 1: horizontalDir = -10; break;
-            case 2: horizontalDir = 10; break;
-        }
+            Vector2 movedir = new Vector2(0, 0);
 
-        switch (verticalDir)
-        {
-            case 0: movedir.y = 0; break;
-            case 1: movedir.y = 1; break;
-            case 2: movedir.y = -1; break;
-        }
+            int horizontalDir = actionBuffers.DiscreteActions[0];
+            int verticalDir = actionBuffers.DiscreteActions[1];
+            int turretRotDir = actionBuffers.DiscreteActions[2];
+            int shooting = actionBuffers.DiscreteActions[3];
 
-        switch (turretRotDir)
-        {
-            case 0: turretRotDir = 0; break;
-            case 1: turretRotDir = 10; break;
-            case 2: turretRotDir = -10; break;
-        }
-
-
-        switch (shooting)
-        {
-            case 0: break;  
-            case 1: Shoot(); break;
-        }
-
-        
-        rb.MoveRotation(rb.rotation += horizontalDir * turnspeed * Time.deltaTime);
-
-        turretPivot.MoveRotation(turretPivot.rotation += turretRotDir * turnspeed * Time.deltaTime);
-
-        rb.velocity = (Vector2)transform.up * movedir.y * speed * Time.deltaTime;
-
-
-        //Rewards
-
-        meanReward = GetCumulativeReward();
-
-        //Idle Penalty
-
-        AddReward(-1f / MaxStep);
-
-
-        if (health < 1)
-        {
-                       
-            //Give blue team a score
-            if(team == 0)
+            switch (horizontalDir)
             {
-                eliminationGameManager.addBlueScore();
-            }
-            //Give red team a score
-            if (team == 1)
-            {
-                eliminationGameManager.addRedScore();
+                case 0: horizontalDir = 0; break;
+                case 1: horizontalDir = -10; break;
+                case 2: horizontalDir = 10; break;
             }
 
-            
-            //Debug.Log(this.gameObject.name + " Lost with a score of : " + GetCumulativeReward());
-            this.gameObject.SetActive(false);
+            switch (verticalDir)
+            {
+                case 0: movedir.y = 0; break;
+                case 1: movedir.y = 1; break;
+                case 2: movedir.y = -1; break;
+            }
+
+            switch (turretRotDir)
+            {
+                case 0: turretRotDir = 0; break;
+                case 1: turretRotDir = 10; break;
+                case 2: turretRotDir = -10; break;
+            }
+
+
+            switch (shooting)
+            {
+                case 0: break;
+                case 1: Shoot(); break;
+            }
+
+
+            rb.MoveRotation(rb.rotation += horizontalDir * turnspeed * Time.deltaTime);
+
+            turretPivot.MoveRotation(turretPivot.rotation += turretRotDir * turnspeed * Time.deltaTime);
+
+            rb.velocity = (Vector2)transform.up * movedir.y * speed * Time.deltaTime;
+
+            //Rewards
+
+            meanReward = GetCumulativeReward();
+
+            //Idle Penalty
+
+            AddReward(-1f / MaxStep);
+
+
+            if (health < 1)
+            {
+
+                stunned = true;
+
+                //Give blue team a score
+                if (team == 0)
+                {
+                    eliminationGameManager.addBlueScore();
+                }
+                //Give red team a score
+                if (team == 1)
+                {
+                    eliminationGameManager.addRedScore();
+                }
+
+                
+                
+                rb.angularVelocity = 0;
+                rb.velocity = Vector2.zero;
+                collider2D.enabled = false;
+                
+
+                Debug.Log(this.gameObject.name + " Lost with a score of : " + GetCumulativeReward());               
+            }
         }
 
     }
@@ -201,6 +227,8 @@ public class EliminationAgent : Agent
 
     }
 
+    
+
     public int getHealth()
     {
         return health;
@@ -230,6 +258,10 @@ public class EliminationAgent : Agent
 
     }
 
+    public void endEpisode()
+    {
+        this.EndEpisode();
+    }
 
     public int getTeam()
     {

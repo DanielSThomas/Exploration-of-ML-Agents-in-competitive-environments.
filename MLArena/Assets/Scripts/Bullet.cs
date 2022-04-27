@@ -64,11 +64,12 @@ public class Bullet : MonoBehaviour
             {
                 //Give reward for elim
 
-                hitAgent.AddReward(-1.1f);
+                //hitAgent.AddReward(-1.1f);
 
                 if (agentlessbullet == false)
                 {
-                    bulletOwner.AddReward(1.1f);
+                    //bulletOwner.AddReward(1.1f);
+                    bulletOwner.SetReward(1);
                 }
 
             }

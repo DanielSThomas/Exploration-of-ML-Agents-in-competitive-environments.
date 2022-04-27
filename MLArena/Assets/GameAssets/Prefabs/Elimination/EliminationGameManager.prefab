@@ -52,14 +52,13 @@ MonoBehaviour:
   redTeamBotPrefab: {fileID: 8640573599010613503, guid: 6214f5a1470dfba449315f52270c1e2d, type: 3}
   blueTeamBotPrefab: {fileID: 6203896011107645367, guid: 432841a725ce0a64788941c0cec7b86a, type: 3}
   levels:
-  - {fileID: 2581254283074040010, guid: fa397a12913330f4e98ce488f1910f16, type: 3}
+  - {fileID: 6796048946439098496, guid: 8ec6b9f6167d3fe4fa120eb5c754eb4c, type: 3}
   currentLevel: {fileID: 0}
   currentLevelInfo: {fileID: 0}
-  redAgentObjects: []
-  blueAgentObjects: []
+  AgentObjects: []
   redTeamScore: 0
   redTeamTotalWins: 0
-  meanRedTeamScore: 0
+  redTeamRewards: []
   blueTeamScore: 0
   blueTeamTotalWins: 0
-  meanBlueTeamScore: 0
+  blueTeamRewards: []

@@ -24,12 +24,12 @@ public class EliminationGameManager : MonoBehaviour
     [SerializeField] private GameObject currentLevel; 
     [SerializeField] private LevelInfo currentLevelInfo;
 
-    [SerializeField] private List<GameObject> redAgentObjects = new List<GameObject>();
+    [SerializeField] private List<GameObject> AgentObjects = new List<GameObject>();
 
-    [SerializeField] private List<GameObject> blueAgentObjects = new List<GameObject>();
+   // [SerializeField] private List<GameObject> blueAgentObjects = new List<GameObject>();
 
-    private SimpleMultiAgentGroup redTeamAgents;
-    private SimpleMultiAgentGroup blueTeamAgents;
+    //private SimpleMultiAgentGroup redTeamAgents;
+    //private SimpleMultiAgentGroup blueTeamAgents;
 
 
     [SerializeField] private int redTeamScore;
@@ -38,7 +38,7 @@ public class EliminationGameManager : MonoBehaviour
 
     [SerializeField] private List<float> redTeamRewards;
  
-    [SerializeField] private float meanRedTeamReward;
+   // [SerializeField] private float meanRedTeamReward;
 
     [SerializeField] private int blueTeamScore;
 
@@ -46,7 +46,11 @@ public class EliminationGameManager : MonoBehaviour
 
     [SerializeField] private List<float> blueTeamRewards;
 
-    [SerializeField] private float meanBlueTeamReward;
+    List<int> occupiedSpawns = new List<int>();
+
+    int spawnIndex = 0;
+
+    // [SerializeField] private float meanBlueTeamReward;
 
     private void Awake()
     {
@@ -65,22 +69,23 @@ public class EliminationGameManager : MonoBehaviour
 
         NewRandomLevel();
 
-        SpawnAgents();
+        SpawnAgents(redTeamBotCount, redTeamBotPrefab);
+        SpawnAgents(blueTeamBotCount, blueTeamBotPrefab);
 
 
 
         //Register bots to teams
-        redTeamAgents = new SimpleMultiAgentGroup();
-        blueTeamAgents = new SimpleMultiAgentGroup();
+        //redTeamAgents = new SimpleMultiAgentGroup();
+        //blueTeamAgents = new SimpleMultiAgentGroup();
 
-        for (int i = 0; i < redAgentObjects.Count; i++)
-        {
-            redTeamAgents.RegisterAgent(redAgentObjects[i].GetComponent<EliminationAgent>());
-        }
-        for (int i = 0; i < blueAgentObjects.Count; i++)
-        {
-            blueTeamAgents.RegisterAgent(blueAgentObjects[i].GetComponent<EliminationAgent>());
-        }
+        //for (int i = 0; i < redAgentObjects.Count; i++)
+        //{
+        //    redTeamAgents.RegisterAgent(redAgentObjects[i].GetComponent<EliminationAgent>());
+        //}
+        //for (int i = 0; i < blueAgentObjects.Count; i++)
+        //{
+        //    blueTeamAgents.RegisterAgent(blueAgentObjects[i].GetComponent<EliminationAgent>());
+        //}
 
     }
 
@@ -102,10 +107,10 @@ public class EliminationGameManager : MonoBehaviour
         {
             Debug.Log("Time Limit Reached. Tie");
 
-            redTeamAgents.GroupEpisodeInterrupted();
-            blueTeamAgents.GroupEpisodeInterrupted();
+            //redTeamAgents.GroupEpisodeInterrupted();
+            //blueTeamAgents.GroupEpisodeInterrupted();
 
-            RoundStart();
+            RoundOver();
         }
 
         if (redTeamScore == blueTeamBotCount)
@@ -113,18 +118,18 @@ public class EliminationGameManager : MonoBehaviour
             Debug.Log("Red Team Won");
             redTeamTotalWins++;
 
-            redTeamRewards.Add(1 - (float)matchtimer / maxSteps);
+            //redTeamRewards.Add(1 - (float)matchtimer / maxSteps);
 
-            float tempMath = 0;
+            //float tempMath = 0;
 
-            for (int i = 0; i < redTeamRewards.Count; i++)
-            {
-                tempMath += redTeamRewards[i];
-            }
-            meanRedTeamReward = tempMath / redTeamRewards.Count;
+            //for (int i = 0; i < redTeamRewards.Count; i++)
+            //{
+            //    tempMath += redTeamRewards[i];
+            //}
+           // meanRedTeamReward = tempMath / redTeamRewards.Count;
 
 
-            RoundOver(redTeamAgents);
+            RoundOver();
         }
 
         if (blueTeamScore == redTeamBotCount)
@@ -132,83 +137,31 @@ public class EliminationGameManager : MonoBehaviour
             Debug.Log("Blue Team Won");
             blueTeamTotalWins++;
 
-            blueTeamRewards.Add(1 - (float)matchtimer / maxSteps);
+            //blueTeamRewards.Add(1 - (float)matchtimer / maxSteps);
 
-            float tempMath = 0;
+            //float tempMath = 0;
 
-            for (int i = 0; i < blueTeamRewards.Count; i++)
-            {
-                tempMath += blueTeamRewards[i];
-            }
-            meanBlueTeamReward = tempMath / blueTeamRewards.Count;
+            //for (int i = 0; i < blueTeamRewards.Count; i++)
+            //{
+            //    tempMath += blueTeamRewards[i];
+            //}
+            //meanBlueTeamReward = tempMath / blueTeamRewards.Count;
 
 
-            RoundOver(blueTeamAgents);
+            RoundOver();
         }
 
 
     }
 
-    private void SpawnAgents()
+    private void SpawnAgents(int _agentcount, GameObject _agentobject)
     {
 
-        List<int> occupiedSpawns = new List<int>();
+        
 
         //Spawn in bots
-        for (int i = 0; i < redTeamBotCount; i++)
-        {
-            int randomNo = Random.Range(0, currentLevelInfo.getSpawnPoints().Length);
-
-            bool retrySpawn = false;
-
-            //Check for a valid spawn point
-            for (int j = 0; j < occupiedSpawns.Count; j++)
-            {
-                if (randomNo == occupiedSpawns[j])
-                {
-                    retrySpawn = true;
-                }
-            }
-
-            if(retrySpawn == false)
-            {
-                GameObject agentObject;
-                //On First Spawn Only//
-                if (roundNumber == 0)
-                {
-                    agentObject = Instantiate(redTeamBotPrefab);
-                    //Make first red bot a player
-                    if(humanPlayer == true && i == 0)
-                    {
-                        agentObject.GetComponent<Unity.MLAgents.Policies.BehaviorParameters>().BehaviorType = Unity.MLAgents.Policies.BehaviorType.HeuristicOnly;
-                    }
-
-                    redAgentObjects.Add(agentObject);
-                }
-                else
-                {
-                    agentObject = redAgentObjects[i];
-                    agentObject.SetActive(true);
-                    redTeamAgents.RegisterAgent(agentObject.GetComponent<EliminationAgent>());
-                }
-
-                //Reset the agent values
-                EliminationAgent _agent = agentObject.GetComponent<EliminationAgent>();
- 
-                _agent.setSpawn(currentLevelInfo.getSpawnPoints()[randomNo]);
-               
-                _agent.setHealth(3);
-
-                occupiedSpawns.Add(randomNo);
-            }
-            else if (retrySpawn == true)
-            {
-                i--;
-            }
-        }
-
-        // So much for DRY code      
-        for (int i = 0; i < blueTeamBotCount; i++)
+                 
+        for (int i = 0; i < _agentcount; i++)
         {
             int randomNo = Random.Range(0, currentLevelInfo.getSpawnPoints().Length);
 
@@ -226,25 +179,23 @@ public class EliminationGameManager : MonoBehaviour
             if (retrySpawn == false)
             {
                 GameObject agentObject;
-                //On First Spawn Only//
+                //On First Spawn Only// Test this
                 if (roundNumber == 0)
                 {
-                    agentObject = Instantiate(blueTeamBotPrefab);
+                    agentObject = Instantiate(_agentobject);
 
-                    blueAgentObjects.Add(agentObject);
-                }
-                else
-                {
-                    agentObject = blueAgentObjects[i];
-                    agentObject.SetActive(true);
-                    blueTeamAgents.RegisterAgent(agentObject.GetComponent<EliminationAgent>());
-                }
+                    if (humanPlayer == true && i == 0 && spawnIndex == 0)
+                    {
+                        agentObject.GetComponent<Unity.MLAgents.Policies.BehaviorParameters>().BehaviorType = Unity.MLAgents.Policies.BehaviorType.HeuristicOnly;
+                    }
 
-                //Reset the agent values
-                EliminationAgent _agent = agentObject.GetComponent<EliminationAgent>();
+                    AgentObjects.Add(agentObject);
+                }
+               
+                //Reset spawn
+                AgentObjects[spawnIndex].GetComponent<EliminationAgent>().setSpawn(currentLevelInfo.getSpawnPoints()[randomNo]);
                 
-                _agent.setSpawn(currentLevelInfo.getSpawnPoints()[randomNo]);         
-                _agent.setHealth(3);
+                spawnIndex++;
                 
                 occupiedSpawns.Add(randomNo);              
             }
@@ -278,11 +229,11 @@ public class EliminationGameManager : MonoBehaviour
         roundNumber++;
 
         NewRandomLevel();
-        SpawnAgents();
-        
+        SpawnAgents(redTeamBotCount,redTeamBotPrefab);
+        SpawnAgents(blueTeamBotCount, blueTeamBotPrefab);
     }
 
-    private void RoundOver(SimpleMultiAgentGroup winningTeam)
+    private void RoundOver()
     {
 
         //Delete leftover bullets
@@ -298,16 +249,20 @@ public class EliminationGameManager : MonoBehaviour
             GameObject.Destroy(_leftoverbluebullets[i]);
         }
 
-        //Team reward
-        winningTeam.AddGroupReward(1 - (float)matchtimer / maxSteps);
 
-        
+        //EliminationAgent[] activeAgents = FindObjectsOfType<EliminationAgent>();
 
-        Debug.Log(winningTeam + "with team score of" + (1 - (float)matchtimer / maxSteps));
+       // End all episodes
+        for (int i = 0; i < AgentObjects.Count; i++)
+        {
 
+            AgentObjects[i].GetComponent<EliminationAgent>().endEpisode();
+ 
+        }
 
-        redTeamAgents.EndGroupEpisode();
-        blueTeamAgents.EndGroupEpisode();
+        occupiedSpawns = new List<int>();
+
+        spawnIndex = 0;
 
         RoundStart();
 
@@ -325,12 +280,15 @@ public class EliminationGameManager : MonoBehaviour
 
     public float getRedAvg()
     {
-        return meanRedTeamReward;
+        return AgentObjects[0].GetComponent<EliminationAgent>().CompletedEpisodes;
     }
     public float getBlueAvg()
     {
-        return meanBlueTeamReward;
+        return AgentObjects[1].GetComponent<EliminationAgent>().CompletedEpisodes;
+    
     }
+
+
 
 
     public int getRedScore()
