@@ -22,8 +22,8 @@ public class Menus : MonoBehaviour
 
     [SerializeField] Text blueTeamWinsText;
     [SerializeField] Text redTeamWinsText;
-    [SerializeField] Text blueTeamAvgText;
-    [SerializeField] Text redTeamAvgText;
+    [SerializeField] Text EpisodeText;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -52,8 +52,8 @@ public class Menus : MonoBehaviour
             blueTeamWinsText.text = "Blue Team Wins : " + eliminationGameManager.getBlueWins().ToString();
             redTeamWinsText.text = "Red Team Wins : " + eliminationGameManager.getRedWins().ToString();
 
-            blueTeamAvgText.text = "Average : " + eliminationGameManager.getBlueAvg().ToString();
-            redTeamAvgText.text = "Average : " + eliminationGameManager.getRedAvg().ToString();
+            EpisodeText.text = "Match : " + eliminationGameManager.getEpisode().ToString();
+          
         }
 
 

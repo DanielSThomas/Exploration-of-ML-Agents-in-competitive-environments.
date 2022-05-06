@@ -15,6 +15,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2407642648546215144, guid: 432841a725ce0a64788941c0cec7b86a, type: 3}
+      propertyPath: DemonstrationName
+      value: EliminationDemoBC
+      objectReference: {fileID: 0}
     - target: {fileID: 2062095037, guid: 432841a725ce0a64788941c0cec7b86a, type: 3}
       propertyPath: m_InstanceId
       value: -30208

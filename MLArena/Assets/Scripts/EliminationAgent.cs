@@ -13,11 +13,15 @@ public class EliminationAgent : Agent
     [SerializeField] int health;
     [SerializeField] bool skipManager = false;
     [SerializeField] private Text healthText;
-    [SerializeField] private float speed = 10;
+    [SerializeField] private float maxSpeed = 100;
+    [SerializeField] private float speed = 0;
+    [SerializeField] private float acceleration;
     [SerializeField] private float turnspeed = 10;
     [SerializeField] private Rigidbody2D rb;
-    [SerializeField] private Collider2D collider2D;
-    [SerializeField] private Transform target;
+    [SerializeField] private Collider2D coll2D;
+    [SerializeField] private float idle;
+    
+    
   
     [SerializeField] private float meanReward;
     [SerializeField] private int team; // 0 = Red Team  1 = Blue Team
@@ -45,37 +49,31 @@ public class EliminationAgent : Agent
         {
             eliminationGameManager = GameObject.FindGameObjectWithTag("GameController").GetComponent<EliminationGameManager>();
             MaxStep = eliminationGameManager.getMaxStep();
+            
         }
             
         
     }
 
-    private void Update()
-    {
-        
-         SetReward(-1);
-        
-
-    }
-
-    // Update is called once per frame
+    
     void FixedUpdate()
     {
         healthText.text = health.ToString();
-
-       
     }
 
     public override void OnEpisodeBegin()
     {
+        idle = 0;
+        speed = 0;
         rb.angularVelocity = 0;
         rb.velocity = Vector2.zero;
         rb.rotation = 0;
         turretPivot.rotation = 0;
         Debug.Log("Episode " + CompletedEpisodes);
         health = 3;
-        collider2D.enabled = true;
+        coll2D.enabled = true;
         stunned = false;
+        healthText.color = Color.green;
     }
 
 
@@ -84,6 +82,7 @@ public class EliminationAgent : Agent
     {
         sensor.AddObservation(canShoot);
         sensor.AddObservation(stunned);
+        sensor.AddObservation(speed);
        
     }
 
@@ -128,12 +127,30 @@ public class EliminationAgent : Agent
                 case 1: Shoot(); break;
             }
 
+            
 
             rb.MoveRotation(rb.rotation += horizontalDir * turnspeed * Time.deltaTime);
 
             turretPivot.MoveRotation(turretPivot.rotation += turretRotDir * turnspeed * Time.deltaTime);
 
-            rb.velocity = (Vector2)transform.up * movedir.y * speed * Time.deltaTime;
+            rb.velocity = (Vector2)transform.up * speed * Time.deltaTime;
+
+            //Acceleration
+            speed += movedir.y * acceleration;
+
+            if(movedir.y == 0)
+            {
+                speed = Mathf.Lerp(speed, 0, 0.04f);
+            }
+
+            else if(speed >= maxSpeed)
+            {
+                speed = maxSpeed;
+            }
+            else if(speed <= -maxSpeed)
+            {
+                speed = -maxSpeed;
+            }
 
             //Rewards
 
@@ -141,12 +158,12 @@ public class EliminationAgent : Agent
 
             //Idle Penalty
 
-            AddReward(-1f / MaxStep);
+            idle += (-1f / MaxStep);
 
 
             if (health < 1)
             {
-
+                SetReward(-1f);
                 stunned = true;
 
                 //Give blue team a score
@@ -164,8 +181,8 @@ public class EliminationAgent : Agent
                 
                 rb.angularVelocity = 0;
                 rb.velocity = Vector2.zero;
-                collider2D.enabled = false;
-                
+                coll2D.enabled = false;
+                healthText.color = Color.red;
 
                 Debug.Log(this.gameObject.name + " Lost with a score of : " + GetCumulativeReward());               
             }
@@ -258,8 +275,10 @@ public class EliminationAgent : Agent
 
     }
 
-    public void endEpisode()
+    public void endEpisode(float reward)
     {
+        SetReward(reward - idle);
+        Debug.Log("Agent won with score of : "+ GetCumulativeReward());
         this.EndEpisode();
     }
 

@@ -606,7 +606,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BrainParameters:
-    VectorObservationSize: 2
+    VectorObservationSize: 3
     NumStackedVectorObservations: 1
     m_ActionSpec:
       m_NumContinuousActions: 0
@@ -618,7 +618,7 @@ MonoBehaviour:
   m_Model: {fileID: 0}
   m_InferenceDevice: 0
   m_BehaviorType: 0
-  m_BehaviorName: EliminationAgentBasic5
+  m_BehaviorName: EliminationAgentSac
   TeamId: 1
   m_UseChildSensors: 1
   m_UseChildActuators: 1
@@ -642,11 +642,13 @@ MonoBehaviour:
   health: 3
   skipManager: 0
   healthText: {fileID: 6131294632219690993}
-  speed: 100
+  maxSpeed: 100
+  speed: 0
+  acceleration: 5
   turnspeed: 12
   rb: {fileID: 4242205098267900495}
-  collider2D: {fileID: 4242205098267900494}
-  target: {fileID: 0}
+  coll2D: {fileID: 4242205098267900494}
+  idle: 0
   meanReward: 0
   team: 1
   bulletSpawn: {fileID: 6203896010511617685}

@@ -668,7 +668,7 @@ GameObject:
   - component: {fileID: 237422431}
   - component: {fileID: 237422430}
   m_Layer: 5
-  m_Name: RedTeamRewardAvg
+  m_Name: Episode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -690,7 +690,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -200, y: -480}
+  m_AnchoredPosition: {x: 0, y: -480}
   m_SizeDelta: {x: 400.3, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &237422430
@@ -726,7 +726,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Average : 0'
+  m_Text: 'Match : 0'
 --- !u!222 &237422431
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -829,7 +829,6 @@ RectTransform:
   - {fileID: 125827412}
   - {fileID: 237422429}
   - {fileID: 52817332}
-  - {fileID: 938332800}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1183,85 +1182,6 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_IsOn: 0
---- !u!1 &938332799
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 938332800}
-  - component: {fileID: 938332802}
-  - component: {fileID: 938332801}
-  m_Layer: 5
-  m_Name: BlueTeamRewardAvg
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &938332800
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 938332799}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 416307467}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 200, y: -480}
-  m_SizeDelta: {x: 400.3, y: 80}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &938332801
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 938332799}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.9622642, g: 0.9622642, b: 0.9622642, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 12800000, guid: b73ad7dba66c25c4fa492b55b929f989, type: 3}
-    m_FontSize: 20
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 0
-    m_MaxSize: 40
-    m_Alignment: 1
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: 'Average : 0'
---- !u!222 &938332802
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 938332799}
-  m_CullTransparentMesh: 1
 --- !u!1 &1156991622
 GameObject:
   m_ObjectHideFlags: 0
@@ -2043,7 +1963,7 @@ GameObject:
   - component: {fileID: 1600650246}
   - component: {fileID: 1600650245}
   m_Layer: 5
-  m_Name: Text (1)
+  m_Name: BlueCount
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2537,8 +2457,7 @@ MonoBehaviour:
   humanPlayerToggle: {fileID: 869627704}
   blueTeamWinsText: {fileID: 52817333}
   redTeamWinsText: {fileID: 125827413}
-  blueTeamAvgText: {fileID: 938332801}
-  redTeamAvgText: {fileID: 237422430}
+  EpisodeText: {fileID: 237422430}
 --- !u!4 &1848223193
 Transform:
   m_ObjectHideFlags: 0
@@ -2680,7 +2599,7 @@ GameObject:
   - component: {fileID: 2059152513}
   - component: {fileID: 2059152512}
   m_Layer: 5
-  m_Name: Text
+  m_Name: RedCount
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

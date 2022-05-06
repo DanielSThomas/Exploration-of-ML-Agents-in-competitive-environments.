@@ -43,7 +43,7 @@ public class Coin : MonoBehaviour
 
             sr.color = Color.gray;
 
-            Invoke("Reactivate", 20);
+            Invoke("Reactivate", 10);
 
         }
         
