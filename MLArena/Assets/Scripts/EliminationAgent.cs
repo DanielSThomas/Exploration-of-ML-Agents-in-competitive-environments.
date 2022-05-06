@@ -69,7 +69,6 @@ public class EliminationAgent : Agent
         rb.velocity = Vector2.zero;
         rb.rotation = 0;
         turretPivot.rotation = 0;
-        Debug.Log("Episode " + CompletedEpisodes);
         health = 3;
         coll2D.enabled = true;
         stunned = false;
