@@ -1,0 +1,39 @@
+{
+    "EliminationAgentGail": {
+        "checkpoints": [
+            {
+                "steps": 499879,
+                "file_path": "results\\EliminationAgentGail\\EliminationAgentGail\\EliminationAgentGail-499879.onnx",
+                "reward": 0.07278422017892201,
+                "creation_time": 1651676091.854662,
+                "auxillary_file_paths": [
+                    "results\\EliminationAgentGail\\EliminationAgentGail\\EliminationAgentGail-499879.pt"
+                ]
+            },
+            {
+                "steps": 600027,
+                "file_path": "results\\EliminationAgentGail\\EliminationAgentGail\\EliminationAgentGail-600027.onnx",
+                "reward": 0.9390315214792887,
+                "creation_time": 1651677417.846597,
+                "auxillary_file_paths": [
+                    "results\\EliminationAgentGail\\EliminationAgentGail\\EliminationAgentGail-600027.pt"
+                ]
+            }
+        ],
+        "elo": 1263.5446342049233,
+        "final_checkpoint": {
+            "steps": 600027,
+            "file_path": "results\\EliminationAgentGail\\EliminationAgentGail.onnx",
+            "reward": 0.9390315214792887,
+            "creation_time": 1651677417.846597,
+            "auxillary_file_paths": [
+                "results\\EliminationAgentGail\\EliminationAgentGail\\EliminationAgentGail-600027.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.27.0",
+        "torch_version": "1.7.1+cu110"
+    }
+}

@@ -1,0 +1,11038 @@
+Mono path[0] = 'D:/Users/Daniel/Documents/Github/ProjectMLArena/MLArena/Builds/MLBuild/MLArena_Data/Managed'
+Mono config path = 'D:/Users/Daniel/Documents/Github/ProjectMLArena/MLArena/Builds/MLBuild/MonoBleedingEdge/etc'
+Initialize engine version: 2021.1.17f1 (03b40fe07a36)
+[Subsystems] Discovering subsystems at path D:/Users/Daniel/Documents/Github/ProjectMLArena/MLArena/Builds/MLBuild/MLArena_Data/UnitySubsystems
+GfxDevice: creating device client; threaded=1; jobified=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce GTX 970 (ID=0x13c2)
+    Vendor:   NVIDIA
+    VRAM:     4043 MB
+    Driver:   30.0.15.1215
+Begin MonoManager ReloadAssembly
+- Completed reload, in  0.151 seconds
+D3D11 device created for Microsoft Media Foundation video decoding.
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 0.770800 ms
+ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index
+  at System.ThrowHelper.ThrowArgumentOutOfRangeException (System.ExceptionArgument argument, System.ExceptionResource resource) [0x00029] in <a1e9f114a6e64f4eacb529fc802ec93d>:0 
+  at System.ThrowHelper.ThrowArgumentOutOfRangeException () [0x00000] in <a1e9f114a6e64f4eacb529fc802ec93d>:0 
+  at EliminationGameManager.getEpisode () [0x00017] in <bd552925918a464c80d0b4464d09d500>:0 
+  at Menus.Update () [0x000f1] in <bd552925918a464c80d0b4464d09d500>:0 
+
+Fallback handler could not load library D:/Users/Daniel/Documents/Github/ProjectMLArena/MLArena/Builds/MLBuild/MLArena_Data/Mono/libcoreclr.so
+Fallback handler could not load library D:/Users/Daniel/Documents/Github/ProjectMLArena/MLArena/Builds/MLBuild/MLArena_Data/Mono/libcoreclr.so.dll
+Fallback handler could not load library D:/Users/Daniel/Documents/Github/ProjectMLArena/MLArena/Builds/MLBuild/MLArena_Data/Mono/libcoreclr.so
+Fallback handler could not load library D:/Users/Daniel/Documents/Github/ProjectMLArena/MLArena/Builds/MLBuild/MLArena_Data/Mono/libdl.so
+Fallback handler could not load library D:/Users/Daniel/Documents/Github/ProjectMLArena/MLArena/Builds/MLBuild/MLArena_Data/Mono/libdl.so.dll
+Fallback handler could not load library D:/Users/Daniel/Documents/Github/ProjectMLArena/MLArena/Builds/MLBuild/MLArena_Data/Mono/libdl.so
+Fallback handler could not load library D:/Users/Daniel/Documents/Github/ProjectMLArena/MLArena/Builds/MLBuild/MLArena_Data/Mono/libSystem.dylib
+Fallback handler could not load library D:/Users/Daniel/Documents/Github/ProjectMLArena/MLArena/Builds/MLBuild/MLArena_Data/Mono/libSystem.dylib.dll
+Fallback handler could not load library D:/Users/Daniel/Documents/Github/ProjectMLArena/MLArena/Builds/MLBuild/MLArena_Data/Mono/libSystem.dylib
+Fallback handler could not load library D:/Users/Daniel/Documents/Github/ProjectMLArena/MLArena/Builds/MLBuild/MLArena_Data/Mono/libcoreclr.so
+Fallback handler could not load library D:/Users/Daniel/Documents/Github/ProjectMLArena/MLArena/Builds/MLBuild/MLArena_Data/Mono/libcoreclr.so.dll
+Fallback handler could not load library D:/Users/Daniel/Documents/Github/ProjectMLArena/MLArena/Builds/MLBuild/MLArena_Data/Mono/libcoreclr.so
+Fallback handler could not load library D:/Users/Daniel/Documents/Github/ProjectMLArena/MLArena/Builds/MLBuild/MLArena_Data/Mono/libdl.so
+Fallback handler could not load library D:/Users/Daniel/Documents/Github/ProjectMLArena/MLArena/Builds/MLBuild/MLArena_Data/Mono/libdl.so.dll
+Fallback handler could not load library D:/Users/Daniel/Documents/Github/ProjectMLArena/MLArena/Builds/MLBuild/MLArena_Data/Mono/libdl.so
+Fallback handler could not load library D:/Users/Daniel/Documents/Github/ProjectMLArena/MLArena/Builds/MLBuild/MLArena_Data/Mono/libSystem.dylib
+Fallback handler could not load library D:/Users/Daniel/Documents/Github/ProjectMLArena/MLArena/Builds/MLBuild/MLArena_Data/Mono/libSystem.dylib.dll
+Fallback handler could not load library D:/Users/Daniel/Documents/Github/ProjectMLArena/MLArena/Builds/MLBuild/MLArena_Data/Mono/libSystem.dylib
+Episode 0
+
+Episode 0
+
+Agent won with score of : -12.29511
+
+Episode 1
+
+EliminationAgentBlue(Clone) Lost with a score of : -15.31999
+
+Red Team Won
+
+Episode 1
+
+Episode 1
+
+Episode 2
+
+Episode 2
+
+Time Limit Reached. Tie
+
+Episode 2
+
+Episode 2
+
+Agent won with score of : -0.8782108
+
+Episode 3
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -2.71
+
+Blue Team Won
+
+Episode 3
+
+Episode 3
+
+Episode 4
+
+Episode 4
+
+Time Limit Reached. Tie
+
+Episode 4
+
+Episode 4
+
+Agent won with score of : -8.936541
+
+Episode 5
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -13.74999
+
+Blue Team Won
+
+Episode 5
+
+Episode 5
+
+Agent won with score of : -6.083452
+
+Episode 6
+
+EliminationAgentBlue(Clone) Lost with a score of : -9.37001
+
+Red Team Won
+
+Episode 6
+
+Episode 6
+
+Agent won with score of : -15.70093
+
+Episode 7
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -13.46999
+
+Blue Team Won
+
+Episode 7
+
+Episode 8
+
+Episode 8
+
+Episode 9
+
+Time Limit Reached. Tie
+
+Episode 8
+
+Episode 9
+
+Episode 9
+
+Episode 10
+
+Time Limit Reached. Tie
+
+Episode 9
+
+Episode 10
+
+Episode 10
+
+Episode 11
+
+Time Limit Reached. Tie
+
+Episode 10
+
+Episode 11
+
+Agent won with score of : -12.08801
+
+Episode 12
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -19.25001
+
+Blue Team Won
+
+Episode 11
+
+Episode 12
+
+Agent won with score of : 0.09388614
+
+Episode 12
+
+EliminationAgentBlue(Clone) Lost with a score of : -2.859999
+
+Red Team Won
+
+Episode 12
+
+Episode 13
+
+Agent won with score of : -5.892051
+
+Episode 14
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -14.70999
+
+Blue Team Won
+
+Episode 13
+
+Episode 15
+
+Agent won with score of : -1.996021
+
+Episode 14
+
+EliminationAgentBlue(Clone) Lost with a score of : -2.829999
+
+Red Team Won
+
+Episode 14
+
+Episode 16
+
+Agent won with score of : -16.97879
+
+Episode 15
+
+EliminationAgentBlue(Clone) Lost with a score of : -16.16998
+
+Red Team Won
+
+Episode 15
+
+Episode 17
+
+Agent won with score of : -0.638912
+
+Episode 18
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -3.069999
+
+Blue Team Won
+
+Episode 16
+
+Episode 18
+
+Episode 17
+
+Episode 19
+
+Time Limit Reached. Tie
+
+Episode 17
+
+Episode 19
+
+Agent won with score of : -0.5772341
+
+Episode 20
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -3.549999
+
+Blue Team Won
+
+Episode 18
+
+Episode 20
+
+Agent won with score of : -2.92762
+
+Episode 19
+
+EliminationAgentBlue(Clone) Lost with a score of : -7.060013
+
+Red Team Won
+
+Episode 19
+
+Episode 21
+
+Agent won with score of : 0.4419851
+
+Episode 22
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -2.35
+
+Blue Team Won
+
+Episode 20
+
+Episode 22
+
+Episode 20
+
+Episode 22
+
+Agent won with score of : 0.9722931
+
+Episode 23
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -3.579999
+
+Blue Team Won
+
+Episode 21
+
+Episode 23
+
+Agent won with score of : -7.97093
+
+Episode 22
+
+EliminationAgentBlue(Clone) Lost with a score of : -9.670012
+
+Red Team Won
+
+Episode 22
+
+Episode 24
+
+Agent won with score of : 0.7706892
+
+Episode 25
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -2.05
+
+Blue Team Won
+
+Episode 23
+
+Episode 25
+
+Agent won with score of : -3.623463
+
+Episode 26
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -2.229997
+
+Blue Team Won
+
+Episode 24
+
+Episode 26
+
+Episode 25
+
+Episode 27
+
+Time Limit Reached. Tie
+
+Episode 25
+
+Episode 27
+
+Agent won with score of : -0.7564146
+
+Episode 28
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.18
+
+Blue Team Won
+
+Episode 26
+
+Episode 28
+
+Agent won with score of : 1.272294
+
+Episode 29
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.75
+
+Blue Team Won
+
+Episode 27
+
+Episode 29
+
+Agent won with score of : -0.7443185
+
+Episode 28
+
+EliminationAgentBlue(Clone) Lost with a score of : -5.259996
+
+Red Team Won
+
+Episode 28
+
+Episode 30
+
+Agent won with score of : -13.74238
+
+Episode 31
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -16.98997
+
+Blue Team Won
+
+Episode 29
+
+Episode 31
+
+Agent won with score of : 0.9727939
+
+Episode 30
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.99
+
+Red Team Won
+
+Episode 31
+
+Episode 32
+
+Agent won with score of : 0.9189931
+
+Episode 32
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.75
+
+Red Team Won
+
+Episode 32
+
+Episode 33
+
+Agent won with score of : 0.2350801
+
+Episode 33
+
+EliminationAgentBlue(Clone) Lost with a score of : -3.819999
+
+Red Team Won
+
+Episode 33
+
+Episode 34
+
+Agent won with score of : -4.108728
+
+Episode 34
+
+EliminationAgentBlue(Clone) Lost with a score of : -15.47
+
+Red Team Won
+
+Episode 34
+
+Episode 35
+
+Agent won with score of : 1.850493
+
+Episode 36
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.9
+
+Blue Team Won
+
+Episode 35
+
+Episode 36
+
+Agent won with score of : 0.5393637
+
+Episode 36
+
+EliminationAgentBlue(Clone) Lost with a score of : -5.690002
+
+Red Team Won
+
+Episode 36
+
+Episode 37
+
+Agent won with score of : -1.968339
+
+Episode 37
+
+EliminationAgentBlue(Clone) Lost with a score of : -16.86999
+
+Red Team Won
+
+Episode 37
+
+Episode 38
+
+Agent won with score of : 2.12617
+
+Episode 38
+
+EliminationAgentBlue(Clone) Lost with a score of : -4.929998
+
+Red Team Won
+
+Episode 38
+
+Episode 39
+
+Agent won with score of : 1.535097
+
+Episode 39
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.75
+
+Red Team Won
+
+Episode 39
+
+Episode 40
+
+Agent won with score of : 0.9169896
+
+Episode 40
+
+EliminationAgentBlue(Clone) Lost with a score of : -2.86
+
+Red Team Won
+
+Episode 40
+
+Episode 41
+
+Agent won with score of : 0.778179
+
+Episode 41
+
+EliminationAgentBlue(Clone) Lost with a score of : -7.330005
+
+Red Team Won
+
+Episode 42
+
+Episode 42
+
+Agent won with score of : 1.820589
+
+Episode 43
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.81
+
+Red Team Won
+
+Episode 43
+
+Episode 43
+
+Agent won with score of : 0.912294
+
+Episode 44
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.3
+
+Red Team Won
+
+Episode 44
+
+Episode 44
+
+Agent won with score of : 1.109092
+
+Episode 45
+
+EliminationAgentBlue(Clone) Lost with a score of : -2.47
+
+Red Team Won
+
+Episode 45
+
+Episode 45
+
+Agent won with score of : 1.96257
+
+Episode 46
+
+EliminationAgentBlue(Clone) Lost with a score of : -4.879998
+
+Red Team Won
+
+Episode 47
+
+Episode 46
+
+Agent won with score of : -1.11433
+
+Episode 47
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -2.28
+
+Blue Team Won
+
+Episode 48
+
+Episode 47
+
+Agent won with score of : 0.2486871
+
+Episode 48
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.13
+
+Blue Team Won
+
+Episode 49
+
+Episode 48
+
+Agent won with score of : 1.531798
+
+Episode 50
+
+EliminationAgentBlue(Clone) Lost with a score of : -2.05
+
+Red Team Won
+
+Episode 51
+
+Episode 49
+
+Agent won with score of : 0.5003785
+
+Episode 50
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -2.449999
+
+Blue Team Won
+
+Episode 52
+
+Episode 51
+
+Agent won with score of : -0.2013145
+
+Episode 52
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.39
+
+Blue Team Won
+
+Episode 53
+
+Episode 52
+
+Agent won with score of : 1.507997
+
+Episode 53
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.78
+
+Blue Team Won
+
+Episode 54
+
+Episode 53
+
+Agent won with score of : -2.510262
+
+Episode 55
+
+EliminationAgentBlue(Clone) Lost with a score of : -2.199998
+
+Red Team Won
+
+Episode 55
+
+Episode 54
+
+Agent won with score of : 0.7846488
+
+Episode 55
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -4.139997
+
+Blue Team Won
+
+Episode 56
+
+Episode 55
+
+Agent won with score of : -0.2988536
+
+Episode 56
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.38
+
+Blue Team Won
+
+Episode 57
+
+Episode 56
+
+Agent won with score of : 1.206897
+
+Episode 57
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.45
+
+Blue Team Won
+
+Episode 58
+
+Episode 57
+
+Agent won with score of : 2.391793
+
+Episode 59
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.87
+
+Red Team Won
+
+Episode 59
+
+Episode 58
+
+Agent won with score of : 1.949577
+
+Episode 59
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -2.209999
+
+Blue Team Won
+
+Episode 60
+
+Episode 60
+
+Agent won with score of : 1.079395
+
+Episode 61
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.57
+
+Red Team Won
+
+Episode 62
+
+Episode 61
+
+Agent won with score of : 1.488896
+
+Episode 63
+
+EliminationAgentBlue(Clone) Lost with a score of : -2.17
+
+Red Team Won
+
+Episode 64
+
+Episode 62
+
+Agent won with score of : 2.089589
+
+Episode 65
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.28
+
+Red Team Won
+
+Episode 65
+
+Episode 63
+
+Agent won with score of : -0.2056368
+
+Episode 64
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.21
+
+Blue Team Won
+
+Episode 66
+
+Episode 64
+
+Agent won with score of : 2.190898
+
+Episode 65
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.45
+
+Blue Team Won
+
+Episode 67
+
+Episode 65
+
+Agent won with score of : 1.429296
+
+Episode 66
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.87
+
+Blue Team Won
+
+Episode 68
+
+Episode 66
+
+Agent won with score of : 1.068196
+
+Episode 69
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.91
+
+Red Team Won
+
+Episode 69
+
+Episode 67
+
+Agent won with score of : 1.63609
+
+Episode 70
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.42
+
+Red Team Won
+
+Episode 70
+
+Episode 68
+
+Agent won with score of : -3.072469
+
+Episode 71
+
+EliminationAgentBlue(Clone) Lost with a score of : -5.76
+
+Red Team Won
+
+Episode 71
+
+Episode 69
+
+Agent won with score of : 0.8771974
+
+Episode 72
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.15
+
+Red Team Won
+
+Episode 72
+
+Episode 70
+
+Agent won with score of : 1.070996
+
+Episode 71
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.33
+
+Blue Team Won
+
+Episode 73
+
+Episode 71
+
+Agent won with score of : 1.423997
+
+Episode 74
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.27
+
+Red Team Won
+
+Episode 74
+
+Episode 72
+
+Agent won with score of : 0.2971532
+
+Episode 73
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -3.209998
+
+Blue Team Won
+
+Episode 75
+
+Episode 73
+
+Agent won with score of : 1.374796
+
+Episode 74
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.96
+
+Blue Team Won
+
+Episode 76
+
+Episode 75
+
+Agent won with score of : 1.458093
+
+Episode 77
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.6099996
+
+Red Team Won
+
+Episode 77
+
+Episode 76
+
+Agent won with score of : 1.425897
+
+Episode 77
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.81
+
+Blue Team Won
+
+Episode 78
+
+Episode 77
+
+Agent won with score of : 2.23509
+
+Episode 78
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -2.049999
+
+Blue Team Won
+
+Episode 79
+
+Episode 78
+
+Agent won with score of : 0.8398749
+
+Episode 79
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.56
+
+Blue Team Won
+
+Episode 80
+
+Episode 79
+
+Agent won with score of : 1.571585
+
+Episode 80
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.88
+
+Blue Team Won
+
+Episode 81
+
+Episode 80
+
+Agent won with score of : 1.865795
+
+Episode 82
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.75
+
+Red Team Won
+
+Episode 83
+
+Episode 81
+
+Agent won with score of : 2.094784
+
+Episode 84
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.48
+
+Red Team Won
+
+Episode 84
+
+Episode 82
+
+Episode 84
+
+Episode 82
+
+Agent won with score of : 0.3774854
+
+Episode 83
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -2.93
+
+Blue Team Won
+
+Episode 85
+
+Episode 83
+
+Agent won with score of : 1.559198
+
+Episode 86
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.39
+
+Red Team Won
+
+Episode 86
+
+Episode 84
+
+Agent won with score of : 1.80298
+
+Episode 87
+
+EliminationAgentBlue(Clone) Lost with a score of : -2.319999
+
+Red Team Won
+
+Episode 87
+
+Episode 85
+
+Agent won with score of : 1.297575
+
+Episode 86
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -2.839999
+
+Blue Team Won
+
+Episode 88
+
+Episode 87
+
+Agent won with score of : 1.504597
+
+Episode 88
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.72
+
+Blue Team Won
+
+Episode 89
+
+Episode 88
+
+Agent won with score of : 1.543694
+
+Episode 89
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.51
+
+Blue Team Won
+
+Episode 90
+
+Episode 90
+
+Agent won with score of : 1.424097
+
+Episode 91
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.94
+
+Blue Team Won
+
+Episode 91
+
+Episode 91
+
+Agent won with score of : -3.691234
+
+Episode 92
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -5.879996
+
+Blue Team Won
+
+Episode 92
+
+Episode 92
+
+Agent won with score of : 1.507697
+
+Episode 93
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.78
+
+Blue Team Won
+
+Episode 93
+
+Episode 93
+
+Agent won with score of : 0.05665576
+
+Episode 94
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.86
+
+Red Team Won
+
+Episode 94
+
+Episode 94
+
+Agent won with score of : 1.553391
+
+Episode 95
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.5199996
+
+Red Team Won
+
+Episode 95
+
+Episode 95
+
+Agent won with score of : 1.734792
+
+Episode 96
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.09999973
+
+Red Team Won
+
+Episode 96
+
+Episode 96
+
+Agent won with score of : 2.360696
+
+Episode 97
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.33
+
+Blue Team Won
+
+Episode 97
+
+Episode 97
+
+Agent won with score of : 0.1877716
+
+Episode 98
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -3.349999
+
+Blue Team Won
+
+Episode 98
+
+Episode 98
+
+Agent won with score of : 1.428696
+
+Episode 99
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.9
+
+Blue Team Won
+
+Episode 99
+
+Episode 99
+
+Agent won with score of : 0.9742937
+
+Episode 100
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -2.05
+
+Blue Team Won
+
+Episode 100
+
+Episode 101
+
+Agent won with score of : 1.255398
+
+Episode 102
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.72
+
+Blue Team Won
+
+Episode 101
+
+Episode 103
+
+Agent won with score of : 1.399696
+
+Episode 104
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.33
+
+Blue Team Won
+
+Episode 102
+
+Episode 104
+
+Agent won with score of : 1.085691
+
+Episode 105
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -2.23
+
+Blue Team Won
+
+Episode 103
+
+Episode 105
+
+Agent won with score of : 1.504198
+
+Episode 104
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.45
+
+Red Team Won
+
+Episode 104
+
+Episode 106
+
+Agent won with score of : 1.365297
+
+Episode 105
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.24
+
+Red Team Won
+
+Episode 105
+
+Episode 107
+
+Agent won with score of : 0.7245947
+
+Episode 106
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.66
+
+Red Team Won
+
+Episode 107
+
+Episode 108
+
+Agent won with score of : 1.765081
+
+Episode 109
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.12
+
+Blue Team Won
+
+Episode 108
+
+Episode 109
+
+Agent won with score of : 1.17178
+
+Episode 109
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.2599999
+
+Red Team Won
+
+Episode 109
+
+Episode 110
+
+Agent won with score of : 0.6481624
+
+Episode 111
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -2.089998
+
+Blue Team Won
+
+Episode 110
+
+Episode 111
+
+Agent won with score of : 0.6838813
+
+Episode 111
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.9099997
+
+Red Team Won
+
+Episode 111
+
+Episode 112
+
+Agent won with score of : -0.9199427
+
+Episode 112
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.779998
+
+Red Team Won
+
+Episode 112
+
+Episode 113
+
+Agent won with score of : 1.421897
+
+Episode 114
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.91
+
+Blue Team Won
+
+Episode 113
+
+Episode 114
+
+Agent won with score of : 1.402696
+
+Episode 115
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.24
+
+Blue Team Won
+
+Episode 114
+
+Episode 115
+
+Agent won with score of : 0.3061402
+
+Episode 116
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.949999
+
+Blue Team Won
+
+Episode 115
+
+Episode 116
+
+Agent won with score of : 2.672083
+
+Episode 117
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.76
+
+Blue Team Won
+
+Episode 116
+
+Episode 117
+
+Agent won with score of : 0.6455802
+
+Episode 117
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.1
+
+Red Team Won
+
+Episode 117
+
+Episode 118
+
+Agent won with score of : 1.097296
+
+Episode 118
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.81
+
+Red Team Won
+
+Episode 119
+
+Episode 119
+
+Agent won with score of : 1.391889
+
+Episode 120
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.57
+
+Blue Team Won
+
+Episode 120
+
+Episode 121
+
+Agent won with score of : 2.547185
+
+Episode 122
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.36
+
+Blue Team Won
+
+Episode 121
+
+Episode 122
+
+Agent won with score of : 0.9649947
+
+Episode 123
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.79
+
+Blue Team Won
+
+Episode 122
+
+Episode 123
+
+Agent won with score of : 1.185286
+
+Episode 124
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.5199995
+
+Blue Team Won
+
+Episode 123
+
+Episode 124
+
+Agent won with score of : 2.44979
+
+Episode 124
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.7099997
+
+Red Team Won
+
+Episode 124
+
+Episode 125
+
+Agent won with score of : 1.09379
+
+Episode 126
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -2.319999
+
+Blue Team Won
+
+Episode 125
+
+Episode 126
+
+Agent won with score of : 1.719391
+
+Episode 127
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.36
+
+Blue Team Won
+
+Episode 126
+
+Episode 127
+
+Agent won with score of : -1.701894
+
+Episode 128
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -7.65001
+
+Blue Team Won
+
+Episode 127
+
+Episode 128
+
+Agent won with score of : 2.089876
+
+Episode 129
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.1699994
+
+Blue Team Won
+
+Episode 128
+
+Episode 129
+
+Agent won with score of : -0.1467125
+
+Episode 130
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.96
+
+Blue Team Won
+
+Episode 129
+
+Episode 130
+
+Agent won with score of : 0.8849965
+
+Episode 130
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.21
+
+Red Team Won
+
+Episode 130
+
+Episode 131
+
+Episode 131
+
+Episode 132
+
+Time Limit Reached. Tie
+
+Episode 131
+
+Episode 132
+
+Agent won with score of : 1.749597
+
+Episode 132
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.54
+
+Red Team Won
+
+Episode 132
+
+Episode 133
+
+Agent won with score of : 1.984966
+
+Episode 134
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.149999
+
+Blue Team Won
+
+Episode 133
+
+Episode 134
+
+Agent won with score of : 1.880576
+
+Episode 135
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -3.349997
+
+Blue Team Won
+
+Episode 134
+
+Episode 135
+
+Agent won with score of : 1.369196
+
+Episode 136
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.87
+
+Blue Team Won
+
+Episode 135
+
+Episode 136
+
+Agent won with score of : 2.903478
+
+Episode 137
+
+EliminationAgentRed Variant(Clone) Lost with a score of : 0.2600005
+
+Blue Team Won
+
+Episode 136
+
+Episode 137
+
+Agent won with score of : 1.477497
+
+Episode 137
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.18
+
+Red Team Won
+
+Episode 137
+
+Episode 138
+
+Agent won with score of : 1.804598
+
+Episode 138
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.48
+
+Red Team Won
+
+Episode 138
+
+Episode 139
+
+Agent won with score of : 2.003796
+
+Episode 140
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.27
+
+Blue Team Won
+
+Episode 139
+
+Episode 141
+
+Agent won with score of : 1.727197
+
+Episode 140
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.97
+
+Red Team Won
+
+Episode 140
+
+Episode 142
+
+Agent won with score of : 1.612289
+
+Episode 141
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.5499999
+
+Red Team Won
+
+Episode 141
+
+Episode 143
+
+Agent won with score of : 1.433642
+
+Episode 142
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.059998
+
+Red Team Won
+
+Episode 143
+
+Episode 144
+
+Agent won with score of : 2.282092
+
+Episode 145
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.27
+
+Blue Team Won
+
+Episode 144
+
+Episode 145
+
+Agent won with score of : 1.431896
+
+Episode 146
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1
+
+Blue Team Won
+
+Episode 145
+
+Episode 146
+
+Agent won with score of : 0.5649923
+
+Episode 146
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.57
+
+Red Team Won
+
+Episode 146
+
+Episode 147
+
+Agent won with score of : 1.744667
+
+Episode 147
+
+EliminationAgentBlue(Clone) Lost with a score of : 0.6600013
+
+Red Team Won
+
+Episode 147
+
+Episode 148
+
+Agent won with score of : 1.476497
+
+Episode 148
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.88
+
+Red Team Won
+
+Episode 148
+
+Episode 149
+
+Agent won with score of : 2.040092
+
+Episode 150
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.21
+
+Blue Team Won
+
+Episode 149
+
+Episode 150
+
+Agent won with score of : 0.7872868
+
+Episode 151
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -2.56
+
+Blue Team Won
+
+Episode 150
+
+Episode 151
+
+Agent won with score of : 3.278777
+
+Episode 151
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.2499984
+
+Red Team Won
+
+Episode 151
+
+Episode 152
+
+Agent won with score of : 0.9111969
+
+Episode 153
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.51
+
+Blue Team Won
+
+Episode 152
+
+Episode 154
+
+Agent won with score of : 1.985591
+
+Episode 155
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.81
+
+Blue Team Won
+
+Episode 153
+
+Episode 155
+
+Agent won with score of : 1.148997
+
+Episode 154
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.88
+
+Red Team Won
+
+Episode 154
+
+Episode 156
+
+Agent won with score of : 1.180097
+
+Episode 157
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.18
+
+Blue Team Won
+
+Episode 155
+
+Episode 158
+
+Agent won with score of : 2.253387
+
+Episode 159
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.769994
+
+Blue Team Won
+
+Episode 156
+
+Episode 160
+
+Agent won with score of : 1.817474
+
+Episode 157
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.7899997
+
+Red Team Won
+
+Episode 157
+
+Episode 161
+
+Agent won with score of : 1.491493
+
+Episode 162
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.24
+
+Blue Team Won
+
+Episode 158
+
+Episode 162
+
+Agent won with score of : 2.769377
+
+Episode 163
+
+EliminationAgentRed Variant(Clone) Lost with a score of : 0.2900004
+
+Blue Team Won
+
+Episode 159
+
+Episode 163
+
+Agent won with score of : 1.245485
+
+Episode 164
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.1999996
+
+Blue Team Won
+
+Episode 160
+
+Episode 164
+
+Agent won with score of : 2.785361
+
+Episode 165
+
+EliminationAgentRed Variant(Clone) Lost with a score of : 0.6600024
+
+Blue Team Won
+
+Episode 161
+
+Episode 165
+
+Agent won with score of : 2.538179
+
+Episode 166
+
+Episode 161
+
+Episode 166
+
+Agent won with score of : 1.186198
+
+Episode 167
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.119999
+
+Blue Team Won
+
+Episode 162
+
+Episode 167
+
+Agent won with score of : 1.133292
+
+Episode 163
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.9099999
+
+Red Team Won
+
+Episode 164
+
+Episode 168
+
+Agent won with score of : 1.386491
+
+Episode 169
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.1899996
+
+Blue Team Won
+
+Episode 165
+
+Episode 169
+
+Agent won with score of : 0.9383943
+
+Episode 166
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.69
+
+Red Team Won
+
+Episode 166
+
+Episode 170
+
+Agent won with score of : -0.02704257
+
+Episode 171
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.6799984
+
+Blue Team Won
+
+Episode 167
+
+Episode 171
+
+Agent won with score of : 0.5749974
+
+Episode 168
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.06
+
+Red Team Won
+
+Episode 168
+
+Episode 172
+
+Agent won with score of : 2.104288
+
+Episode 169
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.45
+
+Red Team Won
+
+Episode 169
+
+Episode 173
+
+Agent won with score of : 1.077895
+
+Episode 170
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.63
+
+Red Team Won
+
+Episode 170
+
+Episode 174
+
+Agent won with score of : -0.9011118
+
+Episode 175
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.21
+
+Blue Team Won
+
+Episode 171
+
+Episode 175
+
+Agent won with score of : 0.7941898
+
+Episode 176
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.12
+
+Blue Team Won
+
+Episode 172
+
+Episode 177
+
+Agent won with score of : 2.460461
+
+Episode 178
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.1199976
+
+Blue Team Won
+
+Episode 173
+
+Episode 178
+
+Agent won with score of : 2.897286
+
+Episode 174
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.8199995
+
+Red Team Won
+
+Episode 175
+
+Episode 179
+
+Agent won with score of : 1.44146
+
+Episode 176
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.9199998
+
+Red Team Won
+
+Episode 176
+
+Episode 180
+
+Agent won with score of : 0.7156955
+
+Episode 181
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1
+
+Blue Team Won
+
+Episode 177
+
+Episode 181
+
+Agent won with score of : 2.537688
+
+Episode 178
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.6099995
+
+Red Team Won
+
+Episode 178
+
+Episode 182
+
+Agent won with score of : 2.041892
+
+Episode 183
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.1299997
+
+Blue Team Won
+
+Episode 179
+
+Episode 183
+
+Agent won with score of : 1.765098
+
+Episode 180
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.75
+
+Red Team Won
+
+Episode 180
+
+Episode 184
+
+Agent won with score of : 3.857463
+
+Episode 181
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.839998
+
+Red Team Won
+
+Episode 182
+
+Episode 185
+
+Agent won with score of : 1.241997
+
+Episode 183
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.45
+
+Red Team Won
+
+Episode 183
+
+Episode 186
+
+Agent won with score of : 1.167092
+
+Episode 184
+
+EliminationAgentBlue(Clone) Lost with a score of : -2.2
+
+Red Team Won
+
+Episode 184
+
+Episode 187
+
+Agent won with score of : 1.919795
+
+Episode 185
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.3
+
+Red Team Won
+
+Episode 185
+
+Episode 188
+
+Agent won with score of : 2.375587
+
+Episode 189
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.3299994
+
+Blue Team Won
+
+Episode 186
+
+Episode 189
+
+Agent won with score of : 2.749685
+
+Episode 190
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.589995
+
+Blue Team Won
+
+Episode 187
+
+Episode 190
+
+Agent won with score of : 1.970296
+
+Episode 188
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.9
+
+Red Team Won
+
+Episode 188
+
+Episode 191
+
+Agent won with score of : 0.8362922
+
+Episode 192
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.21
+
+Blue Team Won
+
+Episode 189
+
+Episode 193
+
+Agent won with score of : 1.128356
+
+Episode 190
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.349996
+
+Red Team Won
+
+Episode 191
+
+Episode 194
+
+Agent won with score of : 1.86579
+
+Episode 192
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.42
+
+Red Team Won
+
+Episode 192
+
+Episode 195
+
+Agent won with score of : 2.992872
+
+Episode 193
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.389999
+
+Red Team Won
+
+Episode 193
+
+Episode 196
+
+Agent won with score of : 3.077668
+
+Episode 197
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.3699977
+
+Blue Team Won
+
+Episode 194
+
+Episode 197
+
+Agent won with score of : 1.674393
+
+Episode 195
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.34
+
+Red Team Won
+
+Episode 195
+
+Episode 198
+
+Agent won with score of : 2.691789
+
+Episode 199
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.2699992
+
+Blue Team Won
+
+Episode 196
+
+Episode 199
+
+Agent won with score of : 1.450897
+
+Episode 200
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.94
+
+Blue Team Won
+
+Episode 197
+
+Episode 200
+
+Agent won with score of : 1.998648
+
+Episode 201
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.1399968
+
+Blue Team Won
+
+Episode 198
+
+Episode 201
+
+Agent won with score of : 1.84939
+
+Episode 202
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.8499998
+
+Blue Team Won
+
+Episode 199
+
+Episode 202
+
+Agent won with score of : 1.139792
+
+Episode 203
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.33
+
+Blue Team Won
+
+Episode 200
+
+Episode 203
+
+Agent won with score of : 2.390893
+
+Episode 201
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.18
+
+Red Team Won
+
+Episode 201
+
+Episode 204
+
+Agent won with score of : 1.259398
+
+Episode 205
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.52
+
+Blue Team Won
+
+Episode 202
+
+Episode 205
+
+Agent won with score of : 2.912966
+
+Episode 206
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.4299985
+
+Blue Team Won
+
+Episode 203
+
+Episode 206
+
+Agent won with score of : 1.854354
+
+Episode 204
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.029997
+
+Red Team Won
+
+Episode 204
+
+Episode 207
+
+Agent won with score of : 1.982488
+
+Episode 205
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.6699997
+
+Red Team Won
+
+Episode 206
+
+Episode 208
+
+Agent won with score of : 2.501094
+
+Episode 209
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.8199999
+
+Blue Team Won
+
+Episode 207
+
+Episode 209
+
+Agent won with score of : 1.847394
+
+Episode 208
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.9099998
+
+Red Team Won
+
+Episode 208
+
+Episode 210
+
+Agent won with score of : -0.1932216
+
+Episode 209
+
+EliminationAgentBlue(Clone) Lost with a score of : -3.099999
+
+Red Team Won
+
+Episode 209
+
+Episode 211
+
+Agent won with score of : 0.7295905
+
+Episode 210
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.96
+
+Red Team Won
+
+Episode 210
+
+Episode 212
+
+Agent won with score of : 1.668385
+
+Episode 211
+
+EliminationAgentBlue(Clone) Lost with a score of : 0.4000008
+
+Red Team Won
+
+Episode 211
+
+Episode 213
+
+Agent won with score of : 1.055995
+
+Episode 212
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.63
+
+Red Team Won
+
+Episode 212
+
+Episode 214
+
+Agent won with score of : 2.331793
+
+Episode 213
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.0399999
+
+Red Team Won
+
+Episode 213
+
+Episode 215
+
+Agent won with score of : 2.475185
+
+Episode 214
+
+EliminationAgentBlue(Clone) Lost with a score of : 0.5200005
+
+Red Team Won
+
+Episode 214
+
+Episode 216
+
+Agent won with score of : 2.459463
+
+Episode 217
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.3399974
+
+Blue Team Won
+
+Episode 215
+
+Episode 217
+
+Agent won with score of : 0.7807916
+
+Episode 218
+
+EliminationAgentRed Variant(Clone) Lost with a score of : 0.0200001
+
+Blue Team Won
+
+Episode 216
+
+Episode 218
+
+Agent won with score of : 1.078195
+
+Episode 217
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.6
+
+Red Team Won
+
+Episode 217
+
+Episode 219
+
+Agent won with score of : 3.698768
+
+Episode 218
+
+EliminationAgentBlue(Clone) Lost with a score of : 0.3400021
+
+Red Team Won
+
+Episode 218
+
+Episode 220
+
+Agent won with score of : 1.091175
+
+Episode 219
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.6899996
+
+Red Team Won
+
+Episode 219
+
+Episode 221
+
+Agent won with score of : 2.582754
+
+Episode 220
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.659998
+
+Red Team Won
+
+Episode 221
+
+Episode 222
+
+Agent won with score of : 0.8602961
+
+Episode 222
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.15
+
+Red Team Won
+
+Episode 222
+
+Episode 223
+
+Agent won with score of : 1.726696
+
+Episode 224
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.94
+
+Blue Team Won
+
+Episode 223
+
+Episode 224
+
+Agent won with score of : 0.6557984
+
+Episode 224
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.09
+
+Red Team Won
+
+Episode 224
+
+Episode 225
+
+Agent won with score of : 2.455882
+
+Episode 226
+
+EliminationAgentRed Variant(Clone) Lost with a score of : 0.05000091
+
+Blue Team Won
+
+Episode 225
+
+Episode 226
+
+Agent won with score of : 2.590968
+
+Episode 226
+
+EliminationAgentBlue(Clone) Lost with a score of : 0.120002
+
+Red Team Won
+
+Episode 226
+
+Episode 227
+
+Agent won with score of : 0.3554887
+
+Episode 228
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.72
+
+Blue Team Won
+
+Episode 227
+
+Episode 228
+
+Agent won with score of : 1.585099
+
+Episode 229
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.33
+
+Blue Team Won
+
+Episode 228
+
+Episode 230
+
+Agent won with score of : 1.479889
+
+Episode 231
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.3
+
+Blue Team Won
+
+Episode 229
+
+Episode 232
+
+Agent won with score of : 0.3807895
+
+Episode 230
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.78
+
+Red Team Won
+
+Episode 230
+
+Episode 233
+
+Agent won with score of : 1.158496
+
+Episode 234
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.67
+
+Blue Team Won
+
+Episode 231
+
+Episode 235
+
+Agent won with score of : 0.6090866
+
+Episode 236
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.839999
+
+Blue Team Won
+
+Episode 232
+
+Episode 236
+
+Agent won with score of : 1.881099
+
+Episode 237
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.6
+
+Blue Team Won
+
+Episode 233
+
+Episode 237
+
+Agent won with score of : 2.394485
+
+Episode 234
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.31
+
+Red Team Won
+
+Episode 235
+
+Episode 238
+
+Agent won with score of : 1.671496
+
+Episode 239
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.3
+
+Blue Team Won
+
+Episode 236
+
+Episode 239
+
+Agent won with score of : 1.581899
+
+Episode 240
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.36
+
+Blue Team Won
+
+Episode 237
+
+Episode 240
+
+Agent won with score of : 2.112097
+
+Episode 238
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.27
+
+Red Team Won
+
+Episode 238
+
+Episode 241
+
+Agent won with score of : 2.214996
+
+Episode 242
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.9399999
+
+Blue Team Won
+
+Episode 239
+
+Episode 242
+
+Agent won with score of : 1.741592
+
+Episode 243
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.6099999
+
+Blue Team Won
+
+Episode 240
+
+Episode 243
+
+Agent won with score of : 0.9249884
+
+Episode 241
+
+EliminationAgentBlue(Clone) Lost with a score of : -2.29
+
+Red Team Won
+
+Episode 241
+
+Episode 244
+
+Agent won with score of : 1.763478
+
+Episode 242
+
+EliminationAgentBlue(Clone) Lost with a score of : 0.2500007
+
+Red Team Won
+
+Episode 242
+
+Episode 245
+
+Agent won with score of : 1.208197
+
+Episode 246
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.39
+
+Blue Team Won
+
+Episode 243
+
+Episode 246
+
+Agent won with score of : 3.107382
+
+Episode 244
+
+EliminationAgentBlue(Clone) Lost with a score of : -2.61
+
+Red Team Won
+
+Episode 244
+
+Episode 247
+
+Agent won with score of : 2.765875
+
+Episode 245
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.16
+
+Red Team Won
+
+Episode 245
+
+Episode 248
+
+Agent won with score of : 1.256298
+
+Episode 249
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.66
+
+Blue Team Won
+
+Episode 246
+
+Episode 250
+
+Agent won with score of : 2.314491
+
+Episode 247
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.6999999
+
+Red Team Won
+
+Episode 247
+
+Episode 251
+
+Agent won with score of : 2.374878
+
+Episode 248
+
+EliminationAgentBlue(Clone) Lost with a score of : 0.6000012
+
+Red Team Won
+
+Episode 248
+
+Episode 252
+
+Agent won with score of : 2.643779
+
+Episode 253
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.9699992
+
+Blue Team Won
+
+Episode 249
+
+Episode 254
+
+Agent won with score of : 1.371196
+
+Episode 255
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.94
+
+Blue Team Won
+
+Episode 250
+
+Episode 255
+
+Agent won with score of : 0.9276981
+
+Episode 251
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.79
+
+Red Team Won
+
+Episode 251
+
+Episode 256
+
+Agent won with score of : 1.724997
+
+Episode 252
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.91
+
+Red Team Won
+
+Episode 252
+
+Episode 257
+
+Agent won with score of : 1.853799
+
+Episode 258
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.33
+
+Blue Team Won
+
+Episode 253
+
+Episode 258
+
+Agent won with score of : 2.576393
+
+Episode 259
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.03
+
+Blue Team Won
+
+Episode 254
+
+Episode 259
+
+Agent won with score of : 1.027994
+
+Episode 255
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.75
+
+Red Team Won
+
+Episode 255
+
+Episode 260
+
+Agent won with score of : 2.434184
+
+Episode 261
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.2199994
+
+Blue Team Won
+
+Episode 256
+
+Episode 262
+
+Agent won with score of : 1.675585
+
+Episode 257
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.06
+
+Red Team Won
+
+Episode 257
+
+Episode 263
+
+Agent won with score of : 2.164686
+
+Episode 264
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.5899994
+
+Blue Team Won
+
+Episode 258
+
+Episode 265
+
+Agent won with score of : 0.9752896
+
+Episode 266
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -2.15
+
+Blue Team Won
+
+Episode 259
+
+Episode 266
+
+Agent won with score of : 1.644696
+
+Episode 267
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.7
+
+Blue Team Won
+
+Episode 260
+
+Episode 267
+
+Agent won with score of : 2.374588
+
+Episode 261
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.3699997
+
+Red Team Won
+
+Episode 261
+
+Episode 268
+
+Agent won with score of : 0.8935927
+
+Episode 262
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.78
+
+Red Team Won
+
+Episode 262
+
+Episode 269
+
+Agent won with score of : 0.8944923
+
+Episode 270
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.75
+
+Blue Team Won
+
+Episode 263
+
+Episode 270
+
+Agent won with score of : 2.598586
+
+Episode 271
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.6799995
+
+Blue Team Won
+
+Episode 264
+
+Episode 271
+
+Agent won with score of : 3.352074
+
+Episode 272
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.07999957
+
+Blue Team Won
+
+Episode 265
+
+Episode 272
+
+Agent won with score of : 2.399188
+
+Episode 266
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.1599997
+
+Red Team Won
+
+Episode 266
+
+Episode 273
+
+Episode 266
+
+Episode 273
+
+Agent won with score of : 2.538854
+
+Episode 274
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.189999
+
+Blue Team Won
+
+Episode 267
+
+Episode 274
+
+Agent won with score of : 3.115885
+
+Episode 268
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.5099996
+
+Red Team Won
+
+Episode 268
+
+Episode 275
+
+Agent won with score of : 1.226598
+
+Episode 276
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.39
+
+Blue Team Won
+
+Episode 269
+
+Episode 277
+
+Agent won with score of : 2.180089
+
+Episode 270
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.6999999
+
+Red Team Won
+
+Episode 270
+
+Episode 278
+
+Agent won with score of : 4.238865
+
+Episode 271
+
+EliminationAgentBlue(Clone) Lost with a score of : 1.280002
+
+Red Team Won
+
+Episode 271
+
+Episode 279
+
+Agent won with score of : 1.261698
+
+Episode 280
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.69
+
+Blue Team Won
+
+Episode 272
+
+Episode 281
+
+Agent won with score of : -0.1781123
+
+Episode 273
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.9099997
+
+Red Team Won
+
+Episode 274
+
+Episode 282
+
+Agent won with score of : 2.297553
+
+Episode 275
+
+EliminationAgentBlue(Clone) Lost with a score of : 1.380002
+
+Red Team Won
+
+Episode 275
+
+Episode 283
+
+Agent won with score of : 2.472286
+
+Episode 276
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.3799995
+
+Red Team Won
+
+Episode 276
+
+Episode 284
+
+Agent won with score of : 2.304196
+
+Episode 285
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.57
+
+Blue Team Won
+
+Episode 277
+
+Episode 285
+
+Agent won with score of : 1.860398
+
+Episode 286
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.09
+
+Blue Team Won
+
+Episode 278
+
+Episode 286
+
+Agent won with score of : 1.587898
+
+Episode 287
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.33
+
+Blue Team Won
+
+Episode 279
+
+Episode 287
+
+Agent won with score of : 1.676795
+
+Episode 288
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.79
+
+Blue Team Won
+
+Episode 280
+
+Episode 288
+
+Agent won with score of : 1.517196
+
+Episode 289
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.75
+
+Blue Team Won
+
+Episode 281
+
+Episode 289
+
+Agent won with score of : 1.782297
+
+Episode 282
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.45
+
+Red Team Won
+
+Episode 283
+
+Episode 290
+
+Agent won with score of : 1.240897
+
+Episode 284
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.45
+
+Red Team Won
+
+Episode 285
+
+Episode 291
+
+Agent won with score of : 1.834798
+
+Episode 292
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.69
+
+Blue Team Won
+
+Episode 286
+
+Episode 292
+
+Agent won with score of : 0.471485
+
+Episode 293
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -2.17
+
+Blue Team Won
+
+Episode 287
+
+Episode 294
+
+Agent won with score of : 2.437695
+
+Episode 295
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1
+
+Blue Team Won
+
+Episode 288
+
+Episode 295
+
+Agent won with score of : 3.217075
+
+Episode 289
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.3099988
+
+Red Team Won
+
+Episode 290
+
+Episode 296
+
+Agent won with score of : 2.923073
+
+Episode 297
+
+EliminationAgentRed Variant(Clone) Lost with a score of : 0.3400014
+
+Blue Team Won
+
+Episode 291
+
+Episode 297
+
+Agent won with score of : 1.32975
+
+Episode 298
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.669999
+
+Blue Team Won
+
+Episode 292
+
+Episode 298
+
+Agent won with score of : 1.352095
+
+Episode 299
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.96
+
+Blue Team Won
+
+Episode 293
+
+Episode 299
+
+Agent won with score of : 1.855587
+
+Episode 294
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.1799994
+
+Red Team Won
+
+Episode 295
+
+Episode 300
+
+Agent won with score of : 3.083773
+
+Episode 301
+
+EliminationAgentRed Variant(Clone) Lost with a score of : 0.3100017
+
+Blue Team Won
+
+Episode 296
+
+Episode 301
+
+Agent won with score of : 1.133293
+
+Episode 297
+
+EliminationAgentBlue(Clone) Lost with a score of : 0.1400003
+
+Red Team Won
+
+Episode 297
+
+Episode 302
+
+Agent won with score of : 2.937659
+
+Episode 303
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.6099974
+
+Blue Team Won
+
+Episode 298
+
+Episode 303
+
+Agent won with score of : 2.792063
+
+Episode 299
+
+EliminationAgentBlue(Clone) Lost with a score of : 1.190002
+
+Red Team Won
+
+Episode 299
+
+Episode 304
+
+Agent won with score of : 1.808894
+
+Episode 300
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.4
+
+Red Team Won
+
+Episode 300
+
+Episode 305
+
+Agent won with score of : 0.7980513
+
+Episode 301
+
+EliminationAgentBlue(Clone) Lost with a score of : 0.6600022
+
+Red Team Won
+
+Episode 302
+
+Episode 306
+
+Agent won with score of : 1.571494
+
+Episode 303
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.5499999
+
+Red Team Won
+
+Episode 303
+
+Episode 307
+
+Agent won with score of : 2.246096
+
+Episode 308
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.33
+
+Blue Team Won
+
+Episode 304
+
+Episode 308
+
+Agent won with score of : 2.873788
+
+Episode 305
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.4299996
+
+Red Team Won
+
+Episode 305
+
+Episode 309
+
+Agent won with score of : 2.251695
+
+Episode 306
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.06
+
+Red Team Won
+
+Episode 307
+
+Episode 310
+
+Agent won with score of : 2.057696
+
+Episode 311
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.33
+
+Blue Team Won
+
+Episode 308
+
+Episode 311
+
+Agent won with score of : 2.072288
+
+Episode 309
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.009999275
+
+Red Team Won
+
+Episode 309
+
+Episode 312
+
+Agent won with score of : 1.784897
+
+Episode 310
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.55
+
+Red Team Won
+
+Episode 310
+
+Episode 313
+
+Agent won with score of : 4.068972
+
+Episode 314
+
+EliminationAgentRed Variant(Clone) Lost with a score of : 0.6800018
+
+Blue Team Won
+
+Episode 311
+
+Episode 314
+
+Agent won with score of : 2.845088
+
+Episode 315
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.3999991
+
+Blue Team Won
+
+Episode 312
+
+Episode 316
+
+Agent won with score of : -0.04222214
+
+Episode 313
+
+EliminationAgentBlue(Clone) Lost with a score of : -2.319999
+
+Red Team Won
+
+Episode 313
+
+Episode 317
+
+Agent won with score of : 1.883089
+
+Episode 318
+
+EliminationAgentRed Variant(Clone) Lost with a score of : 0.4600006
+
+Blue Team Won
+
+Episode 314
+
+Episode 318
+
+Agent won with score of : 1.586198
+
+Episode 315
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.09
+
+Red Team Won
+
+Episode 315
+
+Episode 319
+
+Agent won with score of : 1.091641
+
+Episode 316
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.7299972
+
+Red Team Won
+
+Episode 316
+
+Episode 320
+
+Agent won with score of : 1.957695
+
+Episode 321
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.73
+
+Blue Team Won
+
+Episode 317
+
+Episode 322
+
+Agent won with score of : 3.24718
+
+Episode 323
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.44
+
+Blue Team Won
+
+Episode 318
+
+Episode 323
+
+Agent won with score of : 2.812275
+
+Episode 324
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.12
+
+Blue Team Won
+
+Episode 319
+
+Episode 324
+
+Agent won with score of : 1.557398
+
+Episode 320
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.36
+
+Red Team Won
+
+Episode 320
+
+Episode 325
+
+Agent won with score of : 0.1183643
+
+Episode 326
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -2.199996
+
+Blue Team Won
+
+Episode 321
+
+Episode 326
+
+Agent won with score of : 1.216596
+
+Episode 327
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.48
+
+Blue Team Won
+
+Episode 322
+
+Episode 327
+
+Agent won with score of : 3.810572
+
+Episode 323
+
+EliminationAgentBlue(Clone) Lost with a score of : 0.3800011
+
+Red Team Won
+
+Episode 323
+
+Episode 328
+
+Agent won with score of : 2.090493
+
+Episode 329
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.97
+
+Blue Team Won
+
+Episode 324
+
+Episode 329
+
+Agent won with score of : 3.965239
+
+Episode 330
+
+EliminationAgentRed Variant(Clone) Lost with a score of : 0.3300028
+
+Blue Team Won
+
+Episode 325
+
+Episode 330
+
+Agent won with score of : 2.490547
+
+Episode 331
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.209997
+
+Blue Team Won
+
+Episode 326
+
+Episode 331
+
+Agent won with score of : 3.129668
+
+Episode 332
+
+EliminationAgentRed Variant(Clone) Lost with a score of : 0.3300019
+
+Blue Team Won
+
+Episode 327
+
+Episode 332
+
+Agent won with score of : 2.941477
+
+Episode 328
+
+EliminationAgentBlue(Clone) Lost with a score of : 0.2600012
+
+Red Team Won
+
+Episode 328
+
+Episode 333
+
+Agent won with score of : 2.535794
+
+Episode 329
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.8199999
+
+Red Team Won
+
+Episode 329
+
+Episode 334
+
+Agent won with score of : 2.417493
+
+Episode 335
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.5499999
+
+Blue Team Won
+
+Episode 330
+
+Episode 335
+
+Agent won with score of : 2.698192
+
+Episode 336
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.9099998
+
+Blue Team Won
+
+Episode 331
+
+Episode 337
+
+Agent won with score of : 2.640492
+
+Episode 332
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.18
+
+Red Team Won
+
+Episode 332
+
+Episode 338
+
+Agent won with score of : 0.7459884
+
+Episode 333
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.93
+
+Red Team Won
+
+Episode 333
+
+Episode 339
+
+Agent won with score of : 1.661385
+
+Episode 340
+
+EliminationAgentRed Variant(Clone) Lost with a score of : 0.1700006
+
+Blue Team Won
+
+Episode 334
+
+Episode 340
+
+Agent won with score of : 3.129076
+
+Episode 341
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.45
+
+Blue Team Won
+
+Episode 335
+
+Episode 341
+
+Agent won with score of : 2.773094
+
+Episode 342
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.15
+
+Blue Team Won
+
+Episode 336
+
+Episode 342
+
+Agent won with score of : 2.50579
+
+Episode 343
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.8199999
+
+Blue Team Won
+
+Episode 337
+
+Episode 344
+
+Agent won with score of : 2.518288
+
+Episode 338
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.3499995
+
+Red Team Won
+
+Episode 338
+
+Episode 345
+
+Agent won with score of : 2.268863
+
+Episode 346
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.9499959
+
+Blue Team Won
+
+Episode 339
+
+Episode 346
+
+Agent won with score of : 2.367092
+
+Episode 340
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.5799998
+
+Red Team Won
+
+Episode 340
+
+Episode 347
+
+Agent won with score of : 1.826592
+
+Episode 341
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.4899998
+
+Red Team Won
+
+Episode 341
+
+Episode 348
+
+Agent won with score of : 3.467155
+
+Episode 342
+
+EliminationAgentBlue(Clone) Lost with a score of : 1.290002
+
+Red Team Won
+
+Episode 342
+
+Episode 349
+
+Agent won with score of : 2.230994
+
+Episode 350
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.2199999
+
+Blue Team Won
+
+Episode 343
+
+Episode 350
+
+Agent won with score of : 2.166687
+
+Episode 344
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.3399996
+
+Red Team Won
+
+Episode 345
+
+Episode 351
+
+Agent won with score of : 1.532798
+
+Episode 352
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -2.05
+
+Blue Team Won
+
+Episode 346
+
+Episode 352
+
+Agent won with score of : 3.786054
+
+Episode 347
+
+EliminationAgentBlue(Clone) Lost with a score of : 0.2300022
+
+Red Team Won
+
+Episode 347
+
+Episode 353
+
+Agent won with score of : 3.879373
+
+Episode 354
+
+EliminationAgentRed Variant(Clone) Lost with a score of : 0.02000165
+
+Blue Team Won
+
+Episode 348
+
+Episode 354
+
+Agent won with score of : 2.997687
+
+Episode 355
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.4399998
+
+Blue Team Won
+
+Episode 349
+
+Episode 355
+
+Agent won with score of : 2.093693
+
+Episode 350
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.2199998
+
+Red Team Won
+
+Episode 350
+
+Episode 356
+
+Agent won with score of : 1.266197
+
+Episode 357
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.69
+
+Blue Team Won
+
+Episode 351
+
+Episode 358
+
+Agent won with score of : 3.177188
+
+Episode 359
+
+EliminationAgentRed Variant(Clone) Lost with a score of : 0.08000016
+
+Blue Team Won
+
+Episode 352
+
+Episode 359
+
+Episode 352
+
+Episode 359
+
+Agent won with score of : 2.014876
+
+Episode 360
+
+EliminationAgentRed Variant(Clone) Lost with a score of : 1.190001
+
+Blue Team Won
+
+Episode 353
+
+Episode 360
+
+Agent won with score of : 1.775198
+
+Episode 361
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.12
+
+Blue Team Won
+
+Episode 354
+
+Episode 361
+
+Agent won with score of : 3.668678
+
+Episode 362
+
+EliminationAgentRed Variant(Clone) Lost with a score of : 0.8700007
+
+Blue Team Won
+
+Episode 355
+
+Episode 362
+
+Agent won with score of : 3.816064
+
+Episode 363
+
+EliminationAgentRed Variant(Clone) Lost with a score of : 1.210002
+
+Blue Team Won
+
+Episode 356
+
+Episode 363
+
+Agent won with score of : 3.311055
+
+Episode 364
+
+EliminationAgentRed Variant(Clone) Lost with a score of : 0.730002
+
+Blue Team Won
+
+Episode 357
+
+Episode 364
+
+Agent won with score of : 2.074884
+
+Episode 358
+
+EliminationAgentBlue(Clone) Lost with a score of : 0.08000064
+
+Red Team Won
+
+Episode 358
+
+Episode 365
+
+Agent won with score of : 1.557098
+
+Episode 366
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.42
+
+Blue Team Won
+
+Episode 359
+
+Episode 367
+
+Agent won with score of : 0.9683972
+
+Episode 360
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.42
+
+Red Team Won
+
+Episode 361
+
+Episode 368
+
+Agent won with score of : 1.462496
+
+Episode 369
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.87
+
+Blue Team Won
+
+Episode 362
+
+Episode 369
+
+Agent won with score of : 3.67165
+
+Episode 370
+
+EliminationAgentRed Variant(Clone) Lost with a score of : 1.030003
+
+Blue Team Won
+
+Episode 363
+
+Episode 370
+
+Agent won with score of : 2.597589
+
+Episode 371
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.8799996
+
+Blue Team Won
+
+Episode 364
+
+Episode 371
+
+Agent won with score of : 1.736589
+
+Episode 365
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.16
+
+Red Team Won
+
+Episode 365
+
+Episode 372
+
+Agent won with score of : 1.571697
+
+Episode 366
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.72
+
+Red Team Won
+
+Episode 366
+
+Episode 373
+
+Agent won with score of : 2.085294
+
+Episode 374
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.09
+
+Blue Team Won
+
+Episode 367
+
+Episode 375
+
+Agent won with score of : 1.487396
+
+Episode 376
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -2.05
+
+Blue Team Won
+
+Episode 368
+
+Episode 377
+
+Agent won with score of : 1.029782
+
+Episode 378
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.3999963
+
+Blue Team Won
+
+Episode 369
+
+Episode 378
+
+Agent won with score of : 1.731996
+
+Episode 370
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.64
+
+Red Team Won
+
+Episode 371
+
+Episode 379
+
+Agent won with score of : 1.675096
+
+Episode 372
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.37
+
+Red Team Won
+
+Episode 372
+
+Episode 380
+
+Agent won with score of : 3.234065
+
+Episode 381
+
+EliminationAgentRed Variant(Clone) Lost with a score of : 0.03000179
+
+Blue Team Won
+
+Episode 373
+
+Episode 381
+
+Agent won with score of : 1.832198
+
+Episode 374
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.15
+
+Red Team Won
+
+Episode 374
+
+Episode 382
+
+Agent won with score of : 2.067892
+
+Episode 375
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.91
+
+Red Team Won
+
+Episode 375
+
+Episode 383
+
+Agent won with score of : 2.173869
+
+Episode 376
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.3399985
+
+Red Team Won
+
+Episode 376
+
+Episode 384
+
+Agent won with score of : 2.080797
+
+Episode 377
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.91
+
+Red Team Won
+
+Episode 377
+
+Episode 385
+
+Agent won with score of : 2.305995
+
+Episode 378
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.94
+
+Red Team Won
+
+Episode 378
+
+Episode 386
+
+Agent won with score of : 3.62625
+
+Episode 379
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.309999
+
+Red Team Won
+
+Episode 379
+
+Episode 387
+
+Agent won with score of : 3.509982
+
+Episode 388
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.6399995
+
+Blue Team Won
+
+Episode 380
+
+Episode 388
+
+Agent won with score of : 3.982269
+
+Episode 381
+
+EliminationAgentBlue(Clone) Lost with a score of : 1.740001
+
+Red Team Won
+
+Episode 381
+
+Episode 389
+
+Agent won with score of : 1.477197
+
+Episode 390
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.79
+
+Blue Team Won
+
+Episode 382
+
+Episode 390
+
+Agent won with score of : 3.36558
+
+Episode 383
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.3199997
+
+Red Team Won
+
+Episode 383
+
+Episode 391
+
+Agent won with score of : 2.758184
+
+Episode 392
+
+EliminationAgentRed Variant(Clone) Lost with a score of : 0.3800007
+
+Blue Team Won
+
+Episode 384
+
+Episode 392
+
+Agent won with score of : 1.789389
+
+Episode 393
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.4299997
+
+Blue Team Won
+
+Episode 385
+
+Episode 393
+
+Agent won with score of : 0.7357935
+
+Episode 394
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.75
+
+Blue Team Won
+
+Episode 386
+
+Episode 394
+
+Agent won with score of : 2.304496
+
+Episode 387
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.03
+
+Red Team Won
+
+Episode 387
+
+Episode 395
+
+Agent won with score of : 4.453657
+
+Episode 388
+
+EliminationAgentBlue(Clone) Lost with a score of : 0.8200021
+
+Red Team Won
+
+Episode 388
+
+Episode 396
+
+Agent won with score of : 2.540293
+
+Episode 397
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.4599998
+
+Blue Team Won
+
+Episode 389
+
+Episode 397
+
+Agent won with score of : 3.051393
+
+Episode 398
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.9399999
+
+Blue Team Won
+
+Episode 390
+
+Episode 398
+
+Agent won with score of : 3.065961
+
+Episode 391
+
+EliminationAgentBlue(Clone) Lost with a score of : 0.3800021
+
+Red Team Won
+
+Episode 391
+
+Episode 399
+
+Agent won with score of : 1.160496
+
+Episode 392
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.57
+
+Red Team Won
+
+Episode 392
+
+Episode 400
+
+Agent won with score of : 3.040956
+
+Episode 401
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.6099982
+
+Blue Team Won
+
+Episode 393
+
+Episode 401
+
+Agent won with score of : 2.225691
+
+Episode 394
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.2499996
+
+Red Team Won
+
+Episode 394
+
+Episode 402
+
+Agent won with score of : 2.82479
+
+Episode 403
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.1999997
+
+Blue Team Won
+
+Episode 395
+
+Episode 403
+
+Agent won with score of : 3.18517
+
+Episode 404
+
+EliminationAgentRed Variant(Clone) Lost with a score of : 0.6500016
+
+Blue Team Won
+
+Episode 396
+
+Episode 404
+
+Agent won with score of : 2.118593
+
+Episode 405
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.1899996
+
+Blue Team Won
+
+Episode 397
+
+Episode 405
+
+Agent won with score of : 0.433994
+
+Episode 398
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.2199996
+
+Red Team Won
+
+Episode 398
+
+Episode 406
+
+Agent won with score of : 2.408552
+
+Episode 407
+
+EliminationAgentRed Variant(Clone) Lost with a score of : 3.170001
+
+Blue Team Won
+
+Episode 399
+
+Episode 407
+
+Agent won with score of : 3.443282
+
+Episode 400
+
+EliminationAgentBlue(Clone) Lost with a score of : 0.5200011
+
+Red Team Won
+
+Episode 400
+
+Episode 408
+
+Agent won with score of : 3.460456
+
+Episode 409
+
+EliminationAgentRed Variant(Clone) Lost with a score of : 0.690003
+
+Blue Team Won
+
+Episode 401
+
+Episode 409
+
+Agent won with score of : 3.129287
+
+Episode 402
+
+EliminationAgentBlue(Clone) Lost with a score of : 0.1400008
+
+Red Team Won
+
+Episode 402
+
+Episode 410
+
+Agent won with score of : 1.801295
+
+Episode 403
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.4599999
+
+Red Team Won
+
+Episode 403
+
+Episode 411
+
+Agent won with score of : 2.91562
+
+Episode 412
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.5599949
+
+Blue Team Won
+
+Episode 404
+
+Episode 412
+
+Agent won with score of : 3.795951
+
+Episode 405
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.4399959
+
+Red Team Won
+
+Episode 406
+
+Episode 413
+
+Agent won with score of : 0.1418855
+
+Episode 414
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -2.2
+
+Blue Team Won
+
+Episode 407
+
+Episode 415
+
+Agent won with score of : 2.357896
+
+Episode 408
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.3
+
+Red Team Won
+
+Episode 409
+
+Episode 416
+
+Agent won with score of : 0.2432912
+
+Episode 410
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.18
+
+Red Team Won
+
+Episode 410
+
+Episode 417
+
+Agent won with score of : 3.296565
+
+Episode 418
+
+EliminationAgentRed Variant(Clone) Lost with a score of : 1.180001
+
+Blue Team Won
+
+Episode 411
+
+Episode 418
+
+Agent won with score of : 2.030789
+
+Episode 412
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.1599997
+
+Red Team Won
+
+Episode 413
+
+Episode 419
+
+Agent won with score of : 4.981661
+
+Episode 414
+
+EliminationAgentBlue(Clone) Lost with a score of : 0.9600018
+
+Red Team Won
+
+Episode 414
+
+Episode 420
+
+Agent won with score of : 4.003146
+
+Episode 421
+
+EliminationAgentRed Variant(Clone) Lost with a score of : 2.310003
+
+Blue Team Won
+
+Episode 415
+
+Episode 421
+
+Agent won with score of : 0.4336862
+
+Episode 422
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.69
+
+Blue Team Won
+
+Episode 416
+
+Episode 422
+
+Agent won with score of : 2.134598
+
+Episode 417
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.85
+
+Red Team Won
+
+Episode 417
+
+Episode 423
+
+Agent won with score of : 0.7190919
+
+Episode 424
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.51
+
+Blue Team Won
+
+Episode 418
+
+Episode 424
+
+Agent won with score of : 1.855199
+
+Episode 425
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.39
+
+Blue Team Won
+
+Episode 419
+
+Episode 425
+
+Agent won with score of : 0.9848986
+
+Episode 426
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.76
+
+Blue Team Won
+
+Episode 420
+
+Episode 426
+
+Agent won with score of : 0.8550897
+
+Episode 421
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.21
+
+Red Team Won
+
+Episode 421
+
+Episode 427
+
+Agent won with score of : 0.635987
+
+Episode 422
+
+EliminationAgentBlue(Clone) Lost with a score of : -2.05
+
+Red Team Won
+
+Episode 422
+
+Episode 428
+
+Agent won with score of : 2.185184
+
+Episode 423
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.9399998
+
+Red Team Won
+
+Episode 423
+
+Episode 429
+
+Agent won with score of : 1.088994
+
+Episode 424
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.6
+
+Red Team Won
+
+Episode 424
+
+Episode 430
+
+Agent won with score of : 0.6304916
+
+Episode 431
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.51
+
+Blue Team Won
+
+Episode 425
+
+Episode 431
+
+Agent won with score of : 2.548889
+
+Episode 426
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.07999951
+
+Red Team Won
+
+Episode 426
+
+Episode 432
+
+Agent won with score of : 1.064394
+
+Episode 433
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.72
+
+Blue Team Won
+
+Episode 427
+
+Episode 433
+
+Agent won with score of : 3.073394
+
+Episode 434
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.7599998
+
+Blue Team Won
+
+Episode 428
+
+Episode 434
+
+Episode 428
+
+Episode 434
+
+Agent won with score of : 3.566396
+
+Episode 435
+
+EliminationAgentRed Variant(Clone) Lost with a score of : 0.2800012
+
+Blue Team Won
+
+Episode 429
+
+Episode 435
+
+Agent won with score of : 1.981195
+
+Episode 436
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.3999999
+
+Blue Team Won
+
+Episode 430
+
+Episode 436
+
+Agent won with score of : 0.8098917
+
+Episode 437
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.81
+
+Blue Team Won
+
+Episode 431
+
+Episode 437
+
+Agent won with score of : 0.6306918
+
+Episode 438
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.99
+
+Blue Team Won
+
+Episode 432
+
+Episode 438
+
+Agent won with score of : 1.212197
+
+Episode 439
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.42
+
+Blue Team Won
+
+Episode 433
+
+Episode 439
+
+Agent won with score of : 4.973253
+
+Episode 440
+
+EliminationAgentRed Variant(Clone) Lost with a score of : 1.470002
+
+Blue Team Won
+
+Episode 434
+
+Episode 440
+
+Agent won with score of : 0.7237948
+
+Episode 435
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.57
+
+Red Team Won
+
+Episode 436
+
+Episode 441
+
+Agent won with score of : 2.465062
+
+Episode 437
+
+EliminationAgentBlue(Clone) Lost with a score of : 0.08000255
+
+Red Team Won
+
+Episode 437
+
+Episode 442
+
+Agent won with score of : 2.222395
+
+Episode 443
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.33
+
+Blue Team Won
+
+Episode 438
+
+Episode 443
+
+Agent won with score of : 1.116494
+
+Episode 444
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.6
+
+Blue Team Won
+
+Episode 439
+
+Episode 444
+
+Agent won with score of : 1.618498
+
+Episode 440
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.66
+
+Red Team Won
+
+Episode 440
+
+Episode 445
+
+Agent won with score of : 2.559894
+
+Episode 446
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.99
+
+Blue Team Won
+
+Episode 441
+
+Episode 446
+
+Agent won with score of : 3.043188
+
+Episode 447
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.5199997
+
+Blue Team Won
+
+Episode 442
+
+Episode 447
+
+Agent won with score of : 1.402796
+
+Episode 448
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.81
+
+Blue Team Won
+
+Episode 443
+
+Episode 448
+
+Agent won with score of : 4.550346
+
+Episode 444
+
+EliminationAgentBlue(Clone) Lost with a score of : 0.9100028
+
+Red Team Won
+
+Episode 444
+
+Episode 449
+
+Agent won with score of : 1.170295
+
+Episode 445
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.96
+
+Red Team Won
+
+Episode 446
+
+Episode 450
+
+Agent won with score of : 4.039553
+
+Episode 447
+
+EliminationAgentBlue(Clone) Lost with a score of : 1.220002
+
+Red Team Won
+
+Episode 447
+
+Episode 451
+
+Agent won with score of : 3.526975
+
+Episode 448
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.03999925
+
+Red Team Won
+
+Episode 448
+
+Episode 452
+
+Agent won with score of : 1.884899
+
+Episode 453
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.69
+
+Blue Team Won
+
+Episode 449
+
+Episode 453
+
+Agent won with score of : 3.401386
+
+Episode 450
+
+EliminationAgentBlue(Clone) Lost with a score of : 0.01000059
+
+Red Team Won
+
+Episode 450
+
+Episode 454
+
+Agent won with score of : 2.272796
+
+Episode 451
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.6
+
+Red Team Won
+
+Episode 451
+
+Episode 455
+
+Agent won with score of : 2.208688
+
+Episode 456
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.8199997
+
+Blue Team Won
+
+Episode 452
+
+Episode 457
+
+Agent won with score of : 1.861798
+
+Episode 458
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.15
+
+Blue Team Won
+
+Episode 453
+
+Episode 458
+
+Agent won with score of : 0.7455955
+
+Episode 459
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.27
+
+Blue Team Won
+
+Episode 454
+
+Episode 459
+
+Agent won with score of : 2.643091
+
+Episode 455
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.5499999
+
+Red Team Won
+
+Episode 455
+
+Episode 460
+
+Agent won with score of : 3.629268
+
+Episode 456
+
+EliminationAgentBlue(Clone) Lost with a score of : 0.6400011
+
+Red Team Won
+
+Episode 456
+
+Episode 461
+
+Agent won with score of : 3.527266
+
+Episode 462
+
+EliminationAgentRed Variant(Clone) Lost with a score of : 1.090001
+
+Blue Team Won
+
+Episode 457
+
+Episode 462
+
+Agent won with score of : 3.840879
+
+Episode 458
+
+EliminationAgentBlue(Clone) Lost with a score of : 0.3400012
+
+Red Team Won
+
+Episode 458
+
+Episode 463
+
+Agent won with score of : 1.532698
+
+Episode 464
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.12
+
+Blue Team Won
+
+Episode 459
+
+Episode 464
+
+Agent won with score of : 2.926862
+
+Episode 460
+
+EliminationAgentBlue(Clone) Lost with a score of : 0.5600021
+
+Red Team Won
+
+Episode 460
+
+Episode 465
+
+Agent won with score of : 0.9443967
+
+Episode 466
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.54
+
+Blue Team Won
+
+Episode 461
+
+Episode 466
+
+Agent won with score of : 3.952772
+
+Episode 462
+
+EliminationAgentBlue(Clone) Lost with a score of : 0.320005
+
+Red Team Won
+
+Episode 462
+
+Episode 467
+
+Agent won with score of : 1.431796
+
+Episode 463
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.24
+
+Red Team Won
+
+Episode 463
+
+Episode 468
+
+Agent won with score of : 1.230698
+
+Episode 464
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.03
+
+Red Team Won
+
+Episode 465
+
+Episode 469
+
+Agent won with score of : 2.760788
+
+Episode 470
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.01
+
+Blue Team Won
+
+Episode 466
+
+Episode 470
+
+Agent won with score of : 2.184689
+
+Episode 471
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.5599996
+
+Blue Team Won
+
+Episode 467
+
+Episode 471
+
+Agent won with score of : 2.776794
+
+Episode 472
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.5499998
+
+Blue Team Won
+
+Episode 468
+
+Episode 472
+
+Agent won with score of : 2.448565
+
+Episode 469
+
+EliminationAgentBlue(Clone) Lost with a score of : 1.050004
+
+Red Team Won
+
+Episode 469
+
+Episode 473
+
+Agent won with score of : 3.47387
+
+Episode 470
+
+EliminationAgentBlue(Clone) Lost with a score of : 1.320001
+
+Red Team Won
+
+Episode 470
+
+Episode 474
+
+Agent won with score of : 2.92129
+
+Episode 475
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.2599994
+
+Blue Team Won
+
+Episode 471
+
+Episode 475
+
+Agent won with score of : 2.135897
+
+Episode 476
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.21
+
+Blue Team Won
+
+Episode 472
+
+Episode 476
+
+Agent won with score of : 1.230198
+
+Episode 473
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.09
+
+Red Team Won
+
+Episode 474
+
+Episode 477
+
+Agent won with score of : 3.608877
+
+Episode 475
+
+EliminationAgentBlue(Clone) Lost with a score of : 0.6600006
+
+Red Team Won
+
+Episode 476
+
+Episode 478
+
+Agent won with score of : 3.316273
+
+Episode 479
+
+EliminationAgentRed Variant(Clone) Lost with a score of : 0.5400015
+
+Blue Team Won
+
+Episode 477
+
+Episode 479
+
+Agent won with score of : 0.7995892
+
+Episode 478
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.96
+
+Red Team Won
+
+Episode 478
+
+Episode 480
+
+Agent won with score of : 2.288091
+
+Episode 479
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.3399996
+
+Red Team Won
+
+Episode 479
+
+Episode 481
+
+Agent won with score of : 3.348285
+
+Episode 480
+
+EliminationAgentBlue(Clone) Lost with a score of : 0.2900012
+
+Red Team Won
+
+Episode 480
+
+Episode 482
+
+Agent won with score of : 3.053881
+
+Episode 481
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.78
+
+Red Team Won
+
+Episode 481
+
+Episode 483
+
+Agent won with score of : 3.909875
+
+Episode 484
+
+EliminationAgentRed Variant(Clone) Lost with a score of : 0.3300014
+
+Blue Team Won
+
+Episode 482
+
+Episode 484
+
+Agent won with score of : 1.624795
+
+Episode 483
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.88
+
+Red Team Won
+
+Episode 483
+
+Episode 485
+
+Agent won with score of : 1.438895
+
+Episode 484
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.9
+
+Red Team Won
+
+Episode 484
+
+Episode 486
+
+Agent won with score of : 1.508897
+
+Episode 485
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.58
+
+Red Team Won
+
+Episode 485
+
+Episode 487
+
+Agent won with score of : 0.7301942
+
+Episode 486
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.72
+
+Red Team Won
+
+Episode 486
+
+Episode 488
+
+Agent won with score of : 1.284593
+
+Episode 489
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.03999996
+
+Blue Team Won
+
+Episode 487
+
+Episode 489
+
+Agent won with score of : 2.886875
+
+Episode 490
+
+EliminationAgentRed Variant(Clone) Lost with a score of : 0.04000092
+
+Blue Team Won
+
+Episode 488
+
+Episode 490
+
+Agent won with score of : 2.804976
+
+Episode 489
+
+EliminationAgentBlue(Clone) Lost with a score of : 0.4200013
+
+Red Team Won
+
+Episode 489
+
+Episode 491
+
+Agent won with score of : 3.055772
+
+Episode 490
+
+EliminationAgentBlue(Clone) Lost with a score of : 1.620001
+
+Red Team Won
+
+Episode 490
+
+Episode 492
+
+Agent won with score of : 2.474375
+
+Episode 493
+
+EliminationAgentRed Variant(Clone) Lost with a score of : 0.6200009
+
+Blue Team Won
+
+Episode 491
+
+Episode 493
+
+Agent won with score of : 3.320859
+
+Episode 494
+
+EliminationAgentRed Variant(Clone) Lost with a score of : 1.070002
+
+Blue Team Won
+
+Episode 492
+
+Episode 494
+
+Agent won with score of : 3.262352
+
+Episode 493
+
+EliminationAgentBlue(Clone) Lost with a score of : 1.810002
+
+Red Team Won
+
+Episode 493
+
+Episode 495
+
+Agent won with score of : 0.5659923
+
+Episode 494
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.36
+
+Red Team Won
+
+Episode 494
+
+Episode 496
+
+Agent won with score of : 3.162893
+
+Episode 497
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.119996
+
+Blue Team Won
+
+Episode 495
+
+Episode 497
+
+Agent won with score of : 2.543892
+
+Episode 496
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.6099998
+
+Red Team Won
+
+Episode 496
+
+Episode 498
+
+Agent won with score of : 1.485697
+
+Episode 499
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -2.08
+
+Blue Team Won
+
+Episode 497
+
+Episode 500
+
+Agent won with score of : 2.876357
+
+Episode 498
+
+EliminationAgentBlue(Clone) Lost with a score of : 0.2400017
+
+Red Team Won
+
+Episode 499
+
+Episode 501
+
+Agent won with score of : 3.543686
+
+Episode 502
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.6399997
+
+Blue Team Won
+
+Episode 500
+
+Episode 502
+
+Agent won with score of : 2.02279
+
+Episode 503
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.03999978
+
+Blue Team Won
+
+Episode 501
+
+Episode 503
+
+Agent won with score of : 1.138595
+
+Episode 504
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.51
+
+Blue Team Won
+
+Episode 502
+
+Episode 504
+
+Agent won with score of : 2.990785
+
+Episode 503
+
+EliminationAgentBlue(Clone) Lost with a score of : 0.4500008
+
+Red Team Won
+
+Episode 503
+
+Episode 505
+
+Agent won with score of : 3.727173
+
+Episode 504
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.1099997
+
+Red Team Won
+
+Episode 504
+
+Episode 506
+
+Agent won with score of : 3.003077
+
+Episode 507
+
+EliminationAgentRed Variant(Clone) Lost with a score of : 0.8600014
+
+Blue Team Won
+
+Episode 505
+
+Episode 507
+
+Agent won with score of : 3.722255
+
+Episode 508
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.02999747
+
+Blue Team Won
+
+Episode 506
+
+Episode 508
+
+Agent won with score of : 2.328196
+
+Episode 507
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.27
+
+Red Team Won
+
+Episode 508
+
+Episode 509
+
+Agent won with score of : 2.262094
+
+Episode 509
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.15
+
+Red Team Won
+
+Episode 509
+
+Episode 510
+
+Agent won with score of : 1.882899
+
+Episode 511
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.36
+
+Blue Team Won
+
+Episode 510
+
+Episode 511
+
+Agent won with score of : 2.375494
+
+Episode 511
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.7899999
+
+Red Team Won
+
+Episode 511
+
+Episode 512
+
+Agent won with score of : 3.88154
+
+Episode 512
+
+EliminationAgentBlue(Clone) Lost with a score of : 0.03000307
+
+Red Team Won
+
+Episode 513
+
+Episode 513
+
+Agent won with score of : 2.608395
+
+Episode 514
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.3
+
+Blue Team Won
+
+Episode 514
+
+Episode 515
+
+Agent won with score of : 1.912599
+
+Episode 516
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.66
+
+Blue Team Won
+
+Episode 515
+
+Episode 516
+
+Episode 515
+
+Episode 516
+
+Agent won with score of : 2.290976
+
+Episode 517
+
+EliminationAgentRed Variant(Clone) Lost with a score of : 1.430001
+
+Blue Team Won
+
+Episode 516
+
+Episode 517
+
+Agent won with score of : 5.389142
+
+Episode 518
+
+EliminationAgentRed Variant(Clone) Lost with a score of : 0.8700033
+
+Blue Team Won
+
+Episode 517
+
+Episode 518
+
+Agent won with score of : 0.8060955
+
+Episode 518
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.24
+
+Red Team Won
+
+Episode 518
+
+Episode 519
+
+Agent won with score of : 3.493682
+
+Episode 519
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.09999925
+
+Red Team Won
+
+Episode 519
+
+Episode 520
+
+Agent won with score of : 3.647145
+
+Episode 521
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.2999972
+
+Blue Team Won
+
+Episode 520
+
+Episode 522
+
+Agent won with score of : 3.83458
+
+Episode 523
+
+EliminationAgentRed Variant(Clone) Lost with a score of : 0.6700011
+
+Blue Team Won
+
+Episode 521
+
+Episode 523
+
+Agent won with score of : 4.208063
+
+Episode 524
+
+EliminationAgentRed Variant(Clone) Lost with a score of : 1.240002
+
+Blue Team Won
+
+Episode 522
+
+Episode 524
+
+Agent won with score of : 2.800094
+
+Episode 525
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.88
+
+Blue Team Won
+
+Episode 523
+
+Episode 525
+
+Agent won with score of : 4.745473
+
+Episode 526
+
+EliminationAgentRed Variant(Clone) Lost with a score of : 0.3800016
+
+Blue Team Won
+
+Episode 524
+
+Episode 526
+
+Agent won with score of : 1.277293
+
+Episode 527
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.99
+
+Blue Team Won
+
+Episode 525
+
+Episode 527
+
+Agent won with score of : 1.044596
+
+Episode 526
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.009999812
+
+Red Team Won
+
+Episode 526
+
+Episode 528
+
+Agent won with score of : 1.642596
+
+Episode 529
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.57
+
+Blue Team Won
+
+Episode 527
+
+Episode 530
+
+Agent won with score of : -0.02011299
+
+Episode 528
+
+EliminationAgentBlue(Clone) Lost with a score of : -3.129999
+
+Red Team Won
+
+Episode 529
+
+Episode 531
+
+Agent won with score of : 3.706642
+
+Episode 530
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.4699979
+
+Red Team Won
+
+Episode 530
+
+Episode 532
+
+Agent won with score of : 3.398379
+
+Episode 533
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.0499993
+
+Blue Team Won
+
+Episode 531
+
+Episode 533
+
+Agent won with score of : 3.304588
+
+Episode 532
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.7
+
+Red Team Won
+
+Episode 533
+
+Episode 534
+
+Agent won with score of : 0.8630958
+
+Episode 535
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.21
+
+Blue Team Won
+
+Episode 534
+
+Episode 535
+
+Agent won with score of : -0.2918168
+
+Episode 536
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -3.939999
+
+Blue Team Won
+
+Episode 535
+
+Episode 537
+
+Agent won with score of : 0.7468954
+
+Episode 538
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.6
+
+Blue Team Won
+
+Episode 536
+
+Episode 539
+
+Agent won with score of : 2.478293
+
+Episode 540
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.91
+
+Blue Team Won
+
+Episode 537
+
+Episode 540
+
+Agent won with score of : 2.412076
+
+Episode 541
+
+EliminationAgentRed Variant(Clone) Lost with a score of : 0.3300017
+
+Blue Team Won
+
+Episode 538
+
+Episode 541
+
+Agent won with score of : 1.951595
+
+Episode 539
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.03
+
+Red Team Won
+
+Episode 539
+
+Episode 542
+
+Agent won with score of : 1.074044
+
+Episode 543
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.629998
+
+Blue Team Won
+
+Episode 540
+
+Episode 544
+
+Agent won with score of : 2.972988
+
+Episode 545
+
+EliminationAgentRed Variant(Clone) Lost with a score of : 0.03000045
+
+Blue Team Won
+
+Episode 541
+
+Episode 545
+
+Agent won with score of : 3.676473
+
+Episode 542
+
+EliminationAgentBlue(Clone) Lost with a score of : 0.02000105
+
+Red Team Won
+
+Episode 542
+
+Episode 546
+
+Agent won with score of : 1.344096
+
+Episode 543
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.9
+
+Red Team Won
+
+Episode 543
+
+Episode 547
+
+Agent won with score of : 2.220295
+
+Episode 544
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.3
+
+Red Team Won
+
+Episode 544
+
+Episode 548
+
+Agent won with score of : 2.407897
+
+Episode 549
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.18
+
+Blue Team Won
+
+Episode 545
+
+Episode 549
+
+Agent won with score of : 2.752788
+
+Episode 550
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.04999954
+
+Blue Team Won
+
+Episode 546
+
+Episode 550
+
+Agent won with score of : 1.582299
+
+Episode 547
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.36
+
+Red Team Won
+
+Episode 547
+
+Episode 551
+
+Agent won with score of : 2.476094
+
+Episode 548
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.15
+
+Red Team Won
+
+Episode 548
+
+Episode 552
+
+Agent won with score of : 0.7002945
+
+Episode 549
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.36
+
+Red Team Won
+
+Episode 549
+
+Episode 553
+
+Agent won with score of : 3.752354
+
+Episode 550
+
+EliminationAgentBlue(Clone) Lost with a score of : 0.7700027
+
+Red Team Won
+
+Episode 550
+
+Episode 554
+
+Agent won with score of : 1.447597
+
+Episode 551
+
+EliminationAgentBlue(Clone) Lost with a score of : -2.29
+
+Red Team Won
+
+Episode 551
+
+Episode 555
+
+Agent won with score of : -0.8331168
+
+Episode 552
+
+EliminationAgentBlue(Clone) Lost with a score of : -2.439999
+
+Red Team Won
+
+Episode 552
+
+Episode 556
+
+Agent won with score of : 0.9117969
+
+Episode 557
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.27
+
+Blue Team Won
+
+Episode 553
+
+Episode 557
+
+Agent won with score of : 3.09639
+
+Episode 558
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.3699999
+
+Blue Team Won
+
+Episode 554
+
+Episode 558
+
+Agent won with score of : 1.258592
+
+Episode 559
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -2.41
+
+Blue Team Won
+
+Episode 555
+
+Episode 560
+
+Agent won with score of : 2.030096
+
+Episode 556
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.27
+
+Red Team Won
+
+Episode 556
+
+Episode 561
+
+Agent won with score of : 2.659142
+
+Episode 557
+
+EliminationAgentBlue(Clone) Lost with a score of : 0.4200037
+
+Red Team Won
+
+Episode 558
+
+Episode 562
+
+Agent won with score of : 1.160996
+
+Episode 563
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.63
+
+Blue Team Won
+
+Episode 559
+
+Episode 563
+
+Agent won with score of : 3.170376
+
+Episode 560
+
+EliminationAgentBlue(Clone) Lost with a score of : 1.640001
+
+Red Team Won
+
+Episode 560
+
+Episode 564
+
+Agent won with score of : 2.551484
+
+Episode 561
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.03999951
+
+Red Team Won
+
+Episode 561
+
+Episode 565
+
+Agent won with score of : 3.277676
+
+Episode 562
+
+EliminationAgentBlue(Clone) Lost with a score of : 0.07000184
+
+Red Team Won
+
+Episode 563
+
+Episode 566
+
+Agent won with score of : 0.8263896
+
+Episode 567
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -2.62
+
+Blue Team Won
+
+Episode 564
+
+Episode 568
+
+Agent won with score of : 3.300891
+
+Episode 565
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.94
+
+Red Team Won
+
+Episode 566
+
+Episode 569
+
+Agent won with score of : 1.537197
+
+Episode 567
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.88
+
+Red Team Won
+
+Episode 567
+
+Episode 570
+
+Agent won with score of : 3.21384
+
+Episode 568
+
+EliminationAgentBlue(Clone) Lost with a score of : 0.110003
+
+Red Team Won
+
+Episode 568
+
+Episode 571
+
+Agent won with score of : 0.79289
+
+Episode 572
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.99
+
+Blue Team Won
+
+Episode 569
+
+Episode 572
+
+Agent won with score of : 2.531689
+
+Episode 573
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.2799999
+
+Blue Team Won
+
+Episode 570
+
+Episode 573
+
+Agent won with score of : 0.7341937
+
+Episode 574
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.24
+
+Blue Team Won
+
+Episode 571
+
+Episode 574
+
+Agent won with score of : 2.298496
+
+Episode 575
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.6
+
+Blue Team Won
+
+Episode 572
+
+Episode 576
+
+Agent won with score of : 1.396796
+
+Episode 573
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.28
+
+Red Team Won
+
+Episode 573
+
+Episode 577
+
+Agent won with score of : 2.363493
+
+Episode 578
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.2499996
+
+Blue Team Won
+
+Episode 574
+
+Episode 579
+
+Agent won with score of : 1.855898
+
+Episode 575
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.39
+
+Red Team Won
+
+Episode 576
+
+Episode 580
+
+Agent won with score of : 3.971273
+
+Episode 581
+
+EliminationAgentRed Variant(Clone) Lost with a score of : 0.6900015
+
+Blue Team Won
+
+Episode 577
+
+Episode 581
+
+Agent won with score of : 2.41649
+
+Episode 578
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.6099998
+
+Red Team Won
+
+Episode 579
+
+Episode 582
+
+Agent won with score of : 2.48459
+
+Episode 580
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.6099998
+
+Red Team Won
+
+Episode 580
+
+Episode 583
+
+Agent won with score of : 4.902383
+
+Episode 584
+
+EliminationAgentRed Variant(Clone) Lost with a score of : 1.310004
+
+Blue Team Won
+
+Episode 581
+
+Episode 584
+
+Agent won with score of : 0.05528855
+
+Episode 582
+
+EliminationAgentBlue(Clone) Lost with a score of : -2.5
+
+Red Team Won
+
+Episode 582
+
+Episode 585
+
+Agent won with score of : -0.1869111
+
+Episode 583
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.78
+
+Red Team Won
+
+Episode 583
+
+Episode 586
+
+Agent won with score of : 1.535597
+
+Episode 584
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.96
+
+Red Team Won
+
+Episode 585
+
+Episode 587
+
+Agent won with score of : 3.343073
+
+Episode 588
+
+EliminationAgentRed Variant(Clone) Lost with a score of : 1.180001
+
+Blue Team Won
+
+Episode 586
+
+Episode 588
+
+Agent won with score of : 0.8808969
+
+Episode 589
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.55
+
+Blue Team Won
+
+Episode 587
+
+Episode 589
+
+Agent won with score of : 2.731884
+
+Episode 588
+
+EliminationAgentBlue(Clone) Lost with a score of : 0.8700009
+
+Red Team Won
+
+Episode 588
+
+Episode 590
+
+Agent won with score of : 1.613699
+
+Episode 589
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.36
+
+Red Team Won
+
+Episode 590
+
+Episode 591
+
+Agent won with score of : 2.891794
+
+Episode 591
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.79
+
+Red Team Won
+
+Episode 591
+
+Episode 592
+
+Agent won with score of : 2.269396
+
+Episode 592
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.97
+
+Red Team Won
+
+Episode 592
+
+Episode 593
+
+Agent won with score of : 1.675792
+
+Episode 594
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.009999692
+
+Blue Team Won
+
+Episode 593
+
+Episode 594
+
+Agent won with score of : 2.335788
+
+Episode 595
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.5199996
+
+Blue Team Won
+
+Episode 594
+
+Episode 595
+
+Agent won with score of : 1.796796
+
+Episode 595
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.0999999
+
+Red Team Won
+
+Episode 595
+
+Episode 596
+
+Agent won with score of : 1.476797
+
+Episode 596
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.18
+
+Red Team Won
+
+Episode 597
+
+Episode 597
+
+Agent won with score of : 3.654567
+
+Episode 598
+
+EliminationAgentBlue(Clone) Lost with a score of : 0.8700009
+
+Red Team Won
+
+Episode 598
+
+Episode 598
+
+Agent won with score of : 3.145766
+
+Episode 599
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.2499976
+
+Blue Team Won
+
+Episode 599
+
+Episode 599
+
+Agent won with score of : 5.155051
+
+Episode 600
+
+EliminationAgentRed Variant(Clone) Lost with a score of : 1.300002
+
+Blue Team Won
+
+Episode 600
+
+Episode 600
+
+Agent won with score of : 2.734668
+
+Episode 601
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.4899961
+
+Blue Team Won
+
+Episode 601
+
+Episode 601
+
+Agent won with score of : 2.842293
+
+Episode 602
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.7899998
+
+Red Team Won
+
+Episode 603
+
+Episode 602
+
+Episode 603
+
+Episode 602
+
+Agent won with score of : 4.658473
+
+Episode 603
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -2.689997
+
+Blue Team Won
+
+Episode 604
+
+Episode 603
+
+Agent won with score of : 0.1062936
+
+Episode 605
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.78
+
+Red Team Won
+
+Episode 605
+
+Episode 604
+
+Agent won with score of : 2.913286
+
+Episode 606
+
+EliminationAgentBlue(Clone) Lost with a score of : 0.2300007
+
+Red Team Won
+
+Episode 606
+
+Episode 605
+
+Agent won with score of : 2.575796
+
+Episode 606
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.09
+
+Blue Team Won
+
+Episode 607
+
+Episode 606
+
+Agent won with score of : 3.018281
+
+Episode 607
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.5199994
+
+Blue Team Won
+
+Episode 608
+
+Episode 608
+
+Agent won with score of : -0.1623104
+
+Episode 609
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.63
+
+Blue Team Won
+
+Episode 609
+
+Episode 609
+
+Agent won with score of : 3.761482
+
+Episode 610
+
+EliminationAgentRed Variant(Clone) Lost with a score of : 0.310001
+
+Blue Team Won
+
+Episode 610
+
+Episode 610
+
+Agent won with score of : -0.7307141
+
+Episode 611
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.99
+
+Blue Team Won
+
+Episode 611
+
+Episode 611
+
+Agent won with score of : 0.4907864
+
+Episode 612
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -2.739999
+
+Blue Team Won
+
+Episode 612
+
+Episode 612
+
+Agent won with score of : 2.62627
+
+Episode 613
+
+EliminationAgentBlue(Clone) Lost with a score of : 0.4500015
+
+Red Team Won
+
+Episode 613
+
+Episode 613
+
+Agent won with score of : 2.094887
+
+Episode 614
+
+EliminationAgentBlue(Clone) Lost with a score of : 0.3600005
+
+Red Team Won
+
+Episode 614
+
+Episode 614
+
+Agent won with score of : 2.997484
+
+Episode 615
+
+EliminationAgentBlue(Clone) Lost with a score of : 7.152557E-07
+
+Red Team Won
+
+Episode 615
+
+Episode 615
+
+Agent won with score of : 5.478572
+
+Episode 616
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.9999958
+
+Blue Team Won
+
+Episode 616
+
+Episode 616
+
+Agent won with score of : 5.126653
+
+Episode 617
+
+EliminationAgentRed Variant(Clone) Lost with a score of : 1.790002
+
+Blue Team Won
+
+Episode 617
+
+Episode 617
+
+Agent won with score of : 3.74308
+
+Episode 618
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.1999995
+
+Blue Team Won
+
+Episode 618
+
+Episode 618
+
+Agent won with score of : 0.2717877
+
+Episode 619
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.84
+
+Blue Team Won
+
+Episode 619
+
+Episode 619
+
+Agent won with score of : -0.1176237
+
+Episode 620
+
+EliminationAgentBlue(Clone) Lost with a score of : -2.619999
+
+Red Team Won
+
+Episode 620
+
+Episode 620
+
+Agent won with score of : 2.249295
+
+Episode 621
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.91
+
+Red Team Won
+
+Episode 621
+
+Episode 621
+
+Agent won with score of : 2.949082
+
+Episode 622
+
+EliminationAgentRed Variant(Clone) Lost with a score of : 0.200001
+
+Blue Team Won
+
+Episode 622
+
+Episode 622
+
+Agent won with score of : 1.455794
+
+Episode 623
+
+EliminationAgentRed Variant(Clone) Lost with a score of : 0.1400003
+
+Blue Team Won
+
+Episode 623
+
+Episode 623
+
+Agent won with score of : 2.897084
+
+Episode 624
+
+EliminationAgentBlue(Clone) Lost with a score of : 0.6900008
+
+Red Team Won
+
+Episode 625
+
+Episode 624
+
+Agent won with score of : 2.521196
+
+Episode 626
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.2199962
+
+Red Team Won
+
+Episode 626
+
+Episode 625
+
+Agent won with score of : 4.983042
+
+Episode 626
+
+EliminationAgentRed Variant(Clone) Lost with a score of : 1.907349E-06
+
+Blue Team Won
+
+Episode 627
+
+Episode 627
+
+Agent won with score of : 2.902588
+
+Episode 628
+
+EliminationAgentBlue(Clone) Lost with a score of : 0.2000003
+
+Red Team Won
+
+Episode 628
+
+Episode 628
+
+Agent won with score of : 1.814694
+
+Episode 629
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.7299998
+
+Blue Team Won
+
+Episode 629
+
+Episode 630
+
+Agent won with score of : 2.792761
+
+Episode 630
+
+EliminationAgentBlue(Clone) Lost with a score of : 1.750003
+
+Red Team Won
+
+Episode 630
+
+Episode 631
+
+Agent won with score of : 2.545588
+
+Episode 631
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.3499998
+
+Red Team Won
+
+Episode 631
+
+Episode 632
+
+Agent won with score of : 2.783393
+
+Episode 633
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.5499997
+
+Blue Team Won
+
+Episode 632
+
+Episode 633
+
+Agent won with score of : 1.258198
+
+Episode 633
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.76
+
+Red Team Won
+
+Episode 633
+
+Episode 634
+
+Agent won with score of : 2.097196
+
+Episode 634
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.64
+
+Red Team Won
+
+Episode 634
+
+Episode 635
+
+Agent won with score of : 0.7791919
+
+Episode 636
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -2.29
+
+Blue Team Won
+
+Episode 635
+
+Episode 637
+
+Agent won with score of : 4.439752
+
+Episode 638
+
+EliminationAgentRed Variant(Clone) Lost with a score of : 2.070001
+
+Blue Team Won
+
+Episode 636
+
+Episode 638
+
+Agent won with score of : 1.465296
+
+Episode 637
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.06999975
+
+Red Team Won
+
+Episode 637
+
+Episode 639
+
+Agent won with score of : 3.342084
+
+Episode 638
+
+EliminationAgentBlue(Clone) Lost with a score of : 0.5700006
+
+Red Team Won
+
+Episode 639
+
+Episode 640
+
+Agent won with score of : 4.822055
+
+Episode 640
+
+EliminationAgentBlue(Clone) Lost with a score of : 1.630001
+
+Red Team Won
+
+Episode 640
+
+Episode 641
+
+Agent won with score of : 3.535284
+
+Episode 642
+
+EliminationAgentRed Variant(Clone) Lost with a score of : 0.2000004
+
+Blue Team Won
+
+Episode 641
+
+Episode 642
+
+Agent won with score of : 3.583443
+
+Episode 642
+
+EliminationAgentBlue(Clone) Lost with a score of : 1.440002
+
+Red Team Won
+
+Episode 642
+
+Episode 643
+
+Agent won with score of : 0.4114891
+
+Episode 644
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.9
+
+Blue Team Won
+
+Episode 643
+
+Episode 644
+
+Agent won with score of : 1.437495
+
+Episode 644
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.21
+
+Red Team Won
+
+Episode 644
+
+Episode 645
+
+Agent won with score of : 2.984186
+
+Episode 646
+
+EliminationAgentRed Variant(Clone) Lost with a score of : 0.8200002
+
+Blue Team Won
+
+Episode 645
+
+Episode 646
+
+Agent won with score of : 1.105096
+
+Episode 647
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.9
+
+Blue Team Won
+
+Episode 646
+
+Episode 647
+
+Agent won with score of : 1.564398
+
+Episode 647
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.66
+
+Red Team Won
+
+Episode 647
+
+Episode 648
+
+Agent won with score of : 4.476763
+
+Episode 648
+
+EliminationAgentBlue(Clone) Lost with a score of : 0.9400011
+
+Red Team Won
+
+Episode 648
+
+Episode 649
+
+Agent won with score of : 5.933064
+
+Episode 649
+
+EliminationAgentBlue(Clone) Lost with a score of : 0.7400014
+
+Red Team Won
+
+Episode 650
+
+Episode 650
+
+Agent won with score of : 3.155672
+
+Episode 651
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.06999904
+
+Red Team Won
+
+Episode 651
+
+Episode 651
+
+Agent won with score of : 0.6381944
+
+Episode 652
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.36
+
+Red Team Won
+
+Episode 652
+
+Episode 652
+
+Agent won with score of : 3.931284
+
+Episode 653
+
+EliminationAgentRed Variant(Clone) Lost with a score of : 0.1400011
+
+Blue Team Won
+
+Episode 653
+
+Episode 654
+
+Agent won with score of : 0.5390892
+
+Episode 655
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -2.13
+
+Blue Team Won
+
+Episode 654
+
+Episode 655
+
+Agent won with score of : 6.055047
+
+Episode 655
+
+EliminationAgentBlue(Clone) Lost with a score of : 3.109997
+
+Red Team Won
+
+Episode 655
+
+Episode 656
+
+Agent won with score of : 1.585199
+
+Episode 656
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.09
+
+Red Team Won
+
+Episode 656
+
+Episode 657
+
+Agent won with score of : 3.657768
+
+Episode 658
+
+EliminationAgentRed Variant(Clone) Lost with a score of : 0.9300013
+
+Blue Team Won
+
+Episode 657
+
+Episode 658
+
+Agent won with score of : 2.594687
+
+Episode 658
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.4999994
+
+Red Team Won
+
+Episode 658
+
+Episode 659
+
+Agent won with score of : 1.987994
+
+Episode 659
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.3
+
+Red Team Won
+
+Episode 660
+
+Episode 660
+
+Agent won with score of : 3.674682
+
+Episode 661
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.4299994
+
+Blue Team Won
+
+Episode 661
+
+Episode 661
+
+Agent won with score of : 0.3800932
+
+Episode 662
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -2.44
+
+Blue Team Won
+
+Episode 662
+
+Episode 663
+
+Agent won with score of : 1.653395
+
+Episode 664
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.06
+
+Blue Team Won
+
+Episode 663
+
+Episode 665
+
+Agent won with score of : 0.5694952
+
+Episode 664
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.34
+
+Red Team Won
+
+Episode 664
+
+Episode 666
+
+Agent won with score of : 2.031396
+
+Episode 665
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.97
+
+Red Team Won
+
+Episode 665
+
+Episode 667
+
+Agent won with score of : 2.157198
+
+Episode 668
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.39
+
+Blue Team Won
+
+Episode 666
+
+Episode 668
+
+Agent won with score of : 1.285892
+
+Episode 669
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.4599998
+
+Blue Team Won
+
+Episode 667
+
+Episode 669
+
+Agent won with score of : 0.7684891
+
+Episode 670
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -2.62
+
+Blue Team Won
+
+Episode 668
+
+Episode 671
+
+Agent won with score of : 1.227698
+
+Episode 669
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.03
+
+Red Team Won
+
+Episode 669
+
+Episode 672
+
+Agent won with score of : 2.844089
+
+Episode 670
+
+EliminationAgentBlue(Clone) Lost with a score of : 0.1200008
+
+Red Team Won
+
+Episode 671
+
+Episode 673
+
+Agent won with score of : 3.645343
+
+Episode 672
+
+EliminationAgentBlue(Clone) Lost with a score of : 1.640002
+
+Red Team Won
+
+Episode 673
+
+Episode 674
+
+Agent won with score of : 2.359289
+
+Episode 675
+
+EliminationAgentRed Variant(Clone) Lost with a score of : 0.2600002
+
+Blue Team Won
+
+Episode 674
+
+Episode 675
+
+Agent won with score of : 4.029769
+
+Episode 675
+
+EliminationAgentBlue(Clone) Lost with a score of : 1.110001
+
+Red Team Won
+
+Episode 675
+
+Episode 676
+
+Agent won with score of : 3.658647
+
+Episode 676
+
+EliminationAgentBlue(Clone) Lost with a score of : 0.8800023
+
+Red Team Won
+
+Episode 676
+
+Episode 677
+
+Agent won with score of : 1.868486
+
+Episode 677
+
+EliminationAgentBlue(Clone) Lost with a score of : 0.3800007
+
+Red Team Won
+
+Episode 677
+
+Episode 678
+
+Agent won with score of : -0.4085131
+
+Episode 679
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -3.19
+
+Blue Team Won
+
+Episode 678
+
+Episode 679
+
+Agent won with score of : 1.938087
+
+Episode 679
+
+EliminationAgentBlue(Clone) Lost with a score of : 4.768372E-07
+
+Red Team Won
+
+Episode 680
+
+Episode 680
+
+Episode 680
+
+Episode 680
+
+Agent won with score of : 2.511793
+
+Episode 681
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.2199998
+
+Red Team Won
+
+Episode 681
+
+Episode 681
+
+Agent won with score of : 0.2266895
+
+Episode 682
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.9
+
+Red Team Won
+
+Episode 683
+
+Episode 682
+
+Agent won with score of : 2.919773
+
+Episode 683
+
+EliminationAgentRed Variant(Clone) Lost with a score of : 1.800001
+
+Blue Team Won
+
+Episode 684
+
+Episode 683
+
+Agent won with score of : 1.435496
+
+Episode 685
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.81
+
+Red Team Won
+
+Episode 686
+
+Episode 684
+
+Agent won with score of : 1.818596
+
+Episode 687
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.12
+
+Red Team Won
+
+Episode 687
+
+Episode 685
+
+Agent won with score of : -0.3584084
+
+Episode 686
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.96
+
+Blue Team Won
+
+Episode 688
+
+Episode 686
+
+Agent won with score of : 1.501398
+
+Episode 689
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.82
+
+Red Team Won
+
+Episode 689
+
+Episode 687
+
+Agent won with score of : 3.958271
+
+Episode 688
+
+EliminationAgentRed Variant(Clone) Lost with a score of : 0.9100011
+
+Blue Team Won
+
+Episode 690
+
+Episode 688
+
+Agent won with score of : 0.6965946
+
+Episode 691
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.63
+
+Red Team Won
+
+Episode 692
+
+Episode 689
+
+Agent won with score of : 1.568297
+
+Episode 690
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.69
+
+Blue Team Won
+
+Episode 693
+
+Episode 690
+
+Agent won with score of : 4.60916
+
+Episode 694
+
+EliminationAgentBlue(Clone) Lost with a score of : 2.040002
+
+Red Team Won
+
+Episode 694
+
+Episode 691
+
+Agent won with score of : 2.999486
+
+Episode 692
+
+EliminationAgentRed Variant(Clone) Lost with a score of : 0.07000089
+
+Blue Team Won
+
+Episode 695
+
+Episode 692
+
+Agent won with score of : 0.6620951
+
+Episode 696
+
+EliminationAgentBlue(Clone) Lost with a score of : -2.44
+
+Red Team Won
+
+Episode 697
+
+Episode 693
+
+Agent won with score of : 2.404198
+
+Episode 694
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.42
+
+Blue Team Won
+
+Episode 698
+
+Episode 694
+
+Agent won with score of : 2.559094
+
+Episode 699
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.36
+
+Red Team Won
+
+Episode 700
+
+Episode 695
+
+Agent won with score of : 1.858198
+
+Episode 701
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.06
+
+Red Team Won
+
+Episode 701
+
+Episode 696
+
+Agent won with score of : 1.288998
+
+Episode 697
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.4299999
+
+Blue Team Won
+
+Episode 702
+
+Episode 697
+
+Agent won with score of : 3.289684
+
+Episode 703
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.02999955
+
+Red Team Won
+
+Episode 703
+
+Episode 698
+
+Agent won with score of : 0.7065935
+
+Episode 704
+
+EliminationAgentBlue(Clone) Lost with a score of : -2.29
+
+Red Team Won
+
+Episode 704
+
+Episode 699
+
+Agent won with score of : 3.641373
+
+Episode 700
+
+EliminationAgentRed Variant(Clone) Lost with a score of : 1.090001
+
+Blue Team Won
+
+Episode 705
+
+Episode 700
+
+Agent won with score of : 1.707595
+
+Episode 706
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.91
+
+Red Team Won
+
+Episode 706
+
+Episode 701
+
+Agent won with score of : 1.859098
+
+Episode 707
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.39
+
+Red Team Won
+
+Episode 707
+
+Episode 702
+
+Agent won with score of : 1.482997
+
+Episode 708
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.81
+
+Red Team Won
+
+Episode 708
+
+Episode 703
+
+Agent won with score of : 2.675588
+
+Episode 709
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.2699992
+
+Red Team Won
+
+Episode 709
+
+Episode 704
+
+Agent won with score of : 1.901794
+
+Episode 710
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.7599999
+
+Red Team Won
+
+Episode 711
+
+Episode 705
+
+Agent won with score of : 3.838283
+
+Episode 706
+
+EliminationAgentRed Variant(Clone) Lost with a score of : 0.3300009
+
+Blue Team Won
+
+Episode 712
+
+Episode 706
+
+Agent won with score of : 4.192179
+
+Episode 713
+
+EliminationAgentBlue(Clone) Lost with a score of : 0.6800006
+
+Red Team Won
+
+Episode 713
+
+Episode 707
+
+Agent won with score of : 2.463392
+
+Episode 708
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.3699997
+
+Blue Team Won
+
+Episode 714
+
+Episode 708
+
+Agent won with score of : 2.050097
+
+Episode 709
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.91
+
+Blue Team Won
+
+Episode 715
+
+Episode 709
+
+Agent won with score of : 3.204411
+
+Episode 710
+
+EliminationAgentRed Variant(Clone) Lost with a score of : 0.3000043
+
+Blue Team Won
+
+Episode 716
+
+Episode 710
+
+Agent won with score of : 3.46128
+
+Episode 717
+
+EliminationAgentBlue(Clone) Lost with a score of : 0.480001
+
+Red Team Won
+
+Episode 717
+
+Episode 711
+
+Agent won with score of : 0.5913959
+
+Episode 718
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.27
+
+Red Team Won
+
+Episode 718
+
+Episode 712
+
+Agent won with score of : 2.944476
+
+Episode 719
+
+EliminationAgentBlue(Clone) Lost with a score of : 0.5100008
+
+Red Team Won
+
+Episode 719
+
+Episode 713
+
+Agent won with score of : 3.415185
+
+Episode 720
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.07999918
+
+Red Team Won
+
+Episode 720
+
+Episode 714
+
+Agent won with score of : 2.320694
+
+Episode 721
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.24
+
+Red Team Won
+
+Episode 722
+
+Episode 715
+
+Agent won with score of : 4.00557
+
+Episode 716
+
+EliminationAgentRed Variant(Clone) Lost with a score of : 1.700001
+
+Blue Team Won
+
+Episode 723
+
+Episode 716
+
+Agent won with score of : 4.047677
+
+Episode 724
+
+EliminationAgentBlue(Clone) Lost with a score of : 0.7600012
+
+Red Team Won
+
+Episode 725
+
+Episode 717
+
+Agent won with score of : 1.724994
+
+Episode 718
+
+EliminationAgentRed Variant(Clone) Lost with a score of : 0.2300001
+
+Blue Team Won
+
+Episode 726
+
+Episode 718
+
+Agent won with score of : 3.91608
+
+Episode 719
+
+EliminationAgentRed Variant(Clone) Lost with a score of : 1.050001
+
+Blue Team Won
+
+Episode 727
+
+Episode 719
+
+Agent won with score of : 3.281381
+
+Episode 728
+
+EliminationAgentBlue(Clone) Lost with a score of : 0.8300012
+
+Red Team Won
+
+Episode 728
+
+Episode 720
+
+Agent won with score of : 3.330375
+
+Episode 729
+
+EliminationAgentBlue(Clone) Lost with a score of : 1.120001
+
+Red Team Won
+
+Episode 729
+
+Episode 721
+
+Agent won with score of : 4.717748
+
+Episode 730
+
+EliminationAgentBlue(Clone) Lost with a score of : 1.120002
+
+Red Team Won
+
+Episode 730
+
+Episode 722
+
+Agent won with score of : 3.287689
+
+Episode 731
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.6399995
+
+Red Team Won
+
+Episode 732
+
+Episode 723
+
+Agent won with score of : 0.9064974
+
+Episode 724
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.52
+
+Blue Team Won
+
+Episode 733
+
+Episode 724
+
+Agent won with score of : 1.862298
+
+Episode 725
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.69
+
+Blue Team Won
+
+Episode 734
+
+Episode 726
+
+Agent won with score of : 5.292471
+
+Episode 727
+
+EliminationAgentRed Variant(Clone) Lost with a score of : 0.7900007
+
+Blue Team Won
+
+Episode 735
+
+Episode 727
+
+Agent won with score of : 1.591398
+
+Episode 736
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.69
+
+Red Team Won
+
+Episode 736
+
+Episode 728
+
+Agent won with score of : 0.9333977
+
+Episode 729
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.06
+
+Blue Team Won
+
+Episode 737
+
+Episode 729
+
+Episode 738
+
+Episode 730
+
+Time Limit Reached. Tie
+
+Episode 738
+
+Episode 730
+
+Agent won with score of : 3.369585
+
+Episode 739
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.4799998
+
+Red Team Won
+
+Episode 739
+
+Episode 731
+
+Agent won with score of : 3.773768
+
+Episode 740
+
+EliminationAgentBlue(Clone) Lost with a score of : 0.7700012
+
+Red Team Won
+
+Episode 740
+
+Episode 732
+
+Agent won with score of : 2.357996
+
+Episode 741
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.21
+
+Red Team Won
+
+Episode 741
+
+Episode 733
+
+Agent won with score of : 2.265456
+
+Episode 742
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.4899971
+
+Red Team Won
+
+Episode 743
+
+Episode 734
+
+Agent won with score of : 2.079997
+
+Episode 744
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.18
+
+Red Team Won
+
+Episode 744
+
+Episode 735
+
+Agent won with score of : 0.6167935
+
+Episode 745
+
+EliminationAgentBlue(Clone) Lost with a score of : -2.65
+
+Red Team Won
+
+Episode 746
+
+Episode 736
+
+Agent won with score of : 4.769365
+
+Episode 747
+
+EliminationAgentBlue(Clone) Lost with a score of : 1.270001
+
+Red Team Won
+
+Episode 748
+
+Episode 737
+
+Agent won with score of : 0.6196933
+
+Episode 749
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.6
+
+Red Team Won
+
+Episode 749
+
+Episode 738
+
+Agent won with score of : 2.057396
+
+Episode 739
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.24
+
+Blue Team Won
+
+Episode 750
+
+Episode 739
+
+Agent won with score of : 2.415097
+
+Episode 740
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.27
+
+Blue Team Won
+
+Episode 751
+
+Episode 741
+
+Agent won with score of : 1.791096
+
+Episode 742
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.64
+
+Blue Team Won
+
+Episode 752
+
+Episode 742
+
+Agent won with score of : 1.426396
+
+Episode 743
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.75
+
+Blue Team Won
+
+Episode 753
+
+Episode 743
+
+Agent won with score of : 1.864295
+
+Episode 744
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.1599999
+
+Blue Team Won
+
+Episode 754
+
+Episode 744
+
+Agent won with score of : 3.738276
+
+Episode 755
+
+EliminationAgentBlue(Clone) Lost with a score of : 1.890001
+
+Red Team Won
+
+Episode 756
+
+Episode 745
+
+Agent won with score of : 2.64869
+
+Episode 757
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.4899999
+
+Red Team Won
+
+Episode 757
+
+Episode 746
+
+Agent won with score of : 4.586848
+
+Episode 747
+
+EliminationAgentRed Variant(Clone) Lost with a score of : 1.270002
+
+Blue Team Won
+
+Episode 758
+
+Episode 747
+
+Agent won with score of : 2.382894
+
+Episode 759
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.9399998
+
+Red Team Won
+
+Episode 759
+
+Episode 748
+
+Agent won with score of : 1.177097
+
+Episode 749
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.72
+
+Blue Team Won
+
+Episode 760
+
+Episode 750
+
+Agent won with score of : 2.868393
+
+Episode 751
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.7
+
+Blue Team Won
+
+Episode 761
+
+Episode 752
+
+Agent won with score of : 1.234198
+
+Episode 762
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.45
+
+Red Team Won
+
+Episode 762
+
+Episode 753
+
+Agent won with score of : 1.806397
+
+Episode 754
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.45
+
+Blue Team Won
+
+Episode 763
+
+Episode 754
+
+Agent won with score of : 2.831389
+
+Episode 764
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.3099999
+
+Red Team Won
+
+Episode 764
+
+Episode 755
+
+Agent won with score of : 4.207777
+
+Episode 765
+
+EliminationAgentBlue(Clone) Lost with a score of : 0.960001
+
+Red Team Won
+
+Episode 765
+
+Episode 756
+
+Agent won with score of : 1.615193
+
+Episode 757
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.3999997
+
+Blue Team Won
+
+Episode 766
+
+Episode 758
+
+Agent won with score of : -0.003418922
+
+Episode 767
+
+EliminationAgentBlue(Clone) Lost with a score of : -2.2
+
+Red Team Won
+
+Episode 767
+
+Episode 759
+
+Agent won with score of : 1.725796
+
+Episode 760
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.8499999
+
+Blue Team Won
+
+Episode 768
+
+Episode 760
+
+Agent won with score of : 5.58076
+
+Episode 769
+
+EliminationAgentBlue(Clone) Lost with a score of : 0.09999633
+
+Red Team Won
+
+Episode 770
+
+Episode 761
+
+Agent won with score of : 0.2235902
+
+Episode 762
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.6
+
+Blue Team Won
+
+Episode 771
+
+Episode 762
+
+Agent won with score of : 3.173784
+
+Episode 763
+
+EliminationAgentRed Variant(Clone) Lost with a score of : 0.4900008
+
+Blue Team Won
+
+Episode 772
+
+Episode 763
+
+Agent won with score of : 1.583399
+
+Episode 773
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.63
+
+Red Team Won
+
+Episode 773
+
+Episode 764
+
+Agent won with score of : 2.159988
+
+Episode 774
+
+EliminationAgentBlue(Clone) Lost with a score of : 0.6200004
+
+Red Team Won
+
+Episode 774
+
+Episode 765
+
+Agent won with score of : 1.127196
+
+Episode 766
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.75
+
+Blue Team Won
+
+Episode 775
+
+Episode 767
+
+Agent won with score of : 1.921492
+
+Episode 768
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.1599998
+
+Blue Team Won
+
+Episode 776
+
+Episode 768
+
+Agent won with score of : 1.759496
+
+Episode 769
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.3699999
+
+Blue Team Won
+
+Episode 777
+
+Episode 769
+
+Agent won with score of : 5.10076
+
+Episode 778
+
+EliminationAgentBlue(Clone) Lost with a score of : 2.680001
+
+Red Team Won
+
+Episode 778
+
+Episode 770
+
+Agent won with score of : 1.655895
+
+Episode 779
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.73
+
+Red Team Won
+
+Episode 779
+
+Episode 771
+
+Agent won with score of : 0.9413969
+
+Episode 772
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.75
+
+Blue Team Won
+
+Episode 780
+
+Episode 772
+
+Agent won with score of : 3.632979
+
+Episode 773
+
+EliminationAgentRed Variant(Clone) Lost with a score of : 0.7200006
+
+Blue Team Won
+
+Episode 781
+
+Episode 773
+
+Agent won with score of : 5.128461
+
+Episode 782
+
+EliminationAgentBlue(Clone) Lost with a score of : 0.1300013
+
+Red Team Won
+
+Episode 782
+
+Episode 774
+
+Agent won with score of : 3.106586
+
+Episode 783
+
+EliminationAgentBlue(Clone) Lost with a score of : 0.1300004
+
+Red Team Won
+
+Episode 784
+
+Episode 775
+
+Episode 784
+
+Episode 775
+
+Agent won with score of : 3.746796
+
+Episode 776
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.379998
+
+Blue Team Won
+
+Episode 785
+
+Episode 776
+
+Agent won with score of : 5.064459
+
+Episode 786
+
+EliminationAgentBlue(Clone) Lost with a score of : 1.880002
+
+Red Team Won
+
+Episode 786
+
+Episode 777
+
+Agent won with score of : 4.988555
+
+Episode 778
+
+EliminationAgentRed Variant(Clone) Lost with a score of : 0.5800018
+
+Blue Team Won
+
+Episode 787
+
+Episode 779
+
+Agent won with score of : 3.622276
+
+Episode 780
+
+EliminationAgentRed Variant(Clone) Lost with a score of : 1.960001
+
+Blue Team Won
+
+Episode 788
+
+Episode 780
+
+Agent won with score of : 2.034196
+
+Episode 781
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.73
+
+Blue Team Won
+
+Episode 789
+
+Episode 781
+
+Agent won with score of : 1.270197
+
+Episode 782
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.75
+
+Blue Team Won
+
+Episode 790
+
+Episode 783
+
+Agent won with score of : 3.75187
+
+Episode 784
+
+EliminationAgentRed Variant(Clone) Lost with a score of : 0.9500012
+
+Blue Team Won
+
+Episode 791
+
+Episode 785
+
+Agent won with score of : 2.11669
+
+Episode 786
+
+EliminationAgentRed Variant(Clone) Lost with a score of : 0.8000005
+
+Blue Team Won
+
+Episode 792
+
+Episode 786
+
+Agent won with score of : 0.5845898
+
+Episode 787
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.3099998
+
+Blue Team Won
+
+Episode 793
+
+Episode 788
+
+Agent won with score of : 1.847887
+
+Episode 789
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.1299997
+
+Blue Team Won
+
+Episode 794
+
+Episode 790
+
+Agent won with score of : 2.349753
+
+Episode 791
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.189998
+
+Blue Team Won
+
+Episode 795
+
+Episode 791
+
+Agent won with score of : 0.5628847
+
+Episode 792
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -2.5
+
+Blue Team Won
+
+Episode 796
+
+Episode 792
+
+Agent won with score of : 3.201689
+
+Episode 793
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.6699998
+
+Blue Team Won
+
+Episode 797
+
+Episode 793
+
+Agent won with score of : 1.995596
+
+Episode 794
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.9099999
+
+Blue Team Won
+
+Episode 798
+
+Episode 794
+
+Agent won with score of : 3.357079
+
+Episode 799
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.7599965
+
+Red Team Won
+
+Episode 799
+
+Episode 795
+
+Agent won with score of : 0.7242948
+
+Episode 800
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.87
+
+Red Team Won
+
+Episode 801
+
+Episode 796
+
+Agent won with score of : 1.858698
+
+Episode 802
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.03
+
+Red Team Won
+
+Episode 802
+
+Episode 797
+
+Agent won with score of : 2.597893
+
+Episode 803
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.9699999
+
+Red Team Won
+
+Episode 803
+
+Episode 798
+
+Agent won with score of : 0.8053956
+
+Episode 804
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.51
+
+Red Team Won
+
+Episode 804
+
+Episode 799
+
+Agent won with score of : 3.628483
+
+Episode 805
+
+EliminationAgentBlue(Clone) Lost with a score of : 0.9100004
+
+Red Team Won
+
+Episode 805
+
+Episode 800
+
+Agent won with score of : 2.487882
+
+Episode 801
+
+EliminationAgentRed Variant(Clone) Lost with a score of : 0.9600003
+
+Blue Team Won
+
+Episode 806
+
+Episode 801
+
+Agent won with score of : 4.010271
+
+Episode 802
+
+EliminationAgentRed Variant(Clone) Lost with a score of : 1.260001
+
+Blue Team Won
+
+Episode 807
+
+Episode 802
+
+Agent won with score of : 0.9848986
+
+Episode 808
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.03
+
+Red Team Won
+
+Episode 808
+
+Episode 803
+
+Agent won with score of : -0.07010388
+
+Episode 804
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.57
+
+Blue Team Won
+
+Episode 809
+
+Episode 804
+
+Agent won with score of : 2.71339
+
+Episode 810
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.009999812
+
+Red Team Won
+
+Episode 810
+
+Episode 805
+
+Agent won with score of : 2.810293
+
+Episode 811
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.8599998
+
+Red Team Won
+
+Episode 811
+
+Episode 806
+
+Agent won with score of : 4.314366
+
+Episode 812
+
+EliminationAgentBlue(Clone) Lost with a score of : 1.150001
+
+Red Team Won
+
+Episode 812
+
+Episode 807
+
+Agent won with score of : 4.499467
+
+Episode 808
+
+EliminationAgentRed Variant(Clone) Lost with a score of : 0.4400015
+
+Blue Team Won
+
+Episode 813
+
+Episode 808
+
+Agent won with score of : 1.912093
+
+Episode 814
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.06
+
+Red Team Won
+
+Episode 815
+
+Episode 809
+
+Agent won with score of : 4.130373
+
+Episode 816
+
+EliminationAgentBlue(Clone) Lost with a score of : 0.4600008
+
+Red Team Won
+
+Episode 817
+
+Episode 810
+
+Agent won with score of : 1.180694
+
+Episode 811
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.3099998
+
+Blue Team Won
+
+Episode 818
+
+Episode 811
+
+Agent won with score of : 0.9603979
+
+Episode 819
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.06
+
+Red Team Won
+
+Episode 819
+
+Episode 812
+
+Agent won with score of : 1.808497
+
+Episode 820
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.12
+
+Red Team Won
+
+Episode 820
+
+Episode 813
+
+Agent won with score of : 1.729696
+
+Episode 814
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.64
+
+Blue Team Won
+
+Episode 821
+
+Episode 814
+
+Agent won with score of : 1.479497
+
+Episode 822
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.8200001
+
+Red Team Won
+
+Episode 822
+
+Episode 815
+
+Agent won with score of : 1.837297
+
+Episode 823
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.5199999
+
+Red Team Won
+
+Episode 823
+
+Episode 816
+
+Agent won with score of : 4.50287
+
+Episode 824
+
+EliminationAgentBlue(Clone) Lost with a score of : 1.320001
+
+Red Team Won
+
+Episode 824
+
+Episode 817
+
+Agent won with score of : 1.114591
+
+Episode 818
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.2799996
+
+Blue Team Won
+
+Episode 825
+
+Episode 818
+
+Agent won with score of : 3.659682
+
+Episode 826
+
+EliminationAgentBlue(Clone) Lost with a score of : 0.8000005
+
+Red Team Won
+
+Episode 826
+
+Episode 819
+
+Agent won with score of : 1.700496
+
+Episode 820
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.91
+
+Blue Team Won
+
+Episode 827
+
+Episode 820
+
+Agent won with score of : 1.733996
+
+Episode 828
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.67
+
+Red Team Won
+
+Episode 828
+
+Episode 821
+
+Agent won with score of : 1.282199
+
+Episode 822
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.73
+
+Blue Team Won
+
+Episode 829
+
+Episode 822
+
+Agent won with score of : 1.608899
+
+Episode 823
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.33
+
+Blue Team Won
+
+Episode 830
+
+Episode 823
+
+Agent won with score of : 3.509869
+
+Episode 831
+
+EliminationAgentBlue(Clone) Lost with a score of : 0.6800013
+
+Red Team Won
+
+Episode 831
+
+Episode 824
+
+Agent won with score of : 3.248679
+
+Episode 832
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.3199996
+
+Red Team Won
+
+Episode 833
+
+Episode 825
+
+Agent won with score of : 2.583785
+
+Episode 826
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.1199992
+
+Blue Team Won
+
+Episode 834
+
+Episode 826
+
+Agent won with score of : 0.7956967
+
+Episode 835
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.42
+
+Red Team Won
+
+Episode 835
+
+Episode 827
+
+Agent won with score of : 2.348495
+
+Episode 836
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.76
+
+Red Team Won
+
+Episode 836
+
+Episode 828
+
+Agent won with score of : 5.063155
+
+Episode 837
+
+EliminationAgentBlue(Clone) Lost with a score of : 3.130002
+
+Red Team Won
+
+Episode 837
+
+Episode 829
+
+Agent won with score of : 2.020494
+
+Episode 838
+
+EliminationAgentBlue(Clone) Lost with a score of : 0.2300001
+
+Red Team Won
+
+Episode 838
+
+Episode 830
+
+Agent won with score of : 1.006893
+
+Episode 831
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -2.02
+
+Blue Team Won
+
+Episode 839
+
+Episode 831
+
+Agent won with score of : 3.083592
+
+Episode 840
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.06
+
+Red Team Won
+
+Episode 840
+
+Episode 832
+
+Agent won with score of : 1.463493
+
+Episode 841
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.85
+
+Red Team Won
+
+Episode 842
+
+Episode 833
+
+Agent won with score of : 3.082486
+
+Episode 834
+
+EliminationAgentRed Variant(Clone) Lost with a score of : 0.1300006
+
+Blue Team Won
+
+Episode 843
+
+Episode 834
+
+Agent won with score of : 1.956995
+
+Episode 844
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.7900001
+
+Red Team Won
+
+Episode 844
+
+Episode 835
+
+Agent won with score of : 3.020281
+
+Episode 845
+
+EliminationAgentBlue(Clone) Lost with a score of : 0.7700012
+
+Red Team Won
+
+Episode 845
+
+Episode 836
+
+Agent won with score of : 0.9469963
+
+Episode 837
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.8499999
+
+Blue Team Won
+
+Episode 846
+
+Episode 837
+
+Agent won with score of : 1.275794
+
+Episode 847
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.78
+
+Red Team Won
+
+Episode 847
+
+Episode 838
+
+Agent won with score of : 2.332896
+
+Episode 839
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.67
+
+Blue Team Won
+
+Episode 848
+
+Episode 839
+
+Agent won with score of : 1.512397
+
+Episode 840
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.5199999
+
+Blue Team Won
+
+Episode 849
+
+Episode 840
+
+Agent won with score of : 1.853393
+
+Episode 841
+
+EliminationAgentRed Variant(Clone) Lost with a score of : 0.1700003
+
+Blue Team Won
+
+Episode 850
+
+Episode 841
+
+Agent won with score of : 3.963852
+
+Episode 851
+
+EliminationAgentBlue(Clone) Lost with a score of : 1.570002
+
+Red Team Won
+
+Episode 851
+
+Episode 842
+
+Agent won with score of : 2.915983
+
+Episode 852
+
+EliminationAgentBlue(Clone) Lost with a score of : 1.400001
+
+Red Team Won
+
+Episode 852
+
+Episode 843
+
+Agent won with score of : 1.084895
+
+Episode 844
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.63
+
+Blue Team Won
+
+Episode 853
+
+Episode 844
+
+Agent won with score of : 0.8497971
+
+Episode 854
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.15
+
+Red Team Won
+
+Episode 854
+
+Episode 845
+
+Agent won with score of : 3.704385
+
+Episode 846
+
+EliminationAgentRed Variant(Clone) Lost with a score of : 0.2900012
+
+Blue Team Won
+
+Episode 855
+
+Episode 846
+
+Agent won with score of : 1.104596
+
+Episode 856
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.28
+
+Red Team Won
+
+Episode 856
+
+Episode 847
+
+Agent won with score of : 0.8842858
+
+Episode 857
+
+EliminationAgentBlue(Clone) Lost with a score of : -2.469999
+
+Red Team Won
+
+Episode 857
+
+Episode 848
+
+Agent won with score of : 1.562486
+
+Episode 849
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.7599999
+
+Blue Team Won
+
+Episode 858
+
+Episode 849
+
+Agent won with score of : 1.940396
+
+Episode 859
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.21
+
+Red Team Won
+
+Episode 859
+
+Episode 850
+
+Agent won with score of : 1.587198
+
+Episode 851
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.03
+
+Blue Team Won
+
+Episode 860
+
+Episode 851
+
+Agent won with score of : 3.624477
+
+Episode 852
+
+EliminationAgentRed Variant(Clone) Lost with a score of : 1.350001
+
+Blue Team Won
+
+Episode 861
+
+Episode 852
+
+Agent won with score of : 2.606096
+
+Episode 862
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.03
+
+Red Team Won
+
+Episode 862
+
+Episode 853
+
+Agent won with score of : 3.695575
+
+Episode 863
+
+EliminationAgentBlue(Clone) Lost with a score of : 1.290001
+
+Red Team Won
+
+Episode 863
+
+Episode 854
+
+Agent won with score of : 2.593094
+
+Episode 855
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.09999996
+
+Blue Team Won
+
+Episode 864
+
+Episode 855
+
+Agent won with score of : 1.868497
+
+Episode 865
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.8499999
+
+Red Team Won
+
+Episode 865
+
+Episode 856
+
+Agent won with score of : 4.477673
+
+Episode 866
+
+EliminationAgentBlue(Clone) Lost with a score of : 1.230001
+
+Red Team Won
+
+Episode 866
+
+Episode 857
+
+Agent won with score of : 3.817873
+
+Episode 867
+
+EliminationAgentBlue(Clone) Lost with a score of : 1.460001
+
+Red Team Won
+
+Episode 867
+
+Episode 858
+
+Agent won with score of : 0.9342976
+
+Episode 859
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.12
+
+Blue Team Won
+
+Episode 868
+
+Episode 859
+
+Agent won with score of : 3.174685
+
+Episode 860
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.3399994
+
+Blue Team Won
+
+Episode 869
+
+Episode 860
+
+Agent won with score of : 3.824085
+
+Episode 870
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.3299995
+
+Red Team Won
+
+Episode 870
+
+Episode 861
+
+Agent won with score of : 1.265997
+
+Episode 862
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.42
+
+Blue Team Won
+
+Episode 871
+
+Episode 862
+
+Agent won with score of : 2.414197
+
+Episode 872
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.24
+
+Red Team Won
+
+Episode 873
+
+Episode 863
+
+Agent won with score of : 2.537486
+
+Episode 874
+
+EliminationAgentBlue(Clone) Lost with a score of : 0.8300005
+
+Red Team Won
+
+Episode 874
+
+Episode 864
+
+Agent won with score of : 1.182997
+
+Episode 865
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.15
+
+Blue Team Won
+
+Episode 875
+
+Episode 865
+
+Agent won with score of : 1.93899
+
+Episode 876
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.06999952
+
+Red Team Won
+
+Episode 876
+
+Episode 866
+
+Agent won with score of : 5.415754
+
+Episode 877
+
+EliminationAgentBlue(Clone) Lost with a score of : 2.090001
+
+Red Team Won
+
+Episode 877
+
+Episode 867
+
+Agent won with score of : 2.723096
+
+Episode 868
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.91
+
+Blue Team Won
+
+Episode 878
+
+Episode 868
+
+Agent won with score of : 0.1404852
+
+Episode 869
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -2.23
+
+Blue Team Won
+
+Episode 879
+
+Episode 870
+
+Agent won with score of : 4.39106
+
+Episode 880
+
+EliminationAgentBlue(Clone) Lost with a score of : 0.9300013
+
+Red Team Won
+
+Episode 880
+
+Episode 871
+
+Agent won with score of : 2.405097
+
+Episode 881
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.45
+
+Red Team Won
+
+Episode 881
+
+Episode 872
+
+Agent won with score of : 2.469394
+
+Episode 882
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.06
+
+Red Team Won
+
+Episode 882
+
+Episode 873
+
+Agent won with score of : 1.236097
+
+Episode 874
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.15
+
+Blue Team Won
+
+Episode 883
+
+Episode 874
+
+Agent won with score of : 1.840091
+
+Episode 884
+
+EliminationAgentBlue(Clone) Lost with a score of : 0.2800002
+
+Red Team Won
+
+Episode 884
+
+Episode 875
+
+Agent won with score of : 2.618891
+
+Episode 885
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.06999952
+
+Red Team Won
+
+Episode 885
+
+Episode 876
+
+Agent won with score of : 3.655666
+
+Episode 877
+
+EliminationAgentRed Variant(Clone) Lost with a score of : 0.1000016
+
+Blue Team Won
+
+Episode 886
+
+Episode 877
+
+Agent won with score of : 1.520596
+
+Episode 878
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.28
+
+Blue Team Won
+
+Episode 887
+
+Episode 878
+
+Agent won with score of : 2.315695
+
+Episode 888
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.6699999
+
+Red Team Won
+
+Episode 888
+
+Episode 879
+
+Agent won with score of : 2.055197
+
+Episode 880
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.18
+
+Blue Team Won
+
+Episode 889
+
+Episode 880
+
+Agent won with score of : 3.036681
+
+Episode 881
+
+EliminationAgentRed Variant(Clone) Lost with a score of : 1.110001
+
+Blue Team Won
+
+Episode 890
+
+Episode 881
+
+Agent won with score of : 0.6937949
+
+Episode 891
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.81
+
+Red Team Won
+
+Episode 891
+
+Episode 882
+
+Agent won with score of : 2.291394
+
+Episode 883
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.1899998
+
+Blue Team Won
+
+Episode 892
+
+Episode 883
+
+Episode 892
+
+Episode 883
+
+Agent won with score of : 6.001279
+
+Episode 893
+
+EliminationAgentBlue(Clone) Lost with a score of : 1.350002
+
+Red Team Won
+
+Episode 893
+
+Episode 884
+
+Agent won with score of : 2.380497
+
+Episode 894
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.15
+
+Red Team Won
+
+Episode 894
+
+Episode 885
+
+Agent won with score of : 3.245987
+
+Episode 895
+
+EliminationAgentBlue(Clone) Lost with a score of : 0.4200006
+
+Red Team Won
+
+Episode 895
+
+Episode 886
+
+Agent won with score of : 3.182274
+
+Episode 896
+
+EliminationAgentBlue(Clone) Lost with a score of : 0.8200012
+
+Red Team Won
+
+Episode 896
+
+Episode 887
+
+Agent won with score of : 1.260298
+
+Episode 897
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.36
+
+Red Team Won
+
+Episode 897
+
+Episode 888
+
+Agent won with score of : 0.3897953
+
+Episode 889
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.9
+
+Blue Team Won
+
+Episode 898
+
+Episode 889
+
+Agent won with score of : 0.9850985
+
+Episode 890
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.73
+
+Blue Team Won
+
+Episode 899
+
+Episode 890
+
+Agent won with score of : 5.103055
+
+Episode 900
+
+EliminationAgentBlue(Clone) Lost with a score of : 2.190001
+
+Red Team Won
+
+Episode 901
+
+Episode 891
+
+Agent won with score of : 1.840097
+
+Episode 902
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.21
+
+Red Team Won
+
+Episode 902
+
+Episode 892
+
+Agent won with score of : 5.672674
+
+Episode 903
+
+EliminationAgentBlue(Clone) Lost with a score of : 2.459981
+
+Red Team Won
+
+Episode 904
+
+Episode 893
+
+Agent won with score of : 5.233155
+
+Episode 894
+
+EliminationAgentRed Variant(Clone) Lost with a score of : 1.360001
+
+Blue Team Won
+
+Episode 905
+
+Episode 894
+
+Agent won with score of : 1.984595
+
+Episode 895
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.73
+
+Blue Team Won
+
+Episode 906
+
+Episode 896
+
+Agent won with score of : 5.341554
+
+Episode 897
+
+EliminationAgentRed Variant(Clone) Lost with a score of : 1.420002
+
+Blue Team Won
+
+Episode 907
+
+Episode 897
+
+Agent won with score of : 0.1092893
+
+Episode 898
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -2.89
+
+Blue Team Won
+
+Episode 908
+
+Episode 898
+
+Agent won with score of : 3.369583
+
+Episode 909
+
+EliminationAgentBlue(Clone) Lost with a score of : 0.9800008
+
+Red Team Won
+
+Episode 909
+
+Episode 899
+
+Agent won with score of : 2.848392
+
+Episode 910
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.72
+
+Red Team Won
+
+Episode 910
+
+Episode 900
+
+Agent won with score of : 2.86089
+
+Episode 911
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.73
+
+Red Team Won
+
+Episode 911
+
+Episode 901
+
+Agent won with score of : 1.258798
+
+Episode 902
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.76
+
+Blue Team Won
+
+Episode 912
+
+Episode 902
+
+Agent won with score of : 2.326293
+
+Episode 903
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.2299998
+
+Blue Team Won
+
+Episode 913
+
+Episode 903
+
+Agent won with score of : 1.572897
+
+Episode 904
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.12
+
+Blue Team Won
+
+Episode 914
+
+Episode 904
+
+Agent won with score of : 3.115189
+
+Episode 915
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.06999928
+
+Red Team Won
+
+Episode 915
+
+Episode 905
+
+Agent won with score of : 1.497695
+
+Episode 916
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.7099999
+
+Red Team Won
+
+Episode 916
+
+Episode 906
+
+Agent won with score of : 0.6739938
+
+Episode 907
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.39
+
+Blue Team Won
+
+Episode 917
+
+Episode 907
+
+Agent won with score of : 1.789496
+
+Episode 908
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.8499999
+
+Blue Team Won
+
+Episode 918
+
+Episode 908
+
+Agent won with score of : 1.843297
+
+Episode 919
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.2799999
+
+Red Team Won
+
+Episode 919
+
+Episode 909
+
+Agent won with score of : 1.913899
+
+Episode 920
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.36
+
+Red Team Won
+
+Episode 920
+
+Episode 910
+
+Agent won with score of : 2.957064
+
+Episode 911
+
+EliminationAgentRed Variant(Clone) Lost with a score of : 2.050001
+
+Blue Team Won
+
+Episode 921
+
+Episode 912
+
+Agent won with score of : 0.9603979
+
+Episode 913
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.36
+
+Blue Team Won
+
+Episode 922
+
+Episode 914
+
+Agent won with score of : 4.989762
+
+Episode 923
+
+EliminationAgentBlue(Clone) Lost with a score of : 2.520001
+
+Red Team Won
+
+Episode 923
+
+Episode 915
+
+Agent won with score of : 1.611299
+
+Episode 916
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.06
+
+Blue Team Won
+
+Episode 924
+
+Episode 916
+
+Agent won with score of : 3.94718
+
+Episode 917
+
+EliminationAgentRed Variant(Clone) Lost with a score of : 0.7100013
+
+Blue Team Won
+
+Episode 925
+
+Episode 917
+
+Agent won with score of : 1.06619
+
+Episode 926
+
+EliminationAgentBlue(Clone) Lost with a score of : -2.23
+
+Red Team Won
+
+Episode 926
+
+Episode 918
+
+Agent won with score of : 1.227498
+
+Episode 927
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.06
+
+Red Team Won
+
+Episode 928
+
+Episode 919
+
+Agent won with score of : 2.039795
+
+Episode 920
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.64
+
+Blue Team Won
+
+Episode 929
+
+Episode 920
+
+Agent won with score of : 1.097796
+
+Episode 921
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.54
+
+Blue Team Won
+
+Episode 930
+
+Episode 921
+
+Agent won with score of : 0.560896
+
+Episode 922
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.27
+
+Blue Team Won
+
+Episode 931
+
+Episode 922
+
+Agent won with score of : 0.9356909
+
+Episode 932
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.9
+
+Red Team Won
+
+Episode 932
+
+Episode 923
+
+Agent won with score of : 1.911499
+
+Episode 924
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.33
+
+Blue Team Won
+
+Episode 933
+
+Episode 924
+
+Agent won with score of : 2.440697
+
+Episode 925
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.48
+
+Blue Team Won
+
+Episode 934
+
+Episode 926
+
+Agent won with score of : 2.35719
+
+Episode 927
+
+EliminationAgentRed Variant(Clone) Lost with a score of : 0.4600006
+
+Blue Team Won
+
+Episode 935
+
+Episode 927
+
+Agent won with score of : 1.532298
+
+Episode 928
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.66
+
+Blue Team Won
+
+Episode 936
+
+Episode 928
+
+Agent won with score of : 1.961094
+
+Episode 937
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.06999975
+
+Red Team Won
+
+Episode 937
+
+Episode 929
+
+Agent won with score of : 1.013393
+
+Episode 930
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -2.5
+
+Blue Team Won
+
+Episode 938
+
+Episode 930
+
+Agent won with score of : 1.939793
+
+Episode 931
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.1599998
+
+Blue Team Won
+
+Episode 939
+
+Episode 931
+
+Agent won with score of : 5.278259
+
+Episode 940
+
+EliminationAgentBlue(Clone) Lost with a score of : 1.550001
+
+Red Team Won
+
+Episode 940
+
+Episode 932
+
+Agent won with score of : 3.838686
+
+Episode 933
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.1599997
+
+Blue Team Won
+
+Episode 941
+
+Episode 934
+
+Agent won with score of : 3.261392
+
+Episode 942
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.4099998
+
+Red Team Won
+
+Episode 943
+
+Episode 935
+
+Agent won with score of : 2.305296
+
+Episode 944
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.76
+
+Red Team Won
+
+Episode 944
+
+Episode 936
+
+Agent won with score of : 2.020789
+
+Episode 937
+
+EliminationAgentRed Variant(Clone) Lost with a score of : 0.5900005
+
+Blue Team Won
+
+Episode 945
+
+Episode 937
+
+Agent won with score of : 4.717355
+
+Episode 946
+
+EliminationAgentBlue(Clone) Lost with a score of : 1.900001
+
+Red Team Won
+
+Episode 946
+
+Episode 938
+
+Agent won with score of : 4.554576
+
+Episode 947
+
+EliminationAgentBlue(Clone) Lost with a score of : 0.920001
+
+Red Team Won
+
+Episode 948
+
+Episode 939
+
+Agent won with score of : 0.2521867
+
+Episode 949
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.87
+
+Red Team Won
+
+Episode 949
+
+Episode 940
+
+Agent won with score of : 2.331893
+
+Episode 950
+
+EliminationAgentBlue(Clone) Lost with a score of : 0.08000016
+
+Red Team Won
+
+Episode 950
+
+Episode 941
+
+Agent won with score of : 4.480675
+
+Episode 951
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.3299987
+
+Red Team Won
+
+Episode 951
+
+Episode 942
+
+Agent won with score of : 4.731138
+
+Episode 952
+
+EliminationAgentBlue(Clone) Lost with a score of : 1.050003
+
+Red Team Won
+
+Episode 952
+
+Episode 943
+
+Agent won with score of : 3.264687
+
+Episode 953
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.2799999
+
+Red Team Won
+
+Episode 953
+
+Episode 944
+
+Agent won with score of : 1.202198
+
+Episode 945
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.39
+
+Blue Team Won
+
+Episode 954
+
+Episode 946
+
+Agent won with score of : 1.535697
+
+Episode 947
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.55
+
+Blue Team Won
+
+Episode 955
+
+Episode 947
+
+Agent won with score of : 1.585799
+
+Episode 956
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.63
+
+Red Team Won
+
+Episode 956
+
+Episode 948
+
+Agent won with score of : 3.21735
+
+Episode 957
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.3299974
+
+Red Team Won
+
+Episode 957
+
+Episode 949
+
+Agent won with score of : 1.824296
+
+Episode 950
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.61
+
+Blue Team Won
+
+Episode 958
+
+Episode 950
+
+Agent won with score of : 2.843092
+
+Episode 951
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.4299998
+
+Blue Team Won
+
+Episode 959
+
+Episode 951
+
+Agent won with score of : 2.621394
+
+Episode 960
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.61
+
+Red Team Won
+
+Episode 960
+
+Episode 952
+
+Agent won with score of : 3.034891
+
+Episode 961
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.1999996
+
+Red Team Won
+
+Episode 961
+
+Episode 953
+
+Agent won with score of : 5.190256
+
+Episode 962
+
+EliminationAgentBlue(Clone) Lost with a score of : 2.200001
+
+Red Team Won
+
+Episode 962
+
+Episode 954
+
+Agent won with score of : 2.105095
+
+Episode 955
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.15
+
+Blue Team Won
+
+Episode 963
+
+Episode 955
+
+Agent won with score of : 3.141984
+
+Episode 956
+
+EliminationAgentRed Variant(Clone) Lost with a score of : 0.2700007
+
+Blue Team Won
+
+Episode 964
+
+Episode 957
+
+Agent won with score of : 4.282278
+
+Episode 958
+
+EliminationAgentRed Variant(Clone) Lost with a score of : 0.7300006
+
+Blue Team Won
+
+Episode 965
+
+Episode 958
+
+Agent won with score of : 1.176397
+
+Episode 966
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.15
+
+Red Team Won
+
+Episode 966
+
+Episode 959
+
+Agent won with score of : 2.429695
+
+Episode 960
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.55
+
+Blue Team Won
+
+Episode 967
+
+Episode 960
+
+Agent won with score of : 4.130876
+
+Episode 961
+
+EliminationAgentRed Variant(Clone) Lost with a score of : 1.030001
+
+Blue Team Won
+
+Episode 968
+
+Episode 961
+
+Agent won with score of : 3.304389
+
+Episode 962
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.1799996
+
+Blue Team Won
+
+Episode 969
+
+Episode 962
+
+Agent won with score of : 1.080695
+
+Episode 963
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -2.17
+
+Blue Team Won
+
+Episode 970
+
+Episode 964
+
+Agent won with score of : 3.530079
+
+Episode 971
+
+EliminationAgentBlue(Clone) Lost with a score of : 1.160001
+
+Red Team Won
+
+Episode 971
+
+Episode 965
+
+Agent won with score of : 1.484897
+
+Episode 966
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.52
+
+Blue Team Won
+
+Episode 972
+
+Episode 966
+
+Agent won with score of : 1.173495
+
+Episode 967
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.87
+
+Blue Team Won
+
+Episode 973
+
+Episode 967
+
+Agent won with score of : 1.604197
+
+Episode 968
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.55
+
+Blue Team Won
+
+Episode 974
+
+Episode 968
+
+Agent won with score of : 2.462287
+
+Episode 975
+
+EliminationAgentBlue(Clone) Lost with a score of : 0.3800001
+
+Red Team Won
+
+Episode 976
+
+Episode 969
+
+Agent won with score of : 4.501472
+
+Episode 977
+
+EliminationAgentBlue(Clone) Lost with a score of : 1.220001
+
+Red Team Won
+
+Episode 977
+
+Episode 970
+
+Agent won with score of : 2.370395
+
+Episode 971
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.18
+
+Blue Team Won
+
+Episode 978
+
+Episode 971
+
+Agent won with score of : 1.481497
+
+Episode 979
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.12
+
+Red Team Won
+
+Episode 979
+
+Episode 972
+
+Agent won with score of : 2.389596
+
+Episode 973
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.82
+
+Blue Team Won
+
+Episode 980
+
+Episode 973
+
+Agent won with score of : 1.870594
+
+Episode 974
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.2499999
+
+Blue Team Won
+
+Episode 981
+
+Episode 974
+
+Agent won with score of : 1.453897
+
+Episode 975
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -1.84
+
+Blue Team Won
+
+Episode 982
+
+Episode 975
+
+Agent won with score of : 1.86384
+
+Episode 983
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.269998
+
+Red Team Won
+
+Episode 983
+
+Episode 976
+
+Agent won with score of : 2.370295
+
+Episode 977
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.9699999
+
+Blue Team Won
+
+Episode 984
+
+Episode 978
+
+Agent won with score of : 1.442295
+
+Episode 979
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.7
+
+Blue Team Won
+
+Episode 985
+
+Episode 979
+
+Agent won with score of : 0.9943976
+
+Episode 986
+
+EliminationAgentBlue(Clone) Lost with a score of : -0.49
+
+Red Team Won
+
+Episode 986
+
+Episode 980
+
+Agent won with score of : 3.25398
+
+Episode 981
+
+EliminationAgentRed Variant(Clone) Lost with a score of : 0.8200009
+
+Blue Team Won
+
+Episode 987
+
+Episode 982
+
+Agent won with score of : 5.146656
+
+Episode 988
+
+EliminationAgentBlue(Clone) Lost with a score of : 1.110001
+
+Red Team Won
+
+Episode 988
+
+Episode 983
+
+Agent won with score of : 3.04559
+
+Episode 984
+
+EliminationAgentRed Variant(Clone) Lost with a score of : -0.3499997
+
+Blue Team Won
+
+Episode 989
+
+Episode 985
+
+Agent won with score of : 3.612184
+
+Episode 986
+
+EliminationAgentRed Variant(Clone) Lost with a score of : 0.310001
+
+Blue Team Won
+
+Episode 990
+
+Episode 986
+
+Agent won with score of : 2.876185
+
+Episode 991
+
+EliminationAgentBlue(Clone) Lost with a score of : 0.5900005
+
+Red Team Won
+
+Episode 991
+
+Episode 987
+
+Agent won with score of : 0.9070945
+
+Episode 992
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.93
+
+Red Team Won
+
+Episode 992
+
+Episode 988
+
+Agent won with score of : 1.028794
+
+Episode 993
+
+EliminationAgentBlue(Clone) Lost with a score of : -1.66
+
+Red Team Won
+
+Episode 993
+
+Episode 989
+
+Agent won with score of : 3.598376
+
+Episode 994
+
+EliminationAgentBlue(Clone) Lost with a score of : 1.060001
+
+Red Team Won
+
+Episode 994
+
+Episode 990
+
+Agent won with score of : 0.9389944
+
+Episode 995
+
+EliminationAgentBlue(Clone) Lost with a score of : -2.32
+
+Red Team Won
+
+Episode 995
+
+Episode 991
+
+Agent won with score of : 4.088565
+
+Episode 992
+
+EliminationAgentRed Variant(Clone) Lost with a score of : 1.510001
+
+Blue Team Won
+
+Episode 996
+
+Episode 993
+
+Unable to save timers to file D:/Users/Daniel/Documents/Github/ProjectMLArena/MLArena/Builds/MLBuild/MLArena_Data\ML-Agents\Timers\EliminationTraining_timers.json
+
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: 4c48 -> priority: 1 
+  Thread -> id: 1234 -> priority: 1 

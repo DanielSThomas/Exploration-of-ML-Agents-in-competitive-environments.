@@ -1,0 +1,39 @@
+{
+    "EliminationAgentMemory3": {
+        "checkpoints": [
+            {
+                "steps": 499922,
+                "file_path": "results\\EliminationAgentMemory3\\EliminationAgentMemory3\\EliminationAgentMemory3-499922.onnx",
+                "reward": 1.044174333413442,
+                "creation_time": 1651244833.7671857,
+                "auxillary_file_paths": [
+                    "results\\EliminationAgentMemory3\\EliminationAgentMemory3\\EliminationAgentMemory3-499922.pt"
+                ]
+            },
+            {
+                "steps": 600057,
+                "file_path": "results\\EliminationAgentMemory3\\EliminationAgentMemory3\\EliminationAgentMemory3-600057.onnx",
+                "reward": 1.2244972586631775,
+                "creation_time": 1651246251.4935243,
+                "auxillary_file_paths": [
+                    "results\\EliminationAgentMemory3\\EliminationAgentMemory3\\EliminationAgentMemory3-600057.pt"
+                ]
+            }
+        ],
+        "elo": 1250.07959998596,
+        "final_checkpoint": {
+            "steps": 600057,
+            "file_path": "results\\EliminationAgentMemory3\\EliminationAgentMemory3.onnx",
+            "reward": 1.2244972586631775,
+            "creation_time": 1651246251.4935243,
+            "auxillary_file_paths": [
+                "results\\EliminationAgentMemory3\\EliminationAgentMemory3\\EliminationAgentMemory3-600057.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.27.0",
+        "torch_version": "1.7.1+cu110"
+    }
+}

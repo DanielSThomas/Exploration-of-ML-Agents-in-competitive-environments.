@@ -1,0 +1,39 @@
+{
+    "EliminationAgentCuriosity": {
+        "checkpoints": [
+            {
+                "steps": 499940,
+                "file_path": "results\\EliminationAgentCuriosity\\EliminationAgentCuriosity\\EliminationAgentCuriosity-499940.onnx",
+                "reward": 1.2811989784240723,
+                "creation_time": 1651700810.699189,
+                "auxillary_file_paths": [
+                    "results\\EliminationAgentCuriosity\\EliminationAgentCuriosity\\EliminationAgentCuriosity-499940.pt"
+                ]
+            },
+            {
+                "steps": 611549,
+                "file_path": "results\\EliminationAgentCuriosity\\EliminationAgentCuriosity\\EliminationAgentCuriosity-611549.onnx",
+                "reward": 0.8268715639909109,
+                "creation_time": 1651702601.9512243,
+                "auxillary_file_paths": [
+                    "results\\EliminationAgentCuriosity\\EliminationAgentCuriosity\\EliminationAgentCuriosity-611549.pt"
+                ]
+            }
+        ],
+        "elo": 1265.2439859411695,
+        "final_checkpoint": {
+            "steps": 611549,
+            "file_path": "results\\EliminationAgentCuriosity\\EliminationAgentCuriosity.onnx",
+            "reward": 0.8268715639909109,
+            "creation_time": 1651702601.9512243,
+            "auxillary_file_paths": [
+                "results\\EliminationAgentCuriosity\\EliminationAgentCuriosity\\EliminationAgentCuriosity-611549.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.27.0",
+        "torch_version": "1.7.1+cu110"
+    }
+}
