@@ -618,7 +618,7 @@ MonoBehaviour:
   m_Model: {fileID: 5022602860645237092, guid: 348eecd4d3776134d8388cdb2e1e4303, type: 3}
   m_InferenceDevice: 0
   m_BehaviorType: 0
-  m_BehaviorName: EliminationAgentSac
+  m_BehaviorName: EliminationAgentBasic
   TeamId: 1
   m_UseChildSensors: 1
   m_UseChildActuators: 1
