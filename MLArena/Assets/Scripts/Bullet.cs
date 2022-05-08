@@ -68,8 +68,8 @@ public class Bullet : MonoBehaviour
 
                 if (agentlessbullet == false)
                 {
-                    //bulletOwner.AddReward(4.1f);
-                    bulletOwner.endEpisode(1f);
+                    bulletOwner.AddReward(1f);
+                    //bulletOwner.endEpisode(1f);
                 }
 
             }
