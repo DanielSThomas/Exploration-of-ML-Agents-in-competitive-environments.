@@ -24,3 +24,9 @@ The main variables to change, if altering the project, are the elimination agent
 Additionally, provided in the builds folder can be found all YAML configs as well as two training bats called MLArenaTraining and MLArenaTrainingStandAlone. The main difference between the two is one is for training within the Unity editor while the other relies on a compiled build to be placed in the MLBuild folder.
 
 It is recommended to reference the documentation provided by Unity for training your own agents found here: (https://github.com/Unity-Technologies/ml-agents/blob/main/docs/).
+
+# Game Controls
+* W and S key for fowards and backwards movement.
+* A and D to rotate the tank.
+* K and L to rotate the turret.
+* Spacebar to fire.
